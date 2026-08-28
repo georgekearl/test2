@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Planner</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+
+<style>
+  :root {
+    --bg: rgb(24,26,38); --tile: rgb(38,41,58); --tile-hi: rgb(50,54,76);
+    --text: rgb(235,236,244); --muted: rgb(150,155,175);
+    --green: rgb(87,187,138); --amber: rgb(240,173,78); --red: rgb(224,90,90);
+    --accent: rgb(99,148,255); --border: rgb(70,74,96);
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:18px; background:#0d0e15; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; display:flex; justify-content:center; }
+  .screen { width:100%; max-width:980px; background:var(--bg); border-radius:14px; padding:22px; box-shadow:0 20px 60px rgba(0,0,0,0.5); min-height:70vh; }
+  .header { display:flex; justify-content:space-between; align-items:center; padding-bottom:14px; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.06); }
+  .header h1 { margin:0; font-size:clamp(18px,3.6vw,26px); font-weight:700; color:var(--text); }
+  .back { color:var(--accent); font-size:14px; cursor:pointer; font-weight:600; }
+
+  .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:14px; }
+  @media (max-width:620px){ .kpi-row{grid-template-columns:repeat(2,1fr);} .main-row{grid-template-columns:1fr !important;} }
+  .kpi { background:var(--tile); border-radius:10px; padding:14px 16px; }
+  .kpi-label { font-size:10px; font-weight:700; letter-spacing:.6px; color:var(--muted); text-transform:uppercase; }
+  .kpi-value { font-size:clamp(24px,5vw,32px); font-weight:700; color:var(--text); margin-top:6px; }
+  .kpi-value.good{color:var(--green);} .kpi-value.warn{color:var(--amber);}
+
+  .main-row { display:grid; grid-template-columns:1.08fr 1fr; gap:14px; margin-bottom:14px; }
+  .tile { background:var(--tile); border-radius:10px; padding:16px; }
+  .tile-hdr { font-size:11px; font-weight:700; letter-spacing:.6px; color:var(--muted); text-transform:uppercase; margin-bottom:12px; }
+
+  .sugg-line { display:flex; align-items:flex-start; gap:10px; padding:9px 6px; border-radius:7px; font-size:14px; color:var(--text); border-bottom:1px solid rgba(255,255,255,0.04); cursor:pointer; user-select:none; }
+  .sugg-line:hover { background:rgba(255,255,255,0.03); }
+  .sugg-line.selected { background:rgba(99,148,255,0.12); }
+  .check { flex:0 0 auto; width:16px; height:16px; margin-top:2px; border-radius:4px; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:11px; color:transparent; }
+  .sugg-line.selected .check { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
+  .dot { flex:0 0 auto; width:9px; height:9px; border-radius:50%; margin-top:5px; }
+  .dot.green{background:var(--green);} .dot.amber{background:var(--amber);} .dot.red{background:var(--red);}
+  .sugg-missing { color:var(--muted); font-size:12.5px; }
+  .recipe-title { cursor:pointer; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.25); }
+  .recipe-title:hover { color:var(--accent); }
+
+  .right-col { display:flex; flex-direction:column; gap:14px; }
+  .shop-item { display:flex; justify-content:space-between; font-size:13.5px; color:var(--text); padding:5px 0; }
+  .shop-item .qty { color:var(--muted); }
+  .empty-msg { color:var(--muted); font-size:13px; font-style:italic; }
+
+  .btn-row { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn { flex:1 1 140px; text-align:center; padding:11px 10px; border-radius:8px; font-size:13px; font-weight:700; color:var(--text); border:1px solid var(--border); background:var(--tile); cursor:pointer; }
+  .btn:hover { background:var(--tile-hi); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
+
+  .hero-img { width:100%; border-radius:10px; margin-bottom:16px; display:block; object-fit:cover; max-height:340px; }
+  .recipe-meta { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  .ing-list { list-style:none; padding:0; margin:0 0 20px; }
+  .ing-list li { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(255,255,255,0.05); color:var(--text); font-size:14px; }
+  .ing-list li .qty { color:var(--muted); }
+
+  .cook-step-img { width:100%; max-height:320px; object-fit:cover; border-radius:10px; margin-bottom:16px; }
+  .cook-progress { color:var(--muted); font-size:12px; text-align:center; margin-bottom:8px; letter-spacing:.5px; text-transform:uppercase; }
+  .cook-title { font-size:20px; font-weight:700; color:var(--text); margin-bottom:12px; text-align:center; }
+  .cook-instruction { font-size:16px; line-height:1.6; color:var(--text); margin-bottom:24px; }
+  .cook-nav { display:flex; gap:12px; }
+  .cook-nav .btn { flex:1; padding:16px; font-size:15px; }
+
+  .loading { color:var(--muted); text-align:center; padding:60px 0; }
+  .hint { color:rgb(120,125,145); font-size:11px; text-align:center; max-width:480px; margin:14px auto 0; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useMemo } = React;
+
+function normalize(name) {
+  return name.toLowerCase().trim();
+}
+
+function getFridgeQty(fridge, name) {
+  return fridge[normalize(name)] || 0;
+}
+
+// Same logic as modFridgeCheck.bas
+function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
+  const items = recipeIngredients.filter(ri => ri.recipeId === recipe.id);
+  let criticalMissing = 0;
+  const missing = [];
+
+  for (const ri of items) {
+    const ing = ingredientsById[ri.ingredientId];
+    if (!ing) continue;
+    const have = getFridgeQty(fridge, ing.name);
+    if (have < ri.qty) {
+      missing.push({ name: ing.name, short: ri.qty - have, unit: ri.unit });
+      if (ing.critical) criticalMissing++;
+    }
+  }
+
+  let level = criticalMissing === 0 ? "green" : criticalMissing <= 2 ? "amber" : "red";
+  return { level, missing, items };
+}
+
+// Sample fridge contents - not yet wired to a real backend for live updates
+const FRIDGE = { banana: 1, tomato: 5, strawberry: 2, apple: 4, egg: 3, milk: 1000 };
+
+function useData() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    Promise.all([
+      fetch("data/recipes.json").then(r => r.json()),
+      fetch("data/ingredients.json").then(r => r.json()),
+      fetch("data/recipe_ingredients.json").then(r => r.json()),
+      fetch("data/recipe_steps.json").then(r => r.json()),
+    ])
+      .then(([recipes, ingredients, recipeIngredients, recipeSteps]) => {
+        const ingredientsById = {};
+        ingredients.forEach(i => { ingredientsById[i.id] = i; });
+        setData({ recipes, ingredients, ingredientsById, recipeIngredients, recipeSteps });
+      })
+      .catch(err => setError(err.message));
+  }, []);
+
+  return { data, error };
+}
+
+function App() {
+  const { data, error } = useData();
+  const [view, setView] = useState("dashboard"); // dashboard | recipe | cook
+  const [activeRecipeId, setActiveRecipeId] = useState(null);
+  const [cookStep, setCookStep] = useState(0);
+  const [selected, setSelected] = useState(new Set());
+
+  if (error) {
+    return (
+      <div className="screen">
+        <p style={{ color: "var(--red)" }}>
+          Could not load data ({error}). If you're opening this file directly instead of through
+          a hosted URL, that's why — fetch() needs http(s), not file://. This works once pushed to
+          GitHub Pages.
+        </p>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return <div className="screen"><div className="loading">Loading…</div></div>;
+  }
+
+  const openRecipe = (id) => { setActiveRecipeId(id); setView("recipe"); };
+  const startCooking = (id) => { setActiveRecipeId(id); setCookStep(0); setView("cook"); };
+
+  if (view === "recipe") {
+    return (
+      <RecipeDetail
+        data={data}
+        recipeId={activeRecipeId}
+        onBack={() => setView("dashboard")}
+        onCook={() => startCooking(activeRecipeId)}
+      />
+    );
+  }
+
+  if (view === "cook") {
+    return (
+      <CookMode
+        data={data}
+        recipeId={activeRecipeId}
+        step={cookStep}
+        setStep={setCookStep}
+        onExit={() => setView("recipe")}
+      />
+    );
+  }
+
+  return (
+    <Dashboard
+      data={data}
+      selected={selected}
+      setSelected={setSelected}
+      onOpenRecipe={openRecipe}
+    />
+  );
+}
+
+function Dashboard({ data, selected, setSelected, onOpenRecipe }) {
+  const { recipes, recipeIngredients, ingredientsById } = data;
+
+  const statuses = useMemo(() => {
+    const map = {};
+    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, FRIDGE);
+    return map;
+  }, [recipes, recipeIngredients, ingredientsById]);
+
+  const nCook = Object.values(statuses).filter(s => s.level === "green").length;
+  const nFridgeItems = Object.values(FRIDGE).filter(q => q > 0).length;
+
+  const shoppingList = useMemo(() => {
+    const totals = {};
+    for (const r of recipes) {
+      if (!selected.has(r.id)) continue;
+      for (const item of statuses[r.id].missing) {
+        const key = item.name + "|" + item.unit;
+        totals[key] = (totals[key] || 0) + item.short;
+      }
+    }
+    return Object.entries(totals).map(([key, qty]) => {
+      const [name, unit] = key.split("|");
+      return { name, unit, qty };
+    });
+  }, [selected, statuses, recipes]);
+
+  const toggleRecipe = (id) => {
+    setSelected(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
+
+  const now = new Date();
+  const stamp = now.toLocaleDateString("de-DE") + " " + now.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+
+  return (
+    <div className="screen">
+      <div className="header">
+        <h1>MEAL PLANNER</h1>
+        <div style={{ color: "var(--muted)", fontSize: 11 }}>Stand: {stamp}</div>
+      </div>
+
+      <div className="kpi-row">
+        <Kpi label="Rezepte" value={recipes.length} />
+        <Kpi label="Im Kühlschrank" value={nFridgeItems} />
+        <Kpi label="Einzukaufen" value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
+        <Kpi label="Kochbereit" value={nCook} tone={nCook > 0 ? "good" : "warn"} />
+      </div>
+
+      <div className="main-row">
+        <div className="tile">
+          <div className="tile-hdr">Was kann ich kochen? — Name antippen zum Öffnen, Zeile für Einkaufsliste</div>
+          {recipes.map(r => {
+            const s = statuses[r.id];
+            const isSel = selected.has(r.id);
+            return (
+              <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")}>
+                <span className="check" onClick={() => toggleRecipe(r.id)}>✓</span>
+                <span className={"dot " + s.level}></span>
+                <span>
+                  <span className="recipe-title" onClick={() => onOpenRecipe(r.id)}>{r.name}</span>
+                  {s.missing.length > 0 && (
+                    <span className="sugg-missing">
+                      {" — fehlt: "}
+                      {s.missing.map(m => `${m.name} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
+                    </span>
+                  )}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="right-col">
+          <div className="tile">
+            <div className="tile-hdr">Einkaufsliste — offen</div>
+            {shoppingList.length === 0 ? (
+              <div className="empty-msg">Rezepte auswählen, um die Einkaufsliste zu füllen.</div>
+            ) : (
+              shoppingList.map(item => (
+                <div className="shop-item" key={item.name + item.unit}>
+                  <span style={{ textTransform: "capitalize" }}>{item.name}</span>
+                  <span className="qty">{item.qty}{item.unit === "pcs" ? "" : " " + item.unit}</span>
+                </div>
+              ))
+            )}
+          </div>
+          <div className="tile">
+            <div className="tile-hdr">Ausgewählte Rezepte</div>
+            {selected.size === 0 ? (
+              <div className="empty-msg">Noch keine Auswahl.</div>
+            ) : (
+              recipes.filter(r => selected.has(r.id)).map(r => (
+                <div key={r.id} style={{ fontSize: 13.5, color: "var(--text)", padding: "4px 0" }}>{r.name}</div>
+              ))
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="btn-row">
+        <button className="btn primary" onClick={() => setSelected(new Set())}>Auswahl zurücksetzen</button>
+        <button className="btn" onClick={() => document.documentElement.requestFullscreen?.()}>Vollbild</button>
+      </div>
+    </div>
+  );
+}
+
+function RecipeDetail({ data, recipeId, onBack, onCook }) {
+  const { recipes, recipeIngredients, ingredientsById } = data;
+  const recipe = recipes.find(r => r.id === recipeId);
+  const items = recipeIngredients.filter(ri => ri.recipeId === recipeId);
+  const hasSteps = data.recipeSteps.some(s => s.recipeId === recipeId);
+
+  return (
+    <div className="screen">
+      <div className="header">
+        <span className="back" onClick={onBack}>‹ Zurück</span>
+      </div>
+
+      {recipe.heroImage && <img className="hero-img" src={recipe.heroImage} alt={recipe.name} />}
+
+      <h2 style={{ color: "var(--text)", marginTop: 0 }}>{recipe.name}</h2>
+      <div className="recipe-meta">
+        {recipe.servings} Portionen
+        {recipe.durationMinutes && ` · ${recipe.durationMinutes} Min.`}
+        {recipe.kcal && ` · ${recipe.kcal} kcal`}
+      </div>
+
+      <div className="tile-hdr">Zutaten</div>
+      <ul className="ing-list">
+        {items.map(ri => {
+          const ing = ingredientsById[ri.ingredientId];
+          return (
+            <li key={ri.id}>
+              <span>{ing ? ing.name : "?"}</span>
+              <span className="qty">{ri.qty}{ri.unit === "pcs" ? "" : " " + ri.unit}</span>
+            </li>
+          );
+        })}
+      </ul>
+
+      {hasSteps ? (
+        <button className="btn primary" style={{ width: "100%", padding: 16 }} onClick={onCook}>
+          Kochen starten →
+        </button>
+      ) : (
+        <div className="empty-msg">Für dieses Rezept sind noch keine Zubereitungsschritte hinterlegt.</div>
+      )}
+    </div>
+  );
+}
+
+function CookMode({ data, recipeId, step, setStep, onExit }) {
+  const steps = data.recipeSteps.filter(s => s.recipeId === recipeId).sort((a, b) => a.stepNumber - b.stepNumber);
+  const current = steps[step];
+
+  if (!current) return null;
+
+  const isLast = step === steps.length - 1;
+
+  return (
+    <div className="screen">
+      <div className="header">
+        <span className="back" onClick={onExit}>‹ Rezept</span>
+      </div>
+
+      <div className="cook-progress">Schritt {step + 1} von {steps.length}</div>
+
+      {current.image && <img className="cook-step-img" src={current.image} alt={current.title} />}
+
+      <div className="cook-title">{current.title}</div>
+      <div className="cook-instruction">{current.instruction}</div>
+
+      <div className="cook-nav">
+        <button className="btn" disabled={step === 0} style={{ opacity: step === 0 ? 0.4 : 1 }}
+                onClick={() => setStep(s => Math.max(0, s - 1))}>
+          ← Zurück
+        </button>
+        <button className="btn primary"
+                onClick={() => isLast ? onExit() : setStep(s => s + 1)}>
+          {isLast ? "Fertig ✓" : "Weiter →"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function Kpi({ label, value, tone }) {
+  return (
+    <div className="kpi">
+      <div className="kpi-label">{label}</div>
+      <div className={"kpi-value" + (tone ? " " + tone : "")}>{value}</div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<p class="hint">
+  Fridge contents are still sample data (banana, tomato, strawberry, apple, egg, milk) — live fridge
+  editing comes in a later pass. Ingredient totals, recipe detail, and cook-through mode are fully real.
+</p>
+
+</body>
+</html>
