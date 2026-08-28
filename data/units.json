@@ -1,0 +1,10 @@
+[
+  { "unit": "g", "type": "Weight", "conversionBase": 1 },
+  { "unit": "kg", "type": "Weight", "conversionBase": 1000 },
+  { "unit": "ml", "type": "Volume", "conversionBase": 1 },
+  { "unit": "l", "type": "Volume", "conversionBase": 1000 },
+  { "unit": "pcs", "type": "Pieces", "conversionBase": 1 },
+  { "unit": "tbsp", "type": "Volume", "conversionBase": 1 },
+  { "unit": "tsp", "type": "Volume", "conversionBase": 1 },
+  { "unit": "pinch", "type": "Volume", "conversionBase": 1 }
+]

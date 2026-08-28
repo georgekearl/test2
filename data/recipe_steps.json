@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "recipeId": 5,
+    "stepNumber": 1,
+    "title": "Kartoffeln backen",
+    "instruction": "Heize den Backofen auf 220°C Ober-/Unterhitze (200°C Umluft) vor. Kartoffeln in 2 cm Spalten schneiden. Kartoffeln auf einem mit Backpapier belegten Backblech verteilen, mit 1 EL [1,5 EL | 2 EL] Olivenöl*, Salz* und Pfeffer* vermengen und im Ofen 25–30 Min. goldbraun backen.",
+    "image": "images/step1.jpg"
+  },
+  {
+    "id": 2,
+    "recipeId": 5,
+    "stepNumber": 2,
+    "title": "Gemüse schneiden",
+    "instruction": "Enden der Bohnen abschneiden und Bohnen quer halbieren. Zwiebel vierteln und in dünne Streifen schneiden. Knoblauch fein hacken.",
+    "image": "images/step2.jpg"
+  },
+  {
+    "id": 3,
+    "recipeId": 5,
+    "stepNumber": 3,
+    "title": "Ragout kochen",
+    "instruction": "In einem großen Topf mit Deckel 0,5 EL [0,75 EL | 1 EL] Olivenöl* bei mittlerer Hitze erwärmen. Knoblauch, Zwiebel und Buschbohnen 1–2 Min. andünsten. Butterbohnen, stückige Tomaten, Brühepulver, etwas gerebelten Oregano (Achtung: sehr intensives Aroma) und 50 ml [75 ml | 100 ml] Wasser* unterrühren. Alles ca. 8 Min. abgedeckt kochen lassen, bis die Buschbohnen weich sind und die Soße etwas eindickt. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/step3.jpg"
+  },
+  {
+    "id": 4,
+    "recipeId": 5,
+    "stepNumber": 4,
+    "title": "Hirtenkäse panieren",
+    "instruction": "Zitrone heiß waschen und 1 TL [1,5 TL | 2 TL] der Schale fein abreiben. Hirtenkäse diagonal halbieren. Auf einem flachen Teller \"Hello Souflaki\" mit 1 TL [1,5 TL | 2 TL] Mehl gut mischen und Hirtenkäse vorsichtig von beiden Seiten hineindrücken.",
+    "image": "images/step4.jpg"
+  },
+  {
+    "id": 5,
+    "recipeId": 5,
+    "stepNumber": 5,
+    "title": "Hirtenkäse braten",
+    "instruction": "In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Olivenöl* erhitzen. Hirtenkäse darin je Seite 1–2 Min. anbraten. Bohnenragout mit Salz*, Pfeffer* und nach Belieben etwas mehr Oregano abschmecken.",
+    "image": "images/step5.jpg"
+  },
+  {
+    "id": 6,
+    "recipeId": 5,
+    "stepNumber": 6,
+    "title": "Anrichten",
+    "instruction": "Ofenkartoffeln mit Zitronenabrieb vermengen und auf Teller verteilen. Bohnenragout daneben geben und Hirtenkäse auf dem Ragout anrichten. Mit Joghurt genießen.",
+    "image": "images/step6.jpg"
+  }
+]

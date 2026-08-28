@@ -1,0 +1,36 @@
+[
+  { "id": 1, "recipeId": 1, "ingredientId": 31, "qty": 200, "unit": "g" },
+  { "id": 2, "recipeId": 1, "ingredientId": 21, "qty": 2, "unit": "pcs" },
+  { "id": 3, "recipeId": 1, "ingredientId": 12, "qty": 1, "unit": "pcs" },
+  { "id": 4, "recipeId": 1, "ingredientId": 37, "qty": 2, "unit": "tbsp" },
+  { "id": 5, "recipeId": 1, "ingredientId": 51, "qty": 1, "unit": "tsp" },
+
+  { "id": 6, "recipeId": 2, "ingredientId": 6, "qty": 2, "unit": "pcs" },
+  { "id": 7, "recipeId": 2, "ingredientId": 7, "qty": 50, "unit": "ml" },
+  { "id": 8, "recipeId": 2, "ingredientId": 8, "qty": 1, "unit": "tbsp" },
+  { "id": 9, "recipeId": 2, "ingredientId": 51, "qty": 1, "unit": "pinch" },
+  { "id": 10, "recipeId": 2, "ingredientId": 52, "qty": 1, "unit": "pinch" },
+
+  { "id": 11, "recipeId": 3, "ingredientId": 64, "qty": 1, "unit": "pcs" },
+  { "id": 12, "recipeId": 3, "ingredientId": 65, "qty": 100, "unit": "g" },
+  { "id": 13, "recipeId": 3, "ingredientId": 27, "qty": 1, "unit": "pcs" },
+  { "id": 14, "recipeId": 3, "ingredientId": 47, "qty": 1, "unit": "tbsp" },
+
+  { "id": 15, "recipeId": 4, "ingredientId": 4, "qty": 100, "unit": "g" },
+  { "id": 16, "recipeId": 4, "ingredientId": 8, "qty": 50, "unit": "g" },
+  { "id": 17, "recipeId": 4, "ingredientId": 12, "qty": 50, "unit": "g" },
+  { "id": 18, "recipeId": 4, "ingredientId": 17, "qty": 80, "unit": "g" },
+
+  { "id": 19, "recipeId": 5, "ingredientId": 19, "qty": 700, "unit": "g" },
+  { "id": 20, "recipeId": 5, "ingredientId": 101, "qty": 200, "unit": "g" },
+  { "id": 21, "recipeId": 5, "ingredientId": 13, "qty": 4, "unit": "pcs" },
+  { "id": 22, "recipeId": 5, "ingredientId": 102, "qty": 760, "unit": "g" },
+  { "id": 23, "recipeId": 5, "ingredientId": 103, "qty": 400, "unit": "g" },
+  { "id": 24, "recipeId": 5, "ingredientId": 104, "qty": 780, "unit": "g" },
+  { "id": 25, "recipeId": 5, "ingredientId": 105, "qty": 8, "unit": "g" },
+  { "id": 26, "recipeId": 5, "ingredientId": 12, "qty": 2, "unit": "pcs" },
+  { "id": 27, "recipeId": 5, "ingredientId": 106, "qty": 150, "unit": "g" },
+  { "id": 28, "recipeId": 5, "ingredientId": 107, "qty": 1, "unit": "g" },
+  { "id": 29, "recipeId": 5, "ingredientId": 108, "qty": 8, "unit": "g" },
+  { "id": 30, "recipeId": 5, "ingredientId": 25, "qty": 1, "unit": "pcs" }
+]

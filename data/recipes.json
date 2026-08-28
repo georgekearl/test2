@@ -1,0 +1,15 @@
+[
+  { "id": 1, "name": "Tomato Pasta", "servings": 2, "heroImage": null },
+  { "id": 2, "name": "Scrambled Eggs", "servings": 1, "heroImage": null },
+  { "id": 3, "name": "Fruit Bowl", "servings": 1, "heroImage": null },
+  { "id": 4, "name": "Fish", "servings": 2, "heroImage": null },
+  {
+    "id": 5,
+    "name": "Panierter Hirtenkäse auf tomatigem Bohnenragout mit griechischen Zitronenkartoffeln",
+    "servings": 4,
+    "heroImage": "images/hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 766
+  }
+]
