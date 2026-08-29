@@ -9,6 +9,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 
+<!-- Firebase - used for live cross-device sync of fridge contents and
+     shopping-list selections. Recipes/ingredients/steps still come from
+     the static data/*.json files fetched above; Firebase is only for the
+     state that multiple people editing from different devices need to
+     share. -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
 <style>
   :root {
     --bg: rgb(24,26,38); --tile: rgb(38,41,58); --tile-hi: rgb(50,54,76);
@@ -93,7 +101,24 @@
 <script type="text/babel">
 const { useState, useEffect, useMemo } = React;
 
-const FRIDGE_STORAGE_KEY = "mealPlannerFridge";
+// ==========================================================
+// FIREBASE CONFIG - REPLACE THE VALUES BELOW WITH YOUR OWN
+// PROJECT'S CONFIG FROM THE FIREBASE CONSOLE (Project settings
+// > General > Your apps > SDK setup and configuration).
+// The app will not connect until these are your real values.
+// ==========================================================
+const firebaseConfig = {
+  apiKey: "AIzaSyDpLvpskM4wOphACUhsh8sqBlM2Uwe8fPA",
+  authDomain: "meal-planner-96c95.firebaseapp.com",
+  databaseURL: "https://meal-planner-96c95-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "meal-planner-96c95",
+  storageBucket: "meal-planner-96c95.firebasestorage.app",
+  messagingSenderId: "63291579484",
+  appId: "1:63291579484:web:83db9a5870d2051a329a99"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
 const DEFAULT_FRIDGE = { banana: 1, tomato: 5, strawberry: 2, apple: 4, egg: 3, milk: 1000 };
 
 function normalize(name) {
@@ -104,14 +129,49 @@ function getFridgeQty(fridge, name) {
   return fridge[normalize(name)] || 0;
 }
 
-function loadFridge() {
-  try {
-    const raw = localStorage.getItem(FRIDGE_STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (err) {
-    console.error("Could not read saved fridge, using defaults:", err);
-  }
-  return DEFAULT_FRIDGE;
+// Live-synced fridge: any device that writes here updates every other
+// device watching the same path, in real time, no refresh needed.
+function useSharedFridge() {
+  const [fridge, setFridgeLocal] = React.useState(null); // null = still loading
+
+  React.useEffect(() => {
+    const ref = db.ref("mealPlanner/fridge");
+
+    ref.once("value", snap => {
+      if (snap.val() === null) ref.set(DEFAULT_FRIDGE); // first-ever load seeds the shared default
+    });
+
+    const handler = snap => setFridgeLocal(snap.val() || {});
+    ref.on("value", handler);
+    return () => ref.off("value", handler);
+  }, []);
+
+  const setFridge = (updaterOrValue) => {
+    const next = typeof updaterOrValue === "function" ? updaterOrValue(fridge || {}) : updaterOrValue;
+    db.ref("mealPlanner/fridge").set(next);
+  };
+
+  return [fridge, setFridge];
+}
+
+// Live-synced "selected for shopping" recipe IDs, same pattern as the fridge.
+function useSharedSelected() {
+  const [selected, setSelectedLocal] = React.useState(null); // null = still loading
+
+  React.useEffect(() => {
+    const ref = db.ref("mealPlanner/selected");
+    const handler = snap => setSelectedLocal(new Set(snap.val() || []));
+    ref.on("value", handler);
+    return () => ref.off("value", handler);
+  }, []);
+
+  const setSelected = (updaterOrValue) => {
+    const current = selected || new Set();
+    const next = typeof updaterOrValue === "function" ? updaterOrValue(current) : updaterOrValue;
+    db.ref("mealPlanner/selected").set(Array.from(next));
+  };
+
+  return [selected, setSelected];
 }
 
 // Same logic as modFridgeCheck.bas
@@ -161,16 +221,8 @@ function App() {
   const [view, setView] = useState("dashboard"); // dashboard | recipe | cook | fridge
   const [activeRecipeId, setActiveRecipeId] = useState(null);
   const [cookStep, setCookStep] = useState(0);
-  const [selected, setSelected] = useState(new Set());
-  const [fridge, setFridge] = useState(loadFridge);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(FRIDGE_STORAGE_KEY, JSON.stringify(fridge));
-    } catch (err) {
-      console.error("Could not save fridge:", err);
-    }
-  }, [fridge]);
+  const [selected, setSelected] = useSharedSelected();
+  const [fridge, setFridge] = useSharedFridge();
 
   if (error) {
     return (
@@ -184,7 +236,7 @@ function App() {
     );
   }
 
-  if (!data) {
+  if (!data || fridge === null || selected === null) {
     return <div className="screen"><div className="loading">Loading…</div></div>;
   }
 
@@ -417,8 +469,7 @@ function FridgeScreen({ data, fridge, setFridge, onBack }) {
       </div>
 
       <p className="hint" style={{ marginTop: 20 }}>
-        Änderungen werden auf diesem Gerät/Browser gespeichert. Auf einem anderen Gerät geöffnet, startet
-        der Kühlschrank wieder mit den Standardwerten — geräteübergreifende Synchronisierung folgt später.
+        Änderungen werden live mit allen Geräten synchronisiert, die diese Seite geöffnet haben.
       </p>
     </div>
   );
@@ -517,8 +568,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
 
 <p class="hint">
-  Ingredient totals, recipe detail, cook-through mode, and the fridge are all fully real now.
-  Fridge changes save to this device's browser — cross-device sync is a later step.
+  Ingredient totals, recipe detail, and cook-through mode are fully real. Fridge contents and
+  shopping-list selections now sync live across every device open on this page via Firebase —
+  a change on one screen appears on the others within a second or two, no reload needed.
 </p>
 
 </body>
