@@ -11,9 +11,7 @@
 
 <!-- Firebase - used for live cross-device sync of fridge contents and
      shopping-list selections. Recipes/ingredients/steps still come from
-     the static data/*.json files fetched above; Firebase is only for the
-     state that multiple people editing from different devices need to
-     share. -->
+     the static data/*.json files fetched below. -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 
@@ -27,9 +25,12 @@
   * { box-sizing: border-box; }
   body { margin:0; padding:18px; background:#0d0e15; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; display:flex; justify-content:center; }
   .screen { width:100%; max-width:980px; background:var(--bg); border-radius:14px; padding:22px; box-shadow:0 20px 60px rgba(0,0,0,0.5); min-height:70vh; }
-  .header { display:flex; justify-content:space-between; align-items:center; padding-bottom:14px; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.06); }
-  .header h1 { margin:0; font-size:clamp(18px,3.6vw,26px); font-weight:700; color:var(--text); }
-  .back { color:var(--accent); font-size:14px; cursor:pointer; font-weight:600; }
+  .header { display:flex; justify-content:space-between; align-items:center; padding-bottom:14px; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.06); gap:12px; flex-wrap:wrap; }
+  .header h1 { margin:0; font-size:clamp(18px,3.6vw,26px); font-weight:700; color:var(--text); cursor:pointer; }
+  .header-right { display:flex; align-items:center; gap:10px; }
+  .back { color:var(--accent); font-size:14px; cursor:pointer; font-weight:600; white-space:nowrap; }
+  .lang-toggle { font-size:19px; cursor:pointer; padding:3px 9px; border-radius:8px; background:var(--tile); border:1px solid var(--border); line-height:1.4; }
+  .lang-toggle:hover { background:var(--tile-hi); }
 
   .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:14px; }
   @media (max-width:620px){ .kpi-row{grid-template-columns:repeat(2,1fr);} .main-row{grid-template-columns:1fr !important;} }
@@ -48,6 +49,7 @@
   .sugg-line.selected { background:rgba(99,148,255,0.12); }
   .check { flex:0 0 auto; width:16px; height:16px; margin-top:2px; border-radius:4px; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:11px; color:transparent; }
   .sugg-line.selected .check { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
+  .check.checked { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
   .dot { flex:0 0 auto; width:9px; height:9px; border-radius:50%; margin-top:5px; }
   .dot.green{background:var(--green);} .dot.amber{background:var(--amber);} .dot.red{background:var(--red);}
   .sugg-missing { color:var(--muted); font-size:12.5px; }
@@ -70,6 +72,14 @@
   .ing-list li { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(255,255,255,0.05); color:var(--text); font-size:14px; }
   .ing-list li .qty { color:var(--muted); }
 
+  .recipe-card { display:flex; gap:14px; background:var(--tile); border-radius:10px; padding:14px; margin-bottom:12px; cursor:pointer; }
+  .recipe-card:hover { background:var(--tile-hi); }
+  .recipe-card-img { width:96px; height:96px; object-fit:cover; border-radius:8px; flex:0 0 auto; }
+  .recipe-card-body { flex:1; min-width:0; }
+  .recipe-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .recipe-card-title { font-size:15px; font-weight:700; color:var(--text); text-decoration:underline; text-decoration-color:rgba(255,255,255,0.25); }
+  .recipe-card-meta { color:var(--muted); font-size:12.5px; margin-top:6px; display:flex; align-items:center; gap:6px; }
+
   .cook-step-img { width:100%; max-height:320px; object-fit:cover; border-radius:10px; margin-bottom:16px; }
   .cook-progress { color:var(--muted); font-size:12px; text-align:center; margin-bottom:8px; letter-spacing:.5px; text-transform:uppercase; }
   .cook-title { font-size:20px; font-weight:700; color:var(--text); margin-bottom:12px; text-align:center; }
@@ -78,7 +88,7 @@
   .cook-nav .btn { flex:1; padding:16px; font-size:15px; }
 
   .fridge-row { display:flex; align-items:center; justify-content:space-between; padding:10px 4px; border-bottom:1px solid rgba(255,255,255,0.05); }
-  .fridge-name { font-size:14.5px; color:var(--text); text-transform:capitalize; }
+  .fridge-name { font-size:14.5px; color:var(--text); }
   .fridge-controls { display:flex; align-items:center; gap:10px; }
   .stepper-btn { width:30px; height:30px; border-radius:8px; background:var(--tile-hi); border:1px solid var(--border); color:var(--text); font-size:16px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; }
   .stepper-btn:hover { background:var(--accent); color:rgb(20,24,40); border-color:var(--accent); }
@@ -98,47 +108,149 @@
 <body>
 <div id="root"></div>
 
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDpLvpskM4wOphACUhsh8sqBlM2Uwe8fPA",
+    authDomain: "meal-planner-96c95.firebaseapp.com",
+    databaseURL: "https://meal-planner-96c95-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "meal-planner-96c95",
+    storageBucket: "meal-planner-96c95.firebasestorage.app",
+    messagingSenderId: "63291579484",
+    appId: "1:63291579484:web:83db9a5870d2051a329a99"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
+
 <script type="text/babel">
 const { useState, useEffect, useMemo } = React;
 
-// ==========================================================
-// FIREBASE CONFIG - REPLACE THE VALUES BELOW WITH YOUR OWN
-// PROJECT'S CONFIG FROM THE FIREBASE CONSOLE (Project settings
-// > General > Your apps > SDK setup and configuration).
-// The app will not connect until these are your real values.
-// ==========================================================
-const firebaseConfig = {
-  apiKey: "AIzaSyDpLvpskM4wOphACUhsh8sqBlM2Uwe8fPA",
-  authDomain: "meal-planner-96c95.firebaseapp.com",
-  databaseURL: "https://meal-planner-96c95-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "meal-planner-96c95",
-  storageBucket: "meal-planner-96c95.firebasestorage.app",
-  messagingSenderId: "63291579484",
-  appId: "1:63291579484:web:83db9a5870d2051a329a99"
+// =====================================================
+// i18n
+// =====================================================
+const STRINGS = {
+  de: {
+    appTitle: "MEAL PLANNER",
+    recipes: "Rezepte",
+    inFridge: "Im Kühlschrank",
+    toBuy: "Einzukaufen",
+    readyToCook: "Kochbereit",
+    whatCanICook: "Was kann ich kochen?",
+    whatCanICookHint: "Zeile antippen zum Öffnen, Häkchen für die Einkaufsliste",
+    missingLabel: "fehlt",
+    shoppingListOpen: "Einkaufsliste — offen",
+    shoppingListEmpty: "Rezepte auswählen, um die Einkaufsliste zu füllen.",
+    selectedRecipes: "Ausgewählte Rezepte",
+    noSelectionYet: "Noch keine Auswahl.",
+    resetSelection: "Auswahl zurücksetzen",
+    fridgeBtn: "Kühlschrank",
+    fullscreen: "Vollbild",
+    back: "‹ Zurück",
+    backToRecipe: "‹ Rezept",
+    servings: "Portionen",
+    ingredients: "Zutaten",
+    startCooking: "Kochen starten →",
+    noStepsYet: "Für dieses Rezept sind noch keine Zubereitungsschritte hinterlegt.",
+    stepOf: (a, b) => `Schritt ${a} von ${b}`,
+    navBack: "← Zurück",
+    next: "Weiter →",
+    done: "Fertig ✓",
+    fridgeTitle: "Kühlschrank",
+    fridgeEmpty: "Noch nichts im Kühlschrank hinterlegt.",
+    chooseIngredient: "Zutat wählen…",
+    add: "Hinzufügen",
+    fridgeSyncHint: "Änderungen werden live mit allen Geräten synchronisiert, die diese Seite geöffnet haben.",
+    allRecipes: "Alle Rezepte",
+    loading: "Wird geladen…",
+  },
+  en: {
+    appTitle: "MEAL PLANNER",
+    recipes: "Recipes",
+    inFridge: "In the Fridge",
+    toBuy: "To Buy",
+    readyToCook: "Ready to Cook",
+    whatCanICook: "What can I cook?",
+    whatCanICookHint: "Tap a row to open, checkmark for the shopping list",
+    missingLabel: "missing",
+    shoppingListOpen: "Shopping List — Open",
+    shoppingListEmpty: "Select recipes to fill the shopping list.",
+    selectedRecipes: "Selected Recipes",
+    noSelectionYet: "Nothing selected yet.",
+    resetSelection: "Reset Selection",
+    fridgeBtn: "Fridge",
+    fullscreen: "Fullscreen",
+    back: "‹ Back",
+    backToRecipe: "‹ Recipe",
+    servings: "servings",
+    ingredients: "Ingredients",
+    startCooking: "Start Cooking →",
+    noStepsYet: "No cooking steps have been added for this recipe yet.",
+    stepOf: (a, b) => `Step ${a} of ${b}`,
+    navBack: "← Back",
+    next: "Next →",
+    done: "Done ✓",
+    fridgeTitle: "Fridge",
+    fridgeEmpty: "Nothing in the fridge yet.",
+    chooseIngredient: "Choose ingredient…",
+    add: "Add",
+    fridgeSyncHint: "Changes sync live with every device that has this page open.",
+    allRecipes: "All Recipes",
+    loading: "Loading…",
+  },
 };
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
 
-const DEFAULT_FRIDGE = { banana: 1, tomato: 5, strawberry: 2, apple: 4, egg: 3, milk: 1000 };
-
-function normalize(name) {
-  return name.toLowerCase().trim();
+function t(lang, key, ...args) {
+  const dict = STRINGS[lang] || STRINGS.de;
+  const val = dict[key] !== undefined ? dict[key] : STRINGS.de[key];
+  return typeof val === "function" ? val(...args) : val;
 }
 
-function getFridgeQty(fridge, name) {
-  return fridge[normalize(name)] || 0;
+function localName(item, lang) {
+  if (!item) return "?";
+  return item["name_" + lang] || item.name_de || item.name_en || "?";
 }
 
-// Live-synced fridge: any device that writes here updates every other
-// device watching the same path, in real time, no refresh needed.
+function localField(item, field, lang) {
+  if (!item) return "";
+  return item[field + "_" + lang] || item[field + "_de"] || item[field + "_en"] || "";
+}
+
+const LANG_STORAGE_KEY = "mealPlannerLang";
+function loadLang() {
+  try {
+    return localStorage.getItem(LANG_STORAGE_KEY) || "de";
+  } catch (err) {
+    return "de";
+  }
+}
+
+function LangToggle({ lang, setLang }) {
+  const other = lang === "de" ? "en" : "de";
+  const flag = other === "de" ? "🇩🇪" : "🇬🇧";
+  return (
+    <span className="lang-toggle" onClick={() => setLang(other)} title={other === "de" ? "Deutsch" : "English"}>
+      {flag}
+    </span>
+  );
+}
+
+// =====================================================
+// Shared state (Firebase) - fridge is keyed by ingredient
+// ID, never by name text. This is deliberate: matching by
+// name broke as soon as a name had a plural ("Eggs" vs the
+// old fridge key "egg"), and would break constantly once
+// names change per language. IDs are stable in both cases.
+// =====================================================
+const DEFAULT_FRIDGE = { 64: 1, 21: 5, 65: 2, 27: 4, 6: 3, 7: 1000 };
+
 function useSharedFridge() {
   const [fridge, setFridgeLocal] = React.useState(null); // null = still loading
 
   React.useEffect(() => {
-    const ref = db.ref("mealPlanner/fridge");
+    const ref = db.ref("mealPlanner/fridgeById");
 
     ref.once("value", snap => {
-      if (snap.val() === null) ref.set(DEFAULT_FRIDGE); // first-ever load seeds the shared default
+      if (snap.val() === null) ref.set(DEFAULT_FRIDGE);
     });
 
     const handler = snap => setFridgeLocal(snap.val() || {});
@@ -150,15 +262,14 @@ function useSharedFridge() {
     setFridgeLocal(prevLocal => {
       const base = prevLocal || {};
       const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
-      db.ref("mealPlanner/fridge").set(next); // syncs to other devices; Firebase's own listener will re-confirm this locally too, harmlessly
-      return next; // update this screen immediately, don't wait on the round-trip
+      db.ref("mealPlanner/fridgeById").set(next);
+      return next;
     });
   };
 
   return [fridge, setFridge];
 }
 
-// Live-synced "selected for shopping" recipe IDs, same pattern as the fridge.
 function useSharedSelected() {
   const [selected, setSelectedLocal] = React.useState(null); // null = still loading
 
@@ -173,15 +284,15 @@ function useSharedSelected() {
     setSelectedLocal(prevLocal => {
       const base = prevLocal || new Set();
       const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
-      db.ref("mealPlanner/selected").set(Array.from(next)); // syncs to other devices
-      return next; // update this screen immediately
+      db.ref("mealPlanner/selected").set(Array.from(next));
+      return next;
     });
   };
 
   return [selected, setSelected];
 }
 
-// Same logic as modFridgeCheck.bas
+// Same intent as modFridgeCheck.bas - now matching by ingredient ID
 function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
   const items = recipeIngredients.filter(ri => ri.recipeId === recipe.id);
   let criticalMissing = 0;
@@ -190,9 +301,9 @@ function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
   for (const ri of items) {
     const ing = ingredientsById[ri.ingredientId];
     if (!ing) continue;
-    const have = getFridgeQty(fridge, ing.name);
+    const have = fridge[ri.ingredientId] || 0;
     if (have < ri.qty) {
-      missing.push({ name: ing.name, short: ri.qty - have, unit: ri.unit });
+      missing.push({ ing, short: ri.qty - have, unit: ri.unit });
       if (ing.critical) criticalMissing++;
     }
   }
@@ -225,11 +336,17 @@ function useData() {
 
 function App() {
   const { data, error } = useData();
-  const [view, setView] = useState("dashboard"); // dashboard | recipe | cook | fridge
+  const [view, setView] = useState("dashboard"); // dashboard | recipe | cook | fridge | recipes
   const [activeRecipeId, setActiveRecipeId] = useState(null);
   const [cookStep, setCookStep] = useState(0);
   const [selected, setSelected] = useSharedSelected();
   const [fridge, setFridge] = useSharedFridge();
+  const [lang, setLangState] = useState(loadLang);
+
+  const setLang = (l) => {
+    setLangState(l);
+    try { localStorage.setItem(LANG_STORAGE_KEY, l); } catch (err) {}
+  };
 
   if (error) {
     return (
@@ -244,19 +361,23 @@ function App() {
   }
 
   if (!data || fridge === null || selected === null) {
-    return <div className="screen"><div className="loading">Loading…</div></div>;
+    return <div className="screen"><div className="loading">{t(lang, "loading")}</div></div>;
   }
 
   const openRecipe = (id) => { setActiveRecipeId(id); setView("recipe"); };
   const startCooking = (id) => { setActiveRecipeId(id); setCookStep(0); setView("cook"); };
+  const goHome = () => setView("dashboard");
 
   if (view === "recipe") {
     return (
       <RecipeDetail
         data={data}
         recipeId={activeRecipeId}
-        onBack={() => setView("dashboard")}
+        onBack={goHome}
         onCook={() => startCooking(activeRecipeId)}
+        onGoHome={goHome}
+        lang={lang}
+        setLang={setLang}
       />
     );
   }
@@ -269,6 +390,9 @@ function App() {
         step={cookStep}
         setStep={setCookStep}
         onExit={() => setView("recipe")}
+        onGoHome={goHome}
+        lang={lang}
+        setLang={setLang}
       />
     );
   }
@@ -279,7 +403,26 @@ function App() {
         data={data}
         fridge={fridge}
         setFridge={setFridge}
-        onBack={() => setView("dashboard")}
+        onBack={goHome}
+        onGoHome={goHome}
+        lang={lang}
+        setLang={setLang}
+      />
+    );
+  }
+
+  if (view === "recipes") {
+    return (
+      <RecipesPage
+        data={data}
+        fridge={fridge}
+        selected={selected}
+        setSelected={setSelected}
+        onOpenRecipe={openRecipe}
+        onBack={goHome}
+        onGoHome={goHome}
+        lang={lang}
+        setLang={setLang}
       />
     );
   }
@@ -292,11 +435,14 @@ function App() {
       setSelected={setSelected}
       onOpenRecipe={openRecipe}
       onOpenFridge={() => setView("fridge")}
+      onOpenRecipesList={() => setView("recipes")}
+      lang={lang}
+      setLang={setLang}
     />
   );
 }
 
-function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge }) {
+function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, lang, setLang }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
@@ -313,14 +459,12 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
     for (const r of recipes) {
       if (!selected.has(r.id)) continue;
       for (const item of statuses[r.id].missing) {
-        const key = item.name + "|" + item.unit;
-        totals[key] = (totals[key] || 0) + item.short;
+        const key = item.ing.id + "|" + item.unit;
+        if (!totals[key]) totals[key] = { ing: item.ing, unit: item.unit, qty: 0 };
+        totals[key].qty += item.short;
       }
     }
-    return Object.entries(totals).map(([key, qty]) => {
-      const [name, unit] = key.split("|");
-      return { name, unit, qty };
-    });
+    return Object.values(totals);
   }, [selected, statuses, recipes]);
 
   const toggleRecipe = (id) => {
@@ -332,25 +476,28 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
   };
 
   const now = new Date();
-  const stamp = now.toLocaleDateString("de-DE") + " " + now.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+  const stamp = now.toLocaleDateString(lang === "de" ? "de-DE" : "en-GB") + " " + now.toLocaleTimeString(lang === "de" ? "de-DE" : "en-GB", { hour: "2-digit", minute: "2-digit" });
 
   return (
     <div className="screen">
       <div className="header">
-        <h1>MEAL PLANNER</h1>
-        <div style={{ color: "var(--muted)", fontSize: 11 }}>Stand: {stamp}</div>
+        <h1 onClick={() => {}}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <div style={{ color: "var(--muted)", fontSize: 11 }}>{stamp}</div>
+          <LangToggle lang={lang} setLang={setLang} />
+        </div>
       </div>
 
       <div className="kpi-row">
-        <Kpi label="Rezepte" value={recipes.length} />
-        <Kpi label="Im Kühlschrank" value={nFridgeItems} onClick={onOpenFridge} />
-        <Kpi label="Einzukaufen" value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
-        <Kpi label="Kochbereit" value={nCook} tone={nCook > 0 ? "good" : "warn"} />
+        <Kpi label={t(lang, "recipes")} value={recipes.length} onClick={onOpenRecipesList} />
+        <Kpi label={t(lang, "inFridge")} value={nFridgeItems} onClick={onOpenFridge} />
+        <Kpi label={t(lang, "toBuy")} value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
+        <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} />
       </div>
 
       <div className="main-row">
         <div className="tile">
-          <div className="tile-hdr">Was kann ich kochen? — Zeile antippen zum Öffnen, Häkchen für die Einkaufsliste</div>
+          <div className="tile-hdr">{t(lang, "whatCanICook")} — {t(lang, "whatCanICookHint")}</div>
           {recipes.map(r => {
             const s = statuses[r.id];
             const isSel = selected.has(r.id);
@@ -359,11 +506,11 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
                 <span className="check" onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}>✓</span>
                 <span className={"dot " + s.level}></span>
                 <span>
-                  <span className="recipe-title">{r.name}</span>
+                  <span className="recipe-title">{localName(r, lang)}</span>
                   {s.missing.length > 0 && (
                     <span className="sugg-missing">
-                      {" — fehlt: "}
-                      {s.missing.map(m => `${m.name} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
+                      {` — ${t(lang, "missingLabel")}: `}
+                      {s.missing.map(m => `${localName(m.ing, lang)} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
                     </span>
                   )}
                 </span>
@@ -374,25 +521,25 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
 
         <div className="right-col">
           <div className="tile">
-            <div className="tile-hdr">Einkaufsliste — offen</div>
+            <div className="tile-hdr">{t(lang, "shoppingListOpen")}</div>
             {shoppingList.length === 0 ? (
-              <div className="empty-msg">Rezepte auswählen, um die Einkaufsliste zu füllen.</div>
+              <div className="empty-msg">{t(lang, "shoppingListEmpty")}</div>
             ) : (
               shoppingList.map(item => (
-                <div className="shop-item" key={item.name + item.unit}>
-                  <span style={{ textTransform: "capitalize" }}>{item.name}</span>
+                <div className="shop-item" key={item.ing.id + item.unit}>
+                  <span>{localName(item.ing, lang)}</span>
                   <span className="qty">{item.qty}{item.unit === "pcs" ? "" : " " + item.unit}</span>
                 </div>
               ))
             )}
           </div>
           <div className="tile">
-            <div className="tile-hdr">Ausgewählte Rezepte</div>
+            <div className="tile-hdr">{t(lang, "selectedRecipes")}</div>
             {selected.size === 0 ? (
-              <div className="empty-msg">Noch keine Auswahl.</div>
+              <div className="empty-msg">{t(lang, "noSelectionYet")}</div>
             ) : (
               recipes.filter(r => selected.has(r.id)).map(r => (
-                <div key={r.id} style={{ fontSize: 13.5, color: "var(--text)", padding: "4px 0" }}>{r.name}</div>
+                <div key={r.id} style={{ fontSize: 13.5, color: "var(--text)", padding: "4px 0" }}>{localName(r, lang)}</div>
               ))
             )}
           </div>
@@ -400,89 +547,158 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
       </div>
 
       <div className="btn-row">
-        <button className="btn primary" onClick={() => setSelected(new Set())}>Auswahl zurücksetzen</button>
-        <button className="btn" onClick={onOpenFridge}>Kühlschrank</button>
-        <button className="btn" onClick={() => document.documentElement.requestFullscreen?.()}>Vollbild</button>
+        <button className="btn primary" onClick={() => setSelected(new Set())}>{t(lang, "resetSelection")}</button>
+        <button className="btn" onClick={onOpenFridge}>{t(lang, "fridgeBtn")}</button>
+        <button className="btn" onClick={() => document.documentElement.requestFullscreen?.()}>{t(lang, "fullscreen")}</button>
       </div>
     </div>
   );
 }
 
-function FridgeScreen({ data, fridge, setFridge, onBack }) {
-  const [addName, setAddName] = useState("");
-  const [addQty, setAddQty] = useState("1");
+// Dedicated full-page recipe browser — every recipe in the database,
+// with photo, status, and the same add-to-shopping-list checkbox as
+// the Home Screen tile, just roomier and easier to scroll through.
+function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack, onGoHome, lang, setLang }) {
+  const { recipes, recipeIngredients, ingredientsById } = data;
 
-  const entries = Object.entries(fridge).sort((a, b) => a[0].localeCompare(b[0]));
+  const statuses = useMemo(() => {
+    const map = {};
+    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, fridge);
+    return map;
+  }, [recipes, recipeIngredients, ingredientsById, fridge]);
 
-  const adjust = (name, delta) => {
-    setFridge(prev => ({ ...prev, [name]: Math.max(0, (prev[name] || 0) + delta) }));
-  };
-
-  const remove = (name) => {
-    setFridge(prev => {
-      const next = { ...prev };
-      delete next[name];
+  const toggleRecipe = (id) => {
+    setSelected(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
       return next;
     });
   };
 
-  // Ingredients not already tracked in the fridge, for the "add" dropdown
+  return (
+    <div className="screen">
+      <div className="header">
+        <h1 onClick={onGoHome}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <LangToggle lang={lang} setLang={setLang} />
+          <span className="back" onClick={onBack}>{t(lang, "back")}</span>
+        </div>
+      </div>
+
+      <h2 style={{ color: "var(--text)", marginTop: 0, marginBottom: 16 }}>{t(lang, "allRecipes")}</h2>
+
+      {recipes.map(r => {
+        const s = statuses[r.id];
+        const isSel = selected.has(r.id);
+        return (
+          <div key={r.id} className="recipe-card" onClick={() => onOpenRecipe(r.id)}>
+            {r.heroImage && <img className="recipe-card-img" src={r.heroImage} alt={localName(r, lang)} />}
+            <div className="recipe-card-body">
+              <div className="recipe-card-top">
+                <span className="recipe-card-title">{localName(r, lang)}</span>
+                <span
+                  className={"check" + (isSel ? " checked" : "")}
+                  onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}
+                  title={t(lang, "toBuy")}
+                >✓</span>
+              </div>
+              <div className="recipe-card-meta">
+                <span className={"dot " + s.level}></span>
+                {r.servings} {t(lang, "servings")}
+                {r.durationMinutes && ` · ${r.durationMinutes} min`}
+                {r.kcal && ` · ${r.kcal} kcal`}
+              </div>
+              {s.missing.length > 0 && (
+                <div className="sugg-missing" style={{ marginTop: 4 }}>
+                  {t(lang, "missingLabel")}: {s.missing.map(m => `${localName(m.ing, lang)} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang }) {
+  const [addId, setAddId] = useState("");
+  const [addQty, setAddQty] = useState("1");
+
+  const entries = Object.entries(fridge)
+    .map(([id, qty]) => ({ id, qty, ing: data.ingredientsById[id] }))
+    .filter(e => e.ing)
+    .sort((a, b) => localName(a.ing, lang).localeCompare(localName(b.ing, lang)));
+
+  const adjust = (id, delta) => {
+    setFridge(prev => ({ ...prev, [id]: Math.max(0, (prev[id] || 0) + delta) }));
+  };
+
+  const remove = (id) => {
+    setFridge(prev => {
+      const next = { ...prev };
+      delete next[id];
+      return next;
+    });
+  };
+
   const availableToAdd = data.ingredients
-    .filter(ing => !(normalize(ing.name) in fridge))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .filter(ing => !(String(ing.id) in fridge))
+    .sort((a, b) => localName(a, lang).localeCompare(localName(b, lang)));
 
   const handleAdd = () => {
-    const key = normalize(addName);
-    if (!key) return;
+    if (!addId) return;
     const qty = parseFloat(addQty);
-    setFridge(prev => ({ ...prev, [key]: isNaN(qty) ? 0 : qty }));
-    setAddName("");
+    setFridge(prev => ({ ...prev, [addId]: isNaN(qty) ? 0 : qty }));
+    setAddId("");
     setAddQty("1");
   };
 
   return (
     <div className="screen">
       <div className="header">
-        <span className="back" onClick={onBack}>‹ Zurück</span>
+        <h1 onClick={onGoHome}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <LangToggle lang={lang} setLang={setLang} />
+          <span className="back" onClick={onBack}>{t(lang, "back")}</span>
+        </div>
       </div>
 
-      <h2 style={{ color: "var(--text)", marginTop: 0 }}>Kühlschrank</h2>
+      <h2 style={{ color: "var(--text)", marginTop: 0 }}>{t(lang, "fridgeTitle")}</h2>
 
       {entries.length === 0 ? (
-        <div className="empty-msg">Noch nichts im Kühlschrank hinterlegt.</div>
+        <div className="empty-msg">{t(lang, "fridgeEmpty")}</div>
       ) : (
-        entries.map(([name, qty]) => (
-          <div className="fridge-row" key={name}>
-            <span className="fridge-name">{name}</span>
+        entries.map(e => (
+          <div className="fridge-row" key={e.id}>
+            <span className="fridge-name">{localName(e.ing, lang)}</span>
             <div className="fridge-controls">
-              <button className="stepper-btn" onClick={() => adjust(name, -1)}>−</button>
-              <span className="fridge-qty">{qty}</span>
-              <button className="stepper-btn" onClick={() => adjust(name, 1)}>+</button>
-              <button className="remove-btn" onClick={() => remove(name)} title="Entfernen">✕</button>
+              <button className="stepper-btn" onClick={() => adjust(e.id, -1)}>−</button>
+              <span className="fridge-qty">{e.qty}</span>
+              <button className="stepper-btn" onClick={() => adjust(e.id, 1)}>+</button>
+              <button className="remove-btn" onClick={() => remove(e.id)} title="✕">✕</button>
             </div>
           </div>
         ))
       )}
 
       <div className="add-row">
-        <select value={addName} onChange={e => setAddName(e.target.value)}>
-          <option value="">Zutat wählen…</option>
+        <select value={addId} onChange={ev => setAddId(ev.target.value)}>
+          <option value="">{t(lang, "chooseIngredient")}</option>
           {availableToAdd.map(ing => (
-            <option key={ing.id} value={ing.name}>{ing.name}</option>
+            <option key={ing.id} value={ing.id}>{localName(ing, lang)}</option>
           ))}
         </select>
-        <input type="number" min="0" step="any" value={addQty} onChange={e => setAddQty(e.target.value)} />
-        <button className="btn primary" onClick={handleAdd} disabled={!addName}>Hinzufügen</button>
+        <input type="number" min="0" step="any" value={addQty} onChange={ev => setAddQty(ev.target.value)} />
+        <button className="btn primary" onClick={handleAdd} disabled={!addId}>{t(lang, "add")}</button>
       </div>
 
-      <p className="hint" style={{ marginTop: 20 }}>
-        Änderungen werden live mit allen Geräten synchronisiert, die diese Seite geöffnet haben.
-      </p>
+      <p className="hint" style={{ marginTop: 20 }}>{t(lang, "fridgeSyncHint")}</p>
     </div>
   );
 }
 
-function RecipeDetail({ data, recipeId, onBack, onCook }) {
+function RecipeDetail({ data, recipeId, onBack, onCook, onGoHome, lang, setLang }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
   const recipe = recipes.find(r => r.id === recipeId);
   const items = recipeIngredients.filter(ri => ri.recipeId === recipeId);
@@ -491,25 +707,29 @@ function RecipeDetail({ data, recipeId, onBack, onCook }) {
   return (
     <div className="screen">
       <div className="header">
-        <span className="back" onClick={onBack}>‹ Zurück</span>
+        <h1 onClick={onGoHome}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <LangToggle lang={lang} setLang={setLang} />
+          <span className="back" onClick={onBack}>{t(lang, "back")}</span>
+        </div>
       </div>
 
-      {recipe.heroImage && <img className="hero-img" src={recipe.heroImage} alt={recipe.name} />}
+      {recipe.heroImage && <img className="hero-img" src={recipe.heroImage} alt={localName(recipe, lang)} />}
 
-      <h2 style={{ color: "var(--text)", marginTop: 0 }}>{recipe.name}</h2>
+      <h2 style={{ color: "var(--text)", marginTop: 0 }}>{localName(recipe, lang)}</h2>
       <div className="recipe-meta">
-        {recipe.servings} Portionen
-        {recipe.durationMinutes && ` · ${recipe.durationMinutes} Min.`}
+        {recipe.servings} {t(lang, "servings")}
+        {recipe.durationMinutes && ` · ${recipe.durationMinutes} min`}
         {recipe.kcal && ` · ${recipe.kcal} kcal`}
       </div>
 
-      <div className="tile-hdr">Zutaten</div>
+      <div className="tile-hdr">{t(lang, "ingredients")}</div>
       <ul className="ing-list">
         {items.map(ri => {
           const ing = ingredientsById[ri.ingredientId];
           return (
             <li key={ri.id}>
-              <span>{ing ? ing.name : "?"}</span>
+              <span>{localName(ing, lang)}</span>
               <span className="qty">{ri.qty}{ri.unit === "pcs" ? "" : " " + ri.unit}</span>
             </li>
           );
@@ -518,16 +738,16 @@ function RecipeDetail({ data, recipeId, onBack, onCook }) {
 
       {hasSteps ? (
         <button className="btn primary" style={{ width: "100%", padding: 16 }} onClick={onCook}>
-          Kochen starten →
+          {t(lang, "startCooking")}
         </button>
       ) : (
-        <div className="empty-msg">Für dieses Rezept sind noch keine Zubereitungsschritte hinterlegt.</div>
+        <div className="empty-msg">{t(lang, "noStepsYet")}</div>
       )}
     </div>
   );
 }
 
-function CookMode({ data, recipeId, step, setStep, onExit }) {
+function CookMode({ data, recipeId, step, setStep, onExit, onGoHome, lang, setLang }) {
   const steps = data.recipeSteps.filter(s => s.recipeId === recipeId).sort((a, b) => a.stepNumber - b.stepNumber);
   const current = steps[step];
 
@@ -538,24 +758,28 @@ function CookMode({ data, recipeId, step, setStep, onExit }) {
   return (
     <div className="screen">
       <div className="header">
-        <span className="back" onClick={onExit}>‹ Rezept</span>
+        <h1 onClick={onGoHome}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <LangToggle lang={lang} setLang={setLang} />
+          <span className="back" onClick={onExit}>{t(lang, "backToRecipe")}</span>
+        </div>
       </div>
 
-      <div className="cook-progress">Schritt {step + 1} von {steps.length}</div>
+      <div className="cook-progress">{t(lang, "stepOf", step + 1, steps.length)}</div>
 
-      {current.image && <img className="cook-step-img" src={current.image} alt={current.title} />}
+      {current.image && <img className="cook-step-img" src={current.image} alt={localField(current, "title", lang)} />}
 
-      <div className="cook-title">{current.title}</div>
-      <div className="cook-instruction">{current.instruction}</div>
+      <div className="cook-title">{localField(current, "title", lang)}</div>
+      <div className="cook-instruction">{localField(current, "instruction", lang)}</div>
 
       <div className="cook-nav">
         <button className="btn" disabled={step === 0} style={{ opacity: step === 0 ? 0.4 : 1 }}
                 onClick={() => setStep(s => Math.max(0, s - 1))}>
-          ← Zurück
+          {t(lang, "navBack")}
         </button>
         <button className="btn primary"
                 onClick={() => isLast ? onExit() : setStep(s => s + 1)}>
-          {isLast ? "Fertig ✓" : "Weiter →"}
+          {isLast ? t(lang, "done") : t(lang, "next")}
         </button>
       </div>
     </div>
@@ -573,12 +797,6 @@ function Kpi({ label, value, tone, onClick }) {
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
-
-<p class="hint">
-  Ingredient totals, recipe detail, and cook-through mode are fully real. Fridge contents and
-  shopping-list selections now sync live across every device open on this page via Firebase —
-  a change on one screen appears on the others within a second or two, no reload needed.
-</p>
 
 </body>
 </html>
