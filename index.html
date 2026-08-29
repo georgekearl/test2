@@ -50,6 +50,14 @@
   .check { flex:0 0 auto; width:16px; height:16px; margin-top:2px; border-radius:4px; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:11px; color:transparent; }
   .sugg-line.selected .check { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
   .check.checked { background:var(--accent); border-color:var(--accent); color:rgb(20,24,40); }
+
+  .section-hdr { display:flex; justify-content:space-between; align-items:center; cursor:pointer; padding:6px 2px; font-weight:700; color:var(--text); font-size:14px; }
+  .section-count { color:var(--muted); font-size:12px; font-weight:400; }
+  .shop-check-row { display:flex; align-items:center; gap:10px; padding:9px 4px 9px 20px; border-top:1px solid rgba(255,255,255,0.05); cursor:pointer; }
+  .shop-check-row .check { flex:0 0 auto; }
+  .shop-check-row .name { flex:1; color:var(--text); font-size:14px; }
+  .shop-check-row .name.done { color:var(--muted); text-decoration:line-through; }
+  .shop-check-row .qty { color:var(--muted); font-size:13px; }
   .dot { flex:0 0 auto; width:9px; height:9px; border-radius:50%; margin-top:5px; }
   .dot.green{background:var(--green);} .dot.amber{background:var(--amber);} .dot.red{background:var(--red);}
   .sugg-missing { color:var(--muted); font-size:12.5px; }
@@ -164,6 +172,8 @@ const STRINGS = {
     readyOnly: "Nur Kochbereite",
     showAll: "Alle anzeigen",
     noReadyRecipes: "Aktuell ist kein Rezept kochbereit.",
+    shoppingListTitle: "Einkaufsliste",
+    resetChecks: "Häkchen zurücksetzen",
     loading: "Wird geladen…",
   },
   en: {
@@ -201,6 +211,8 @@ const STRINGS = {
     readyOnly: "Ready to Cook Only",
     showAll: "Show All",
     noReadyRecipes: "Nothing is ready to cook right now.",
+    shoppingListTitle: "Shopping List",
+    resetChecks: "Reset Checkmarks",
     loading: "Loading…",
   },
 };
@@ -298,6 +310,50 @@ function useSharedSelected() {
   return [selected, setSelected];
 }
 
+// "Ticked off in the basket" state while physically shopping - keyed by
+// ingredient ID, synced live so it works if more than one phone is doing
+// the shopping together.
+function useSharedChecked() {
+  const [checked, setCheckedLocal] = React.useState(null);
+
+  React.useEffect(() => {
+    const ref = db.ref("mealPlanner/shoppingChecked");
+    const handler = snap => setCheckedLocal(snap.val() || {});
+    ref.on("value", handler);
+    return () => ref.off("value", handler);
+  }, []);
+
+  const setChecked = (updaterOrValue) => {
+    setCheckedLocal(prevLocal => {
+      const base = prevLocal || {};
+      const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
+      db.ref("mealPlanner/shoppingChecked").set(next);
+      return next;
+    });
+  };
+
+  return [checked, setChecked];
+}
+
+// Maps your existing ingredient categories onto the walking order of a
+// typical German supermarket (produce near the entrance, dry goods and
+// spices toward the back). Categories not listed fall into "other".
+const SECTIONS = [
+  { key: "produce", categories: ["Vegetable", "Fruit"], de: "Obst & Gemüse", en: "Fruit & Vegetables" },
+  { key: "dairy", categories: ["Dairy"], de: "Kühlregal (Milchprodukte & Eier)", en: "Dairy & Eggs" },
+  { key: "meat", categories: ["Meat", "Fish"], de: "Fleisch, Wurst & Fisch", en: "Meat & Fish" },
+  { key: "pantry", categories: ["Pantry"], de: "Trockenwaren & Konserven", en: "Pantry & Dry Goods" },
+  { key: "spice", categories: ["Spice"], de: "Gewürze & Zutaten", en: "Spices & Seasonings" },
+  { key: "other", categories: [], de: "Sonstiges", en: "Other" },
+];
+
+function getSection(category) {
+  for (const s of SECTIONS) {
+    if (s.categories.includes(category)) return s;
+  }
+  return SECTIONS[SECTIONS.length - 1];
+}
+
 // Same intent as modFridgeCheck.bas - now matching by ingredient ID
 function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
   const items = recipeIngredients.filter(ri => ri.recipeId === recipe.id);
@@ -347,6 +403,7 @@ function App() {
   const [cookStep, setCookStep] = useState(0);
   const [selected, setSelected] = useSharedSelected();
   const [fridge, setFridge] = useSharedFridge();
+  const [checked, setChecked] = useSharedChecked();
   const [lang, setLangState] = useState(loadLang);
   const [recipesFilter, setRecipesFilter] = useState("all"); // all | ready
 
@@ -367,7 +424,7 @@ function App() {
     );
   }
 
-  if (!data || fridge === null || selected === null) {
+  if (!data || fridge === null || selected === null || checked === null) {
     return <div className="screen"><div className="loading">{t(lang, "loading")}</div></div>;
   }
 
@@ -436,6 +493,22 @@ function App() {
     );
   }
 
+  if (view === "shopping") {
+    return (
+      <ShoppingListPage
+        data={data}
+        fridge={fridge}
+        selected={selected}
+        checked={checked}
+        setChecked={setChecked}
+        onBack={goHome}
+        onGoHome={goHome}
+        lang={lang}
+        setLang={setLang}
+      />
+    );
+  }
+
   return (
     <Dashboard
       data={data}
@@ -446,13 +519,14 @@ function App() {
       onOpenFridge={() => setView("fridge")}
       onOpenRecipesList={() => { setRecipesFilter("all"); setView("recipes"); }}
       onOpenReadyToCook={() => { setRecipesFilter("ready"); setView("recipes"); }}
+      onOpenShoppingList={() => setView("shopping")}
       lang={lang}
       setLang={setLang}
     />
   );
 }
 
-function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, onOpenReadyToCook, lang, setLang }) {
+function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, onOpenReadyToCook, onOpenShoppingList, lang, setLang }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
@@ -501,7 +575,7 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
       <div className="kpi-row">
         <Kpi label={t(lang, "recipes")} value={recipes.length} onClick={onOpenRecipesList} />
         <Kpi label={t(lang, "inFridge")} value={nFridgeItems} onClick={onOpenFridge} />
-        <Kpi label={t(lang, "toBuy")} value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
+        <Kpi label={t(lang, "toBuy")} value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} onClick={onOpenShoppingList} />
         <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} onClick={onOpenReadyToCook} />
       </div>
 
@@ -640,6 +714,98 @@ function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack
           </div>
         );
       })}
+    </div>
+  );
+}
+
+// Shopping checklist, grouped into collapsible German-supermarket-style
+// sections. Ticking an item just marks it "in the basket" for this trip -
+// it doesn't touch the fridge or the recipe selection.
+function ShoppingListPage({ data, fridge, selected, checked, setChecked, onBack, onGoHome, lang, setLang }) {
+  const { recipes, recipeIngredients, ingredientsById } = data;
+
+  const statuses = useMemo(() => {
+    const map = {};
+    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, fridge);
+    return map;
+  }, [recipes, recipeIngredients, ingredientsById, fridge]);
+
+  const shoppingList = useMemo(() => {
+    const totals = {};
+    for (const r of recipes) {
+      if (!selected.has(r.id)) continue;
+      for (const item of statuses[r.id].missing) {
+        const key = item.ing.id;
+        if (!totals[key]) totals[key] = { ing: item.ing, unit: item.unit, qty: 0 };
+        totals[key].qty += item.short;
+      }
+    }
+    return Object.values(totals);
+  }, [selected, statuses, recipes]);
+
+  const grouped = useMemo(() => {
+    const bySection = {};
+    for (const item of shoppingList) {
+      const section = getSection(item.ing.category);
+      if (!bySection[section.key]) bySection[section.key] = { section, items: [] };
+      bySection[section.key].items.push(item);
+    }
+    return SECTIONS.map(s => bySection[s.key]).filter(Boolean);
+  }, [shoppingList]);
+
+  const [collapsed, setCollapsed] = useState({});
+  const toggleSection = (key) => setCollapsed(prev => ({ ...prev, [key]: !prev[key] }));
+  const toggleChecked = (id) => setChecked(prev => ({ ...prev, [id]: !prev[id] }));
+
+  const totalCount = shoppingList.length;
+  const doneCount = shoppingList.filter(item => checked[item.ing.id]).length;
+
+  return (
+    <div className="screen">
+      <div className="header">
+        <h1 onClick={onGoHome}>{t(lang, "appTitle")}</h1>
+        <div className="header-right">
+          <LangToggle lang={lang} setLang={setLang} />
+          <span className="back" onClick={onBack}>{t(lang, "back")}</span>
+        </div>
+      </div>
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+        <h2 style={{ color: "var(--text)", margin: 0 }}>{t(lang, "shoppingListTitle")}</h2>
+        {totalCount > 0 && <span style={{ color: "var(--muted)", fontSize: 13 }}>{doneCount} / {totalCount}</span>}
+      </div>
+
+      {shoppingList.length === 0 ? (
+        <div className="empty-msg">{t(lang, "shoppingListEmpty")}</div>
+      ) : (
+        <>
+          {grouped.map(g => {
+            const isCollapsed = !!collapsed[g.section.key];
+            const sectionDone = g.items.filter(i => checked[i.ing.id]).length;
+            return (
+              <div className="tile" key={g.section.key} style={{ marginBottom: 12, padding: "10px 14px" }}>
+                <div className="section-hdr" onClick={() => toggleSection(g.section.key)}>
+                  <span>{isCollapsed ? "▸" : "▾"} {g.section[lang]}</span>
+                  <span className="section-count">{sectionDone}/{g.items.length}</span>
+                </div>
+                {!isCollapsed && g.items.map(item => {
+                  const isDone = !!checked[item.ing.id];
+                  return (
+                    <div className="shop-check-row" key={item.ing.id} onClick={() => toggleChecked(item.ing.id)}>
+                      <span className={"check" + (isDone ? " checked" : "")}>✓</span>
+                      <span className={"name" + (isDone ? " done" : "")}>{localName(item.ing, lang)}</span>
+                      <span className="qty">{item.qty}{item.unit === "pcs" ? "" : " " + item.unit}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+          <button className="btn" style={{ width: "100%", marginTop: 8 }} onClick={() => setChecked({})}>
+            {t(lang, "resetChecks")}
+          </button>
+        </>
+      )}
     </div>
   );
 }
