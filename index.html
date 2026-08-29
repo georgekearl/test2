@@ -25,7 +25,8 @@
 
   .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:14px; }
   @media (max-width:620px){ .kpi-row{grid-template-columns:repeat(2,1fr);} .main-row{grid-template-columns:1fr !important;} }
-  .kpi { background:var(--tile); border-radius:10px; padding:14px 16px; }
+  .kpi { background:var(--tile); border-radius:10px; padding:14px 16px; cursor:pointer; transition:background 0.15s; }
+  .kpi:hover { background:var(--tile-hi); }
   .kpi-label { font-size:10px; font-weight:700; letter-spacing:.6px; color:var(--muted); text-transform:uppercase; }
   .kpi-value { font-size:clamp(24px,5vw,32px); font-weight:700; color:var(--text); margin-top:6px; }
   .kpi-value.good{color:var(--green);} .kpi-value.warn{color:var(--amber);}
@@ -68,6 +69,20 @@
   .cook-nav { display:flex; gap:12px; }
   .cook-nav .btn { flex:1; padding:16px; font-size:15px; }
 
+  .fridge-row { display:flex; align-items:center; justify-content:space-between; padding:10px 4px; border-bottom:1px solid rgba(255,255,255,0.05); }
+  .fridge-name { font-size:14.5px; color:var(--text); text-transform:capitalize; }
+  .fridge-controls { display:flex; align-items:center; gap:10px; }
+  .stepper-btn { width:30px; height:30px; border-radius:8px; background:var(--tile-hi); border:1px solid var(--border); color:var(--text); font-size:16px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .stepper-btn:hover { background:var(--accent); color:rgb(20,24,40); border-color:var(--accent); }
+  .fridge-qty { min-width:44px; text-align:center; font-size:14.5px; color:var(--text); }
+  .remove-btn { width:26px; height:26px; border-radius:50%; background:transparent; border:1px solid var(--border); color:var(--muted); font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:4px; }
+  .remove-btn:hover { background:var(--red); color:white; border-color:var(--red); }
+  .add-row { display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
+  .add-row select, .add-row input { background:var(--tile-hi); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:9px 10px; font-size:13.5px; }
+  .add-row select { flex:2; min-width:140px; }
+  .add-row input { flex:1; min-width:70px; }
+  .add-row button { flex:0 0 auto; }
+
   .loading { color:var(--muted); text-align:center; padding:60px 0; }
   .hint { color:rgb(120,125,145); font-size:11px; text-align:center; max-width:480px; margin:14px auto 0; }
 </style>
@@ -78,12 +93,25 @@
 <script type="text/babel">
 const { useState, useEffect, useMemo } = React;
 
+const FRIDGE_STORAGE_KEY = "mealPlannerFridge";
+const DEFAULT_FRIDGE = { banana: 1, tomato: 5, strawberry: 2, apple: 4, egg: 3, milk: 1000 };
+
 function normalize(name) {
   return name.toLowerCase().trim();
 }
 
 function getFridgeQty(fridge, name) {
   return fridge[normalize(name)] || 0;
+}
+
+function loadFridge() {
+  try {
+    const raw = localStorage.getItem(FRIDGE_STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (err) {
+    console.error("Could not read saved fridge, using defaults:", err);
+  }
+  return DEFAULT_FRIDGE;
 }
 
 // Same logic as modFridgeCheck.bas
@@ -106,19 +134,16 @@ function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
   return { level, missing, items };
 }
 
-// Sample fridge contents - not yet wired to a real backend for live updates
-const FRIDGE = { banana: 1, tomato: 5, strawberry: 2, apple: 4, egg: 3, milk: 1000 };
-
 function useData() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     Promise.all([
-      fetch("data/recipes.json").then(r => r.json()),
-      fetch("data/ingredients.json").then(r => r.json()),
-      fetch("data/recipe_ingredients.json").then(r => r.json()),
-      fetch("data/recipe_steps.json").then(r => r.json()),
+      fetch("recipes.json").then(r => r.json()),
+      fetch("ingredients.json").then(r => r.json()),
+      fetch("recipe_ingredients.json").then(r => r.json()),
+      fetch("recipe_steps.json").then(r => r.json()),
     ])
       .then(([recipes, ingredients, recipeIngredients, recipeSteps]) => {
         const ingredientsById = {};
@@ -133,10 +158,19 @@ function useData() {
 
 function App() {
   const { data, error } = useData();
-  const [view, setView] = useState("dashboard"); // dashboard | recipe | cook
+  const [view, setView] = useState("dashboard"); // dashboard | recipe | cook | fridge
   const [activeRecipeId, setActiveRecipeId] = useState(null);
   const [cookStep, setCookStep] = useState(0);
   const [selected, setSelected] = useState(new Set());
+  const [fridge, setFridge] = useState(loadFridge);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(FRIDGE_STORAGE_KEY, JSON.stringify(fridge));
+    } catch (err) {
+      console.error("Could not save fridge:", err);
+    }
+  }, [fridge]);
 
   if (error) {
     return (
@@ -180,27 +214,40 @@ function App() {
     );
   }
 
+  if (view === "fridge") {
+    return (
+      <FridgeScreen
+        data={data}
+        fridge={fridge}
+        setFridge={setFridge}
+        onBack={() => setView("dashboard")}
+      />
+    );
+  }
+
   return (
     <Dashboard
       data={data}
+      fridge={fridge}
       selected={selected}
       setSelected={setSelected}
       onOpenRecipe={openRecipe}
+      onOpenFridge={() => setView("fridge")}
     />
   );
 }
 
-function Dashboard({ data, selected, setSelected, onOpenRecipe }) {
+function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
     const map = {};
-    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, FRIDGE);
+    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, fridge);
     return map;
-  }, [recipes, recipeIngredients, ingredientsById]);
+  }, [recipes, recipeIngredients, ingredientsById, fridge]);
 
   const nCook = Object.values(statuses).filter(s => s.level === "green").length;
-  const nFridgeItems = Object.values(FRIDGE).filter(q => q > 0).length;
+  const nFridgeItems = Object.values(fridge).filter(q => q > 0).length;
 
   const shoppingList = useMemo(() => {
     const totals = {};
@@ -237,7 +284,7 @@ function Dashboard({ data, selected, setSelected, onOpenRecipe }) {
 
       <div className="kpi-row">
         <Kpi label="Rezepte" value={recipes.length} />
-        <Kpi label="Im Kühlschrank" value={nFridgeItems} />
+        <Kpi label="Im Kühlschrank" value={nFridgeItems} onClick={onOpenFridge} />
         <Kpi label="Einzukaufen" value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
         <Kpi label="Kochbereit" value={nCook} tone={nCook > 0 ? "good" : "warn"} />
       </div>
@@ -295,8 +342,84 @@ function Dashboard({ data, selected, setSelected, onOpenRecipe }) {
 
       <div className="btn-row">
         <button className="btn primary" onClick={() => setSelected(new Set())}>Auswahl zurücksetzen</button>
+        <button className="btn" onClick={onOpenFridge}>Kühlschrank</button>
         <button className="btn" onClick={() => document.documentElement.requestFullscreen?.()}>Vollbild</button>
       </div>
+    </div>
+  );
+}
+
+function FridgeScreen({ data, fridge, setFridge, onBack }) {
+  const [addName, setAddName] = useState("");
+  const [addQty, setAddQty] = useState("1");
+
+  const entries = Object.entries(fridge).sort((a, b) => a[0].localeCompare(b[0]));
+
+  const adjust = (name, delta) => {
+    setFridge(prev => ({ ...prev, [name]: Math.max(0, (prev[name] || 0) + delta) }));
+  };
+
+  const remove = (name) => {
+    setFridge(prev => {
+      const next = { ...prev };
+      delete next[name];
+      return next;
+    });
+  };
+
+  // Ingredients not already tracked in the fridge, for the "add" dropdown
+  const availableToAdd = data.ingredients
+    .filter(ing => !(normalize(ing.name) in fridge))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const handleAdd = () => {
+    const key = normalize(addName);
+    if (!key) return;
+    const qty = parseFloat(addQty);
+    setFridge(prev => ({ ...prev, [key]: isNaN(qty) ? 0 : qty }));
+    setAddName("");
+    setAddQty("1");
+  };
+
+  return (
+    <div className="screen">
+      <div className="header">
+        <span className="back" onClick={onBack}>‹ Zurück</span>
+      </div>
+
+      <h2 style={{ color: "var(--text)", marginTop: 0 }}>Kühlschrank</h2>
+
+      {entries.length === 0 ? (
+        <div className="empty-msg">Noch nichts im Kühlschrank hinterlegt.</div>
+      ) : (
+        entries.map(([name, qty]) => (
+          <div className="fridge-row" key={name}>
+            <span className="fridge-name">{name}</span>
+            <div className="fridge-controls">
+              <button className="stepper-btn" onClick={() => adjust(name, -1)}>−</button>
+              <span className="fridge-qty">{qty}</span>
+              <button className="stepper-btn" onClick={() => adjust(name, 1)}>+</button>
+              <button className="remove-btn" onClick={() => remove(name)} title="Entfernen">✕</button>
+            </div>
+          </div>
+        ))
+      )}
+
+      <div className="add-row">
+        <select value={addName} onChange={e => setAddName(e.target.value)}>
+          <option value="">Zutat wählen…</option>
+          {availableToAdd.map(ing => (
+            <option key={ing.id} value={ing.name}>{ing.name}</option>
+          ))}
+        </select>
+        <input type="number" min="0" step="any" value={addQty} onChange={e => setAddQty(e.target.value)} />
+        <button className="btn primary" onClick={handleAdd} disabled={!addName}>Hinzufügen</button>
+      </div>
+
+      <p className="hint" style={{ marginTop: 20 }}>
+        Änderungen werden auf diesem Gerät/Browser gespeichert. Auf einem anderen Gerät geöffnet, startet
+        der Kühlschrank wieder mit den Standardwerten — geräteübergreifende Synchronisierung folgt später.
+      </p>
     </div>
   );
 }
@@ -381,9 +504,9 @@ function CookMode({ data, recipeId, step, setStep, onExit }) {
   );
 }
 
-function Kpi({ label, value, tone }) {
+function Kpi({ label, value, tone, onClick }) {
   return (
-    <div className="kpi">
+    <div className="kpi" onClick={onClick}>
       <div className="kpi-label">{label}</div>
       <div className={"kpi-value" + (tone ? " " + tone : "")}>{value}</div>
     </div>
@@ -394,8 +517,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
 
 <p class="hint">
-  Fridge contents are still sample data (banana, tomato, strawberry, apple, egg, milk) — live fridge
-  editing comes in a later pass. Ingredient totals, recipe detail, and cook-through mode are fully real.
+  Ingredient totals, recipe detail, cook-through mode, and the fridge are all fully real now.
+  Fridge changes save to this device's browser — cross-device sync is a later step.
 </p>
 
 </body>
