@@ -140,10 +140,10 @@ function useData() {
 
   useEffect(() => {
     Promise.all([
-      fetch("recipes.json").then(r => r.json()),
-      fetch("ingredients.json").then(r => r.json()),
-      fetch("recipe_ingredients.json").then(r => r.json()),
-      fetch("recipe_steps.json").then(r => r.json()),
+      fetch("data/recipes.json").then(r => r.json()),
+      fetch("data/ingredients.json").then(r => r.json()),
+      fetch("data/recipe_ingredients.json").then(r => r.json()),
+      fetch("data/recipe_steps.json").then(r => r.json()),
     ])
       .then(([recipes, ingredients, recipeIngredients, recipeSteps]) => {
         const ingredientsById = {};
