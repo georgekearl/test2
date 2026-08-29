@@ -1,0 +1,1271 @@
+[
+  {
+    "id": 1,
+    "name_en": "Chicken breast",
+    "name_de": "Hähnchenbrust",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 2,
+    "name_en": "Minced beef",
+    "name_de": "Hackfleisch",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 3,
+    "name_en": "Pork",
+    "name_de": "Schweinefleisch",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 4,
+    "name_en": "Salmon",
+    "name_de": "Lachs",
+    "category": "Fish",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 5,
+    "name_en": "Shrimp",
+    "name_de": "Garnelen",
+    "category": "Fish",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 6,
+    "name_en": "Eggs",
+    "name_de": "Eier",
+    "category": "Dairy",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 7,
+    "name_en": "Milk",
+    "name_de": "Milch",
+    "category": "Dairy",
+    "unit": "ml",
+    "critical": true,
+    "type": "Volume"
+  },
+  {
+    "id": 8,
+    "name_en": "Butter",
+    "name_de": "Butter",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 9,
+    "name_en": "Cream",
+    "name_de": "Sahne",
+    "category": "Dairy",
+    "unit": "ml",
+    "critical": true,
+    "type": "Volume"
+  },
+  {
+    "id": 10,
+    "name_en": "Parmesan",
+    "name_de": "Parmesan",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 11,
+    "name_en": "Mozzarella",
+    "name_de": "Mozzarella",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 12,
+    "name_en": "Onion",
+    "name_de": "Zwiebel",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 13,
+    "name_en": "Garlic",
+    "name_de": "Knoblauch",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 14,
+    "name_en": "Carrot",
+    "name_de": "Karotte",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 15,
+    "name_en": "Bell pepper",
+    "name_de": "Paprika",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 16,
+    "name_en": "Zucchini",
+    "name_de": "Zucchini",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 17,
+    "name_en": "Broccoli",
+    "name_de": "Brokkoli",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 18,
+    "name_en": "Spinach",
+    "name_de": "Spinat",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 19,
+    "name_en": "Potatoes",
+    "name_de": "Kartoffeln",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 20,
+    "name_en": "Sweet potato",
+    "name_de": "Süßkartoffel",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 21,
+    "name_en": "Tomato",
+    "name_de": "Tomate",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 22,
+    "name_en": "Cherry tomatoes",
+    "name_de": "Kirschtomaten",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 23,
+    "name_en": "Mushrooms",
+    "name_de": "Pilze",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 24,
+    "name_en": "Cucumber",
+    "name_de": "Gurke",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 25,
+    "name_en": "Lemon",
+    "name_de": "Zitrone",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 26,
+    "name_en": "Lime",
+    "name_de": "Limette",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 27,
+    "name_en": "Apple",
+    "name_de": "Apfel",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 28,
+    "name_en": "Rice",
+    "name_de": "Reis",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 29,
+    "name_en": "Jasmine rice",
+    "name_de": "Jasminreis",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 30,
+    "name_en": "Basmati rice",
+    "name_de": "Basmatireis",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 31,
+    "name_en": "Pasta",
+    "name_de": "Nudeln",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 32,
+    "name_en": "Spaghetti",
+    "name_de": "Spaghetti",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 33,
+    "name_en": "Flour",
+    "name_de": "Mehl",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 34,
+    "name_en": "Breadcrumbs",
+    "name_de": "Paniermehl",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 35,
+    "name_en": "Tortilla",
+    "name_de": "Tortilla",
+    "category": "Pantry",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 36,
+    "name_en": "Soy sauce",
+    "name_de": "Sojasoße",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 37,
+    "name_en": "Olive oil",
+    "name_de": "Olivenöl",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 38,
+    "name_en": "Vegetable oil",
+    "name_de": "Pflanzenöl",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 47,
+    "name_en": "Honey",
+    "name_de": "Honig",
+    "category": "Pantry",
+    "unit": "tbsp",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 51,
+    "name_en": "Salt",
+    "name_de": "Salz",
+    "category": "Spice",
+    "unit": "tsp",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 52,
+    "name_en": "Pepper",
+    "name_de": "Pfeffer",
+    "category": "Spice",
+    "unit": "pinch",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 64,
+    "name_en": "Banana",
+    "name_de": "Banane",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 65,
+    "name_en": "Strawberry",
+    "name_de": "Erdbeere",
+    "category": "Fruit",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 101,
+    "name_en": "Green beans",
+    "name_de": "Buschbohnen",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 102,
+    "name_en": "Butter beans",
+    "name_de": "Butterbohnen",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 103,
+    "name_en": "Light feta",
+    "name_de": "Hirtenkäse leicht",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 104,
+    "name_en": "Chopped tomatoes",
+    "name_de": "Stückige Tomaten",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 105,
+    "name_en": "Souflaki spice mix",
+    "name_de": "Gewürzmischung Hello Souflaki",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 106,
+    "name_en": "Cream yogurt",
+    "name_de": "Sahnejoghurt",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 107,
+    "name_en": "Oregano",
+    "name_de": "Oregano",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 108,
+    "name_en": "Vegetable stock powder",
+    "name_de": "Gemüsebrühpulver",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 109,
+    "name_en": "Orange",
+    "name_de": "Orange",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 110,
+    "name_en": "Spicy onion chutney",
+    "name_de": "Würziges Zwiebel-Chutney",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 111,
+    "name_en": "Chicken stock powder",
+    "name_de": "Hühnerbrühe",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 112,
+    "name_en": "Medium-hot mustard",
+    "name_de": "Mittelscharfer Senf",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 113,
+    "name_en": "Dried rosemary",
+    "name_de": "Rosmarin, getrocknet",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 114,
+    "name_en": "Celeriac",
+    "name_de": "Knollensellerie",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 115,
+    "name_en": "Demi-glace",
+    "name_de": "Demi-glace",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 116,
+    "name_en": "Harissa spice mix",
+    "name_de": "Gewürzmischung Hello Harissa",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 117,
+    "name_en": "Balsamic cream",
+    "name_de": "Balsamico Creme",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 118,
+    "name_en": "Red onion",
+    "name_de": "Rote Zwiebel",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 119,
+    "name_en": "Mayonnaise",
+    "name_de": "Mayonnaise",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 120,
+    "name_en": "Sliced almonds",
+    "name_de": "Mandelblättchen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 121,
+    "name_en": "Parsley & chives",
+    "name_de": "Petersilie & Schnittlauch",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 122,
+    "name_en": "Corn",
+    "name_de": "Mais",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 123,
+    "name_en": "Cooking cream",
+    "name_de": "Kochsahne",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 124,
+    "name_en": "Paprika spice mix",
+    "name_de": "Gewürzmischung Hello Paprika",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 125,
+    "name_en": "Ground cumin",
+    "name_de": "Kumin, gemahlen",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 126,
+    "name_en": "Coriander",
+    "name_de": "Koriander",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 127,
+    "name_en": "Green olives",
+    "name_de": "Grüne Oliven (ohne Stein)",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 128,
+    "name_en": "Beef stock powder",
+    "name_de": "Rinderbrühe",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 129,
+    "name_en": "Cajun spice mix",
+    "name_de": "Gewürzmischung Hello Cajun",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 130,
+    "name_en": "Filo pastry",
+    "name_de": "Filoteig",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 131,
+    "name_en": "Sesame seeds",
+    "name_de": "Sesamsamen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 132,
+    "name_en": "Mild chili mix",
+    "name_de": "Milder Chili-Mix",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 133,
+    "name_en": "Mixed salad greens",
+    "name_de": "Blattsalatmischung",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 134,
+    "name_en": "Sunflower seeds",
+    "name_de": "Sonnenblumenkerne",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 135,
+    "name_en": "Red curry paste",
+    "name_de": "Rote Currypaste",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 136,
+    "name_en": "Hello Curry spice mix",
+    "name_de": "Gewürzmischung Hello Curry",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 137,
+    "name_en": "Spring onion",
+    "name_de": "Frühlingszwiebel",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 138,
+    "name_en": "Coconut milk",
+    "name_de": "Kokosmilch",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": true,
+    "type": "Volume"
+  },
+  {
+    "id": 139,
+    "name_en": "Fresh gnocchi",
+    "name_de": "Frische Gnocchi, vorgekocht",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 140,
+    "name_en": "Tomato sugo",
+    "name_de": "Tomatensugo",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 141,
+    "name_en": "Basil paste",
+    "name_de": "Basilikumpaste",
+    "category": "Pantry",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 142,
+    "name_en": "Bean mix",
+    "name_de": "Bohnen-Mix",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 143,
+    "name_en": "Mini flatbread",
+    "name_de": "Mini-Fladenbrot",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 144,
+    "name_en": "Spicy dal sauce",
+    "name_de": "Würzige Dalsoße",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 145,
+    "name_en": "Madras curry powder",
+    "name_de": "Madras-Curry-Pulver",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 146,
+    "name_en": "Ginger paste",
+    "name_de": "Ingwerpaste",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 147,
+    "name_en": "Ketchup",
+    "name_de": "Ketchup",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 148,
+    "name_en": "Hello Grünzeug spice mix",
+    "name_de": "Gewürzmischung Hello Grünzeug",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 149,
+    "name_en": "Tomato pesto",
+    "name_de": "Tomatenpesto",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 150,
+    "name_en": "Kalamata olives",
+    "name_de": "Kalamata-Oliven ohne Stein",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 151,
+    "name_en": "Capers",
+    "name_de": "Kapern",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 152,
+    "name_en": "Sun-dried tomatoes with herbs",
+    "name_de": "Getrocknete Tomaten mit Kräutern",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 153,
+    "name_en": "Italian-style hard cheese, grated",
+    "name_de": "Hartkäse ital. Art, gerieben",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 154,
+    "name_en": "Hello Buon Appetito spice mix",
+    "name_de": "Gewürzmischung Hello Buon Appetito",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 155,
+    "name_en": "Vienna sausages",
+    "name_de": "Wiener Würstchen",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 156,
+    "name_en": "Brown lentils",
+    "name_de": "Braune Linsen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 157,
+    "name_en": "Leek",
+    "name_de": "Porree",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 158,
+    "name_en": "Sour cream",
+    "name_de": "Schmand",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 159,
+    "name_en": "Bacon",
+    "name_de": "Bacon",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 160,
+    "name_en": "Thuringian bratwurst",
+    "name_de": "Thüringer Rostbratwurst",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 161,
+    "name_en": "Hello Muskat spice mix",
+    "name_de": "Gewürzmischung Hello Muskat",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 162,
+    "name_en": "Buttermilk lemon dressing",
+    "name_de": "Buttermilch-Zitronen-Dressing",
+    "category": "Dairy",
+    "unit": "ml",
+    "critical": true,
+    "type": "Volume"
+  },
+  {
+    "id": 163,
+    "name_en": "Pre-cooked potato cubes",
+    "name_de": "Vorgegarte Kartoffelwürfel",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 164,
+    "name_en": "Lamb's lettuce",
+    "name_de": "Feldsalat",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 165,
+    "name_en": "Wild garlic",
+    "name_de": "Bärlauch",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 166,
+    "name_en": "Shallot",
+    "name_de": "Schalotte",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 167,
+    "name_en": "Beef rump steak",
+    "name_de": "Hüftsteak vom Weiderind",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 168,
+    "name_en": "Fresh lasagne sheets",
+    "name_de": "Frische Lasagneplatten",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 169,
+    "name_en": "Hello Mediterraneo spice mix",
+    "name_de": "Gewürzmischung Hello Mediterraneo",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 170,
+    "name_en": "Basil",
+    "name_de": "Basilikum",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 171,
+    "name_en": "Flat-leaf parsley and thyme",
+    "name_de": "Petersilie glatt/Thymian",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 172,
+    "name_en": "Hello Patatas spice mix",
+    "name_de": "Gewürzmischung Hello Patatas",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 173,
+    "name_en": "Fusilli",
+    "name_de": "Fusilli",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 174,
+    "name_en": "Natural yogurt",
+    "name_de": "Naturjoghurt",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 175,
+    "name_en": "Radishes",
+    "name_de": "Radieschen",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 176,
+    "name_en": "Aubergine",
+    "name_de": "Aubergine",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 177,
+    "name_en": "Young Gouda, grated",
+    "name_de": "Junger Gouda, gerieben",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 178,
+    "name_en": "Cherry tomatoes, canned",
+    "name_de": "Kirschtomaten (Dose)",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 179,
+    "name_en": "Romaine lettuce",
+    "name_de": "Salatherz (Romana)",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 180,
+    "name_en": "Chives and thyme",
+    "name_de": "Schnittlauch/Thymian",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 181,
+    "name_en": "Hello Smoky Paprika spice mix",
+    "name_de": "Gewürzmischung Hello Smoky Paprika",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 182,
+    "name_en": "Cornstarch",
+    "name_de": "Maisstärke",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 183,
+    "name_en": "Cheddar, grated",
+    "name_de": "Geriebener Cheddar",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 184,
+    "name_en": "Mini potato dumplings",
+    "name_de": "Mini-Klöße",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 185,
+    "name_en": "Parsley",
+    "name_de": "Petersilie, glatt",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 186,
+    "name_en": "Chorizo",
+    "name_de": "Chorizo",
+    "category": "Meat",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 187,
+    "name_en": "Black beans",
+    "name_de": "Schwarze Bohnen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 188,
+    "name_en": "Avocado",
+    "name_de": "Avocado",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 189,
+    "name_en": "Kiwi",
+    "name_de": "Kiwi",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 190,
+    "name_en": "Spring onions",
+    "name_de": "Frühlingszwiebel",
+    "category": "Vegetable",
+    "unit": "pcs",
+    "critical": true,
+    "type": "Pieces"
+  },
+  {
+    "id": 191,
+    "name_en": "Tortilla chips",
+    "name_de": "Tortilla-Chips",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 192,
+    "name_en": "Hello Fiesta spice mix",
+    "name_de": "Gewürzmischung Hello Fiesta",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 193,
+    "name_en": "Salsa verde",
+    "name_de": "Salsa Verde",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 194,
+    "name_en": "Chipotle paste",
+    "name_de": "Chipotle Paste",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 195,
+    "name_en": "Pollock fillet",
+    "name_de": "Seelachs ohne Haut",
+    "category": "Fish",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 196,
+    "name_en": "Dill and chives",
+    "name_de": "Dill/Schnittlauch",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  },
+  {
+    "id": 197,
+    "name_en": "Hello Umami spice mix",
+    "name_de": "Hello Umami",
+    "category": "Spice",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 198,
+    "name_en": "Parsnip",
+    "name_de": "Pastinake",
+    "category": "Vegetable",
+    "unit": "g",
+    "critical": true,
+    "type": "Weight"
+  }
+]

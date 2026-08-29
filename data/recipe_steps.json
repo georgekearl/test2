@@ -58,5 +58,1505 @@
     "instruction_en": "Toss the roasted potatoes with the lemon zest and divide between plates. Spoon the bean ragout alongside and place the feta on top of the ragout. Enjoy with yogurt.",
     "instruction_de": "Ofenkartoffeln mit Zitronenabrieb vermengen und auf Teller verteilen. Bohnenragout daneben geben und Hirtenkäse auf dem Ragout anrichten. Mit Joghurt genießen.",
     "image": "images/step6.jpg"
+  },
+  {
+    "id": 7,
+    "recipeId": 6,
+    "stepNumber": 1,
+    "title_en": "Roast the potatoes",
+    "title_de": "Kartoffeln rösten",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Halve the potatoes and cut into 1cm wedges. Spread on a baking-paper-lined tray, toss with 1 tbsp [1.5 tbsp | 2 tbsp] oil*, rosemary, salt* and pepper*, and roast for 25–30 min until golden brown.",
+    "instruction_de": "Heize den Backofen auf 220°C Ober-/Unterhitze (200°C Umluft) vor. Kartoffeln halbieren und in 1 cm Spalten schneiden. Kartoffeln auf einem mit Backpapier belegten Backblech verteilen, mit 1 EL [1,5 EL | 2 EL] Öl*, Rosmarin, Salz* und Pfeffer* vermengen und im Ofen 25–30 Min. goldbraun backen.",
+    "image": "images/r6-step1.jpg"
+  },
+  {
+    "id": 8,
+    "recipeId": 6,
+    "stepNumber": 2,
+    "title_en": "Cook the broccoli",
+    "title_de": "Brokkoli garen",
+    "instruction_en": "Halve the onion and cut into thin strips. Break the broccoli into small florets. Fill a large pot with plenty of hot water*, salt* it, and bring to a boil. Add the broccoli and cook for 4–6 min until tender.",
+    "instruction_de": "Zwiebel halbieren und in feine Streifen schneiden. Brokkoli in kleine Röschen teilen. In einen großen Topf reichlich heißes Wasser* füllen, salzen* und aufkochen lassen. Brokkoli zugeben und 4–6 Min. garen, bis er weich ist.",
+    "image": "images/r6-step2.jpg"
+  },
+  {
+    "id": 9,
+    "recipeId": 6,
+    "stepNumber": 3,
+    "title_en": "Prepare the sauce",
+    "title_de": "Soße vorbereiten",
+    "instruction_en": "Halve the orange and squeeze the juice into a tall mixing container. Stir the orange juice together with the mustard, onion chutney, stock powder, and 1 tsp [1.5 tsp | 2 tsp] honey*. Season with salt* and pepper*.",
+    "instruction_de": "Orange halbieren und in ein hohes Rührgefäß auspressen. Orangensaft mit Senf, Zwiebel-Chutney, Brühepulver und 1 TL [1,5 TL | 2 TL] Honig* verrühren. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/r6-step3.jpg"
+  },
+  {
+    "id": 10,
+    "recipeId": 6,
+    "stepNumber": 4,
+    "title_en": "Fry the meat",
+    "title_de": "Fleisch anbraten",
+    "instruction_en": "Salt the chicken fillets. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan. Fry the fillets on all sides for 4–5 min, until no longer pink inside. Remove from the pan.",
+    "instruction_de": "Hähncheninnenfilets salzen*. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Innenfilets rundum 4–5 Min. braten, bis das Fleisch innen nicht mehr rosa ist. Herausnehmen.",
+    "image": "images/r6-step4.jpg"
+  },
+  {
+    "id": 11,
+    "recipeId": 6,
+    "stepNumber": 5,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Melt 1 tbsp [1.5 tbsp | 2 tbsp] butter* in the large pan. Sauté the onion in it for 3–4 min. Deglaze with the prepared sauce and simmer for another 2–3 min, until the sauce thickens slightly. Finally, return the chicken to the pan.",
+    "instruction_de": "In der großen Pfanne 1 EL [1,5 EL | 2 EL] Butter* zerlassen. Zwiebel darin 3–4 Min. anschwitzen. Mit der vorbereiteten Soße ablöschen und weitere 2–3 Min. köcheln lassen, bis die Soße leicht eindickt. Zum Schluss Hähnchen zurück in die Pfanne geben.",
+    "image": "images/r6-step5.jpg"
+  },
+  {
+    "id": 12,
+    "recipeId": 6,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the potato wedges between plates. Arrange the sticky chicken with sauce and broccoli alongside. Enjoy!",
+    "instruction_de": "Kartoffelspalten auf Teller verteilen. Sticky Hähnchen mit Soße und Brokkoli daneben anrichten. Guten Appetit!",
+    "image": "images/r6-step6.jpg"
+  },
+  {
+    "id": 13,
+    "recipeId": 7,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil plenty of water in the kettle. Pour the hot water* into a large pot with a lid, salt* generously, and bring to a boil. Peel the celeriac and cut into 2cm cubes. Peel the potatoes and cut into 2cm cubes. Peel the garlic.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Reichlich heißes Wasser* in einen großen Topf mit Deckel geben, kräftig salzen* und aufkochen. Knollensellerie schälen und in 2 cm Würfel schneiden. Kartoffeln schälen und in 2 cm Würfel schneiden. Knoblauch abziehen.",
+    "image": "images/r7-step1.jpg"
+  },
+  {
+    "id": 14,
+    "recipeId": 7,
+    "stepNumber": 2,
+    "title_en": "Cook the vegetables",
+    "title_de": "Gemüse kochen",
+    "instruction_en": "Add the celeriac, potatoes, and 1 [1.5 | 2] garlic clove to the pot of boiling water* and cook for 14–16 min, until the vegetables are soft.",
+    "instruction_de": "Knollensellerie, Kartoffeln und 1 [1,5 | 2] Knoblauchzehe in den Topf mit kochendem Wasser* geben und 14–16 Min. kochen, bis das Gemüse weich ist.",
+    "image": "images/r7-step2.jpg"
+  },
+  {
+    "id": 15,
+    "recipeId": 7,
+    "stepNumber": 3,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Heat the demi-glace and 100ml [150ml | 200ml] water* in a small pot with a lid. Stir in 1 tbsp [1.5 tbsp | 2 tbsp] butter* until the sauce thickens slightly and turns glossy. Keep warm if needed.",
+    "instruction_de": "In einem kleinen Topf mit Deckel Demi-glace und 100 ml [150 ml | 200 ml] Wasser* erhitzen. 1 EL [1,5 EL | 2 EL] Butter* unterrühren, bis die Soße leicht eindickt und glänzend wird. Ggfs. warm halten.",
+    "image": "images/r7-step3.jpg"
+  },
+  {
+    "id": 16,
+    "recipeId": 7,
+    "stepNumber": 4,
+    "title_en": "For the pork steaks",
+    "title_de": "Für die Schweinelachssteaks",
+    "instruction_en": "Finely chop the remaining garlic. Season the pork loin steaks all over with salt* and pepper*. Heat 1 tbsp [1.5 tbsp | 2 tbsp] butter* in a large pan over medium-high heat. Fry the pork steaks for 3–5 min per side, until only slightly pink in the middle. Remove from the pan. Add the spinach and garlic to the pan and fry for 1–2 min, until the spinach wilts slightly.",
+    "instruction_de": "Restlichen Knoblauch fein hacken. Schweinelachssteaks rundum mit Salz* und Pfeffer* würzen. In einer großen Pfanne bei mittelhoher Temperatur 1 EL [1,5 EL | 2 EL] Butter* erhitzen. Schweinelachssteaks darin 3–5 Min. je Seite braten, bis das Fleisch in der Mitte nur noch leicht rosa ist. Herausnehmen. Spinat und Knoblauch in die Pfanne geben und 1–2 Min. anbraten, bis der Spinat leicht zusammenfällt.",
+    "image": "images/r7-step4.jpg"
+  },
+  {
+    "id": 17,
+    "recipeId": 7,
+    "stepNumber": 5,
+    "title_en": "For the mash",
+    "title_de": "Für den Stampf",
+    "instruction_en": "Once cooked, drain the vegetables using the lid. Mash the vegetables with a potato masher along with the vegetable stock powder, 75ml [125ml | 150ml] milk*, and 2 tbsp [3 tbsp | 4 tbsp] butter*. Season with salt* and pepper*.",
+    "instruction_de": "Gemüse nach der Garzeit mithilfe des Deckels abgießen. Gemüse dann mithilfe eines Kartoffelstampfers, Gemüsebrühe, 75 ml [125 ml | 150 ml] Milch* und 2 EL [3 EL | 4 EL] Butter* zu einem Stampf verarbeiten. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/r7-step5.jpg"
+  },
+  {
+    "id": 18,
+    "recipeId": 7,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Cut the pork loin steaks into strips, if you like. Divide the mash between plates. Arrange the steak and spinach alongside. Drizzle with sauce and enjoy!",
+    "instruction_de": "Schweinelachssteaks nach Belieben in Streifen schneiden. Stampf auf Teller verteilen. Steak und Spinat daneben anrichten. Mit Soße beträufeln und genießen!",
+    "image": "images/r7-step6.jpg"
+  },
+  {
+    "id": 19,
+    "recipeId": 8,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil plenty of water in the kettle. Preheat the oven to 220°C top/bottom heat (200°C fan). Peel the sweet potato and cut into roughly 4cm pieces. Cut the zucchini into 1cm slices. Finely chop the garlic. Halve the onion and cut into thin strips.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Heize den Backofen auf 220°C Ober-/Unterhitze (200°C Umluft) vor. Süßkartoffel schälen und in ca. 4 cm Stücke schneiden. Zucchini in 1 cm Scheiben schneiden. Knoblauch fein hacken. Zwiebel halbieren und in feine Streifen schneiden.",
+    "image": "images/r8-step1.jpg"
+  },
+  {
+    "id": 20,
+    "recipeId": 8,
+    "stepNumber": 2,
+    "title_en": "Coat the chicken",
+    "title_de": "Hähnchen panieren",
+    "instruction_en": "In a large bowl, mix the mayonnaise and \"Hello Harissa\" spice blend. Put the sliced almonds on a deep plate. Turn the chicken breast fillets in the bowl with the mayonnaise mixture until fully coated. Then roll them in the sliced almonds and press to adhere.",
+    "instruction_de": "In einer großen Schüssel Mayonnaise und \"Hello Harissa\" vermengen. Mandelblättchen auf einen tiefen Teller geben. Hähnchenbrustfilets in der Schüssel mit der Mayonnaise wenden, bis sie rundum mit der Mayonnaise bedeckt sind. Danach in den Mandelblättchen wälzen und diese andrücken.",
+    "image": "images/r8-step2.jpg"
+  },
+  {
+    "id": 21,
+    "recipeId": 8,
+    "stepNumber": 3,
+    "title_en": "Roast the zucchini",
+    "title_de": "Zucchini backen",
+    "instruction_en": "Spread the zucchini and chopped garlic on a baking-paper-lined tray. Drizzle with 1 tbsp [1.5 tbsp | 2 tbsp] oil* and season with salt* and pepper*. Place the chicken breasts alongside and bake everything for 16–18 min, until the chicken is no longer pink inside.",
+    "instruction_de": "Zucchini und gehackten Knoblauch auf einem mit Backpapier belegten Backblech verteilen. Mit 1 EL [1,5 EL | 2 EL] Öl* beträufeln und mit Salz* und Pfeffer* würzen. Hähnchenbrüste daneben legen und alles im Ofen 16–18 Min. backen, bis das Fleisch innen nicht mehr rosa ist.",
+    "image": "images/r8-step3.jpg"
+  },
+  {
+    "id": 22,
+    "recipeId": 8,
+    "stepNumber": 4,
+    "title_en": "For the mash",
+    "title_de": "Für den Stampf",
+    "instruction_en": "Fill a large pot with plenty of hot water*, salt* lightly, and bring to a boil. Cook the sweet potato cubes in the pot for 8–10 min, until soft. Once cooked, drain the sweet potato through a sieve, return to the pot, and mash finely with a potato masher.",
+    "instruction_de": "In einen großen Topf reichlich heißes Wasser* füllen, leicht salzen* und aufkochen lassen. Süßkartoffelwürfel in dem Topf 8–10 Min. kochen, bis sie weich sind. Nach Ende der Garzeit Süßkartoffelwürfel durch ein Sieb abgießen, zurück in den Topf geben und mithilfe eines Kartoffelstampfers zu feinem Stampf verarbeiten.",
+    "image": "images/r8-step4.jpg"
+  },
+  {
+    "id": 23,
+    "recipeId": 8,
+    "stepNumber": 5,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a small pot. Fry the onion strips for 2 min. Deglaze the pot with 100ml [150ml | 200ml] water*, the stock powder, the balsamic cream, and 1 tbsp [1.5 tbsp | 2 tbsp] butter*. Simmer everything for 2–4 min, until the sauce has thickened.",
+    "instruction_de": "In einem kleinen Topf 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Zwiebelstreifen 2 Min. anbraten. Topfinhalt mit 100 ml [150 ml | 200 ml] Wasser*, Brühepulver, Balsamicocreme und 1 EL [1,5 EL | 2 EL] Butter* ablöschen. Alles 2–4 Min. einköcheln lassen, bis die Soße dickflüssiger geworden ist.",
+    "image": "images/r8-step5.jpg"
+  },
+  {
+    "id": 24,
+    "recipeId": 8,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Arrange the chicken breast, zucchini, sweet potato mash, and sauce on plates and enjoy!",
+    "instruction_de": "Hähnchenbrust, Zucchini, Süßkartoffelstampf und Soße auf Tellern anrichten und genießen!",
+    "image": "images/r8-step6.jpg"
+  },
+  {
+    "id": 25,
+    "recipeId": 9,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil plenty of water in the kettle. Preheat the oven to 220°C top/bottom heat (200°C fan). Halve the bell peppers, remove the seeds, and cut into 1cm strips. Peel the carrot, halve lengthwise, and cut diagonally into half-moons. Drain the corn through a sieve. In a large pot with a lid, bring 1,000ml [1,500ml | 2,000ml] hot water* and the stock powder to a boil.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Heize den Backofen auf 220°C Ober-/Unterhitze (200°C Umluft) vor. Paprika halbieren, entkernen und in 1 cm Streifen schneiden. Karotte schälen, längs halbieren und schräg in Halbmonde schneiden. Mais durch ein Sieb abgießen. In einem großen Topf mit Deckel 1.000 ml [1.500 ml | 2.000 ml] heißes Wasser* und Brühepulver aufkochen lassen.",
+    "image": "images/r9-step1.jpg"
+  },
+  {
+    "id": 26,
+    "recipeId": 9,
+    "stepNumber": 2,
+    "title_en": "Fry the chicken breast",
+    "title_de": "Hähnchenbrust braten",
+    "instruction_en": "Marinate the chicken breast fillets with \"Hello Paprika\" spice mix, 1 tbsp [1.5 tbsp | 2 tbsp] oil*, salt* and pepper*. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan. Add the bell peppers and chicken breast fillets, frying the chicken for 2 min per side until golden. Transfer the peppers and chicken breast to a baking dish and bake in the preheated oven for 12–14 min, until the chicken is no longer pink inside.",
+    "instruction_de": "Hähnchenbrustfilets mit \"Hello Paprika\", 1 EL [1,5 EL | 2 EL] Öl*, Salz* und Pfeffer* marinieren. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Paprika und Hähnchenbrustfilets hineingeben und Hähnchenbrustfilets 2 Min. je Seite goldbraun anbraten. Paprika und Hähnchenbrust in eine Auflaufform geben und im vorgeheizten Ofen 12–14 Min. backen, bis das Fleisch innen nicht mehr rosa ist.",
+    "image": "images/r9-step2.jpg"
+  },
+  {
+    "id": 27,
+    "recipeId": 9,
+    "stepNumber": 3,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Meanwhile, add the rice, carrot, and corn to the boiling water and salt* lightly. Bring everything to a boil together and cook covered for 10–12 min, until the rice is tender enough. Finely chop the parsley leaves and chives.",
+    "instruction_de": "Währenddessen Reis, Karotte und Mais in das kochende Wasser geben und leicht salzen*. Alles zusammen zum Kochen bringen und abgedeckt 10–12 Min. kochen, bis der Reis weich genug ist. Petersilienblätter und Schnittlauch fein hacken.",
+    "image": "images/r9-step3.jpg"
+  },
+  {
+    "id": 28,
+    "recipeId": 9,
+    "stepNumber": 4,
+    "title_en": "Finish the rice",
+    "title_de": "Reis vollenden",
+    "instruction_en": "Drain the cooked rice and vegetables through a sieve and return immediately to the pot. Stir in half the herbs and 1 tbsp [1.5 tbsp | 2 tbsp] butter*.",
+    "instruction_de": "Fertig gegarten Reis mit Gemüse durch ein Sieb abgießen und gleich zurück in den Topf geben. Die Hälfte der Kräuter und 1 EL [1,5 EL | 2 EL] Butter* unterrühren.",
+    "image": "images/r9-step4.jpg"
+  },
+  {
+    "id": 29,
+    "recipeId": 9,
+    "stepNumber": 5,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Add the cooking cream, remaining herbs, and 50ml [75ml | 100ml] water* to the pan from step 2 and bring to a boil for 1 min, stirring.",
+    "instruction_de": "Kochsahne, restliche Kräuter und 50 ml [75 ml | 100 ml] Wasser* in die Pfanne aus Schritt 2 geben und unter Rühren 1 Min. aufkochen lassen.",
+    "image": "images/r9-step5.jpg"
+  },
+  {
+    "id": 30,
+    "recipeId": 9,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Arrange the chicken breast, bell pepper vegetables, rice, and herb sauce on plates. Enjoy!",
+    "instruction_de": "Hühnerbrust, Paprikagemüse, Reis und Kräuter-Soße auf Tellern anrichten. Guten Appetit!",
+    "image": "images/r9-step6.jpg"
+  },
+  {
+    "id": 31,
+    "recipeId": 10,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Boil plenty of water in the kettle. Fill a small pot with a lid with 300ml [450ml | 600ml] hot water*. Add 0.25 tsp [0.5 tsp | 0.5 tsp] salt* and bring to a boil. Add the rice and simmer covered over low heat for 10 min. Then remove from the heat and let stand covered for 10 min.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen kleinen Topf mit Deckel 300 ml [450 ml | 600 ml] heißes Wasser* füllen. 0,25 TL [0,5 TL | 0,5 TL] Salz* dazugeben und aufkochen lassen. Reis zugeben und bei niedriger Hitze 10 Min. abgedeckt köcheln lassen. Danach vom Herd nehmen und abgedeckt 10 Min. ziehen lassen.",
+    "image": "images/r10-step1.jpg"
+  },
+  {
+    "id": 32,
+    "recipeId": 10,
+    "stepNumber": 2,
+    "title_en": "Brown the mince",
+    "title_de": "Hack anbraten",
+    "instruction_en": "Halve the onion and cut into thin strips. Heat a large pan with no added fat. Add the mince, cumin, \"Hello Cajun\" spice mix, onion, and 1 tsp [1.5 tsp | 2 tsp] sugar*, and fry for 4–5 min, stirring, until crumbly.",
+    "instruction_de": "Zwiebel halbieren und in feine Streifen schneiden. Eine große Pfanne ohne Fettzugabe erhitzen. Hackfleisch, Kumin, \"Hello Cajun\", Zwiebel und 1 TL [1,5 TL | 2 TL] Zucker* hineingeben und 4–5 Min. unter Rühren krümelig anbraten.",
+    "image": "images/r10-step2.jpg"
+  },
+  {
+    "id": 33,
+    "recipeId": 10,
+    "stepNumber": 3,
+    "title_en": "Chop the herbs",
+    "title_de": "Kräuter hacken",
+    "instruction_en": "Halve the olives. Roughly chop the coriander leaves.",
+    "instruction_de": "Oliven halbieren. Korianderblätter grob hacken.",
+    "image": "images/r10-step3.jpg"
+  },
+  {
+    "id": 34,
+    "recipeId": 10,
+    "stepNumber": 4,
+    "title_en": "Finish the meat sauce",
+    "title_de": "Hacksoße fertigstellen",
+    "instruction_en": "Add the chopped tomatoes, stock powder, and olives to the mince in the pan and let simmer down a little.",
+    "instruction_de": "Stückige Tomaten, Brühepulver und Oliven zu dem Hackfleisch in die Pfanne geben und etwas einköcheln lassen.",
+    "image": "images/r10-step4.jpg"
+  },
+  {
+    "id": 35,
+    "recipeId": 10,
+    "stepNumber": 5,
+    "title_en": "Finish the rice",
+    "title_de": "Reis fertigstellen",
+    "instruction_en": "Once the rice is done, stir in 1 tbsp [1.5 tbsp | 2 tbsp] butter* and half of the coriander.",
+    "instruction_de": "Wenn der Reis gar ist, 1 EL [1,5 EL | 2 EL] Butter* und die Hälfte vom Koriander untermischen.",
+    "image": "images/r10-step5.jpg"
+  },
+  {
+    "id": 36,
+    "recipeId": 10,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the rice between plates. Arrange the meat sauce alongside. Sprinkle with the remaining coriander. Enjoy!",
+    "instruction_de": "Reis auf Teller verteilen. Hackfleischsoße daneben anrichten. Mit restlichem Koriander bestreuen. Guten Appetit!",
+    "image": "images/r10-step6.jpg"
+  },
+  {
+    "id": 37,
+    "recipeId": 11,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Halve the onion and cut into thin strips. Halve the cherry tomatoes. Cut the lemon into 6 wedges. Squeeze the juice from 2 [3 | 4] of the wedges into a small bowl.",
+    "instruction_de": "Heize den Backofen auf 220°C Ober-/Unterhitze (200°C Umluft) vor. Zwiebel halbieren und in feine Streifen schneiden. Kirschtomaten halbieren. Zitrone in 6 Spalten schneiden. Saft von der 2 [3 | 4] der Spalten in eine kleine Schüssel auspressen.",
+    "image": "images/r11-step1.jpg"
+  },
+  {
+    "id": 38,
+    "recipeId": 11,
+    "stepNumber": 2,
+    "title_en": "Caramelize the onions",
+    "title_de": "Zwiebeln karamellisieren",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] butter* in a large pan. Fry the onion strips, stirring, for about 3 min. Add the onion chutney and let caramelize gently for 4–5 min. Season with salt* and pepper*.",
+    "instruction_de": "In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Butter* erhitzen. Zwiebelstreifen ca. 3 Min. rundum anbraten. Zwiebelchutney dazugeben und 4–5 Min. leicht karamellisieren lassen. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/r11-step2.jpg"
+  },
+  {
+    "id": 39,
+    "recipeId": 11,
+    "stepNumber": 3,
+    "title_en": "Roll the snails",
+    "title_de": "Schnecken aufrollen",
+    "instruction_en": "Lay a sheet of filo pastry on the work surface and brush it with oil*. Repeat until you have 3 filo sheets stacked on top of each other. Crumble some feta along the long side of the dough and add the caramelized onions next to it. Roll it up into a long roll and tuck in the ends. Carefully shape the filo from one end into a snail/spiral shape. Repeat the process until the dough and onions are used up.",
+    "instruction_de": "Leg ein Filo-Blatt auf die Arbeitsfläche und bestreiche es mit Öl*. Wiederhole das, bis du 3 Filo-Blätter aufeinanderliegen hast. Zerbrösel etwas Feta entlang der Längsseite des Teigs und gib karamellisierte Zwiebeln daneben. Roll es zu einer langen Rolle auf und klapp die Enden rein. Den Filo vorsichtig von einem Ende aus zu einer Schnecke formen. Den Vorgang wiederholen, bis der Teig und die Zwiebeln aufgebraucht sind.",
+    "image": "images/r11-step3.jpg"
+  },
+  {
+    "id": 40,
+    "recipeId": 11,
+    "stepNumber": 4,
+    "title_en": "Bake the snails",
+    "title_de": "Schnecken backen",
+    "instruction_en": "Place the filo snails on a baking-paper-lined tray and carefully brush with oil*. Sprinkle with sesame seeds, salt*, and pepper*. Bake the snails for 12–15 min until golden brown.",
+    "instruction_de": "Filo-Schnecken auf ein mit Backpapier belegtes Backblech geben und vorsichtig mit Öl* bestreichen. Sesamsamen, Salz* und Pfeffer* darüberstreuen. Schnecken 12–15 Min. goldbraun backen.",
+    "image": "images/r11-step4.jpg"
+  },
+  {
+    "id": 41,
+    "recipeId": 11,
+    "stepNumber": 5,
+    "title_en": "Meanwhile",
+    "title_de": "Währenddessen",
+    "instruction_en": "In a small bowl, stir together 1.5 tsp [2.25 tsp | 3 tsp] honey* and half [three-quarters | all] of the mild chili mix (careful: spicy!). In a large bowl, combine the tomatoes, salad greens, lemon juice, 1 tbsp [1.5 tbsp | 2 tbsp] olive oil*, honey*, salt*, and pepper* into a salad. In the large pan with no added fat, toast the sunflower seeds for 1–2 min.",
+    "instruction_de": "In einer kleinen Schüssel 1,5 TL [2,25 TL | 3 TL] Honig*, Hälfte [drei Viertel | ganze] milden Chili-Mix (Achtung: scharf!) verrühren. In einer großen Schüssel Tomaten, Salat, Zitronensaft, 1 EL [1,5 EL | 2 EL] Olivenöl*, Honig*, Salz*, Pfeffer* zu einem Salat vermengen. In der großen Pfanne ohne Fettzugabe Sonnenblumenkerne 1–2 Min. rösten.",
+    "image": "images/r11-step5.jpg"
+  },
+  {
+    "id": 42,
+    "recipeId": 11,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the salad between plates and top with sunflower seeds. Arrange the snails alongside and enjoy with the hot honey. Enjoy!",
+    "instruction_de": "Salat auf Teller verteilen und mit Sonnenblumenkernen toppen. Schnecken daneben anrichten und mit Hot Honey genießen. Guten Appetit!",
+    "image": "images/r11-step6.jpg"
+  },
+  {
+    "id": 43,
+    "recipeId": 12,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis garen",
+    "instruction_en": "Bring 600 ml water* to a boil in the kettle. Pour 600 ml hot water* into a small pot with a lid. Add half of the 'Hello Curry' spice mix and 0.5 tsp salt* and bring to a boil. Add the rice and simmer, covered, over low heat for 10 min. Remove from the heat and let steam, covered, for 10 min.",
+    "instruction_de": "Erhitze 300 ml [450 ml] [600 ml] Wasser* im Wasserkocher. In einen kleinen Topf mit Deckel 300 ml [450 ml] [600 ml] heißes Wasser* füllen. Hälfte „Hello Curry\" und 0,25 TL [0,5 TL] [0,5 TL] Salz* dazugeben und aufkochen lassen. Reis zugeben und bei niedriger Hitze 10 Min. abgedeckt köcheln lassen. Vom Herd nehmen und abgedeckt 10 Min. ziehen lassen.",
+    "image": "images/35_lachs_step1.jpg"
+  },
+  {
+    "id": 44,
+    "recipeId": 12,
+    "stepNumber": 2,
+    "title_en": "Prep work",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Roughly dice the yellow onion. Cut the red onion into thin strips. Cut the spring onion into fine rings. Finely chop the garlic. Halve the zucchini lengthwise and cut into 0.5 cm half-moons. In a small pot, bring 100 ml water*, 100 ml vinegar*, salt*, and sugar* to a boil. Add the onion strips and simmer for 30 sec. Remove from the heat and let marinate.",
+    "instruction_de": "Gelbe Zwiebel grob würfeln. Rote Zwiebel in feine Streifen schneiden. Frühlingszwiebel in feine Ringe schneiden. Knoblauch fein hacken. Zucchini längs halbieren und in 0,5 cm Halbmonde schneiden. In einem kleinen Topf 50 ml [75 ml] [100 ml] Wasser*, 50 ml [75 ml] [100 ml] Essig*, Salz* und Zucker* aufkochen. Zwiebelstreifen hinzugeben und 30 Sek. köcheln lassen. Von der Hitze nehmen und marinieren lassen.",
+    "image": "images/35_lachs_step2.jpg"
+  },
+  {
+    "id": 45,
+    "recipeId": 12,
+    "stepNumber": 3,
+    "title_en": "Sear the salmon",
+    "title_de": "Lachsfilet anbraten",
+    "instruction_en": "Salt* the salmon fillets all over. Heat 2 tbsp oil* in a large pan. Sear the salmon skin-side down for 2 min., then flip and cook for another 2–3 min., until no longer translucent inside. Remove the salmon and, if desired, remove the skin.",
+    "instruction_de": "Lachsfilets rundum salzen*. In einer großen Pfanne 1 EL [1 EL] [2 EL] Öl* erhitzen. Lachs auf der Hautseite 2 Min. anbraten, dann wenden und weitere 2–3 Min. braten, bis der Fisch innen nicht mehr glasig ist. Lachs herausnehmen und nach Belieben die Haut abziehen.",
+    "image": "images/35_lachs_step3.jpg"
+  },
+  {
+    "id": 46,
+    "recipeId": 12,
+    "stepNumber": 4,
+    "title_en": "Fry the vegetables",
+    "title_de": "Gemüse anbraten",
+    "instruction_en": "Heat another 2 tbsp oil* in the same pan. Sauté the onion and zucchini in it for 3–4 min. Add the garlic, red curry paste, and remaining 'Hello Curry' spice mix and fry for another 1 min. Deglaze the pan with the coconut milk, 200 ml water*, and the stock powder, and let simmer for 2–3 min.",
+    "instruction_de": "In derselben Pfanne erneut 1 EL [1,5 EL] [2 EL] Öl* erhitzen. Zwiebel und Zucchini darin 3–4 Min. anschwitzen. Knoblauch, rote Currypaste und restliches „Hello Curry\" darin 1 weitere Min. anbraten. Pfanneninhalt mit Kokosmilch, 100 ml [150 ml] [200 ml] Wasser* und Brühepulver ablöschen und 2–3 Min. köcheln lassen.",
+    "image": "images/35_lachs_step4.jpg"
+  },
+  {
+    "id": 47,
+    "recipeId": 12,
+    "stepNumber": 5,
+    "title_en": "Season the sauce",
+    "title_de": "Soße abschmecken",
+    "instruction_en": "Season the sauce to taste with 0.5 tsp vinegar*, salt*, pepper*, and a pinch of sugar*. Return the salmon to the pan and keep warm until the rice is done.",
+    "instruction_de": "Soße mit 0,25 TL [0,35 TL] [0,5 TL] Essig*, Salz*, Pfeffer* und einer Prise Zucker* abschmecken. Lachs zurück in die Pfanne geben und warm halten, bis der Reis gar ist.",
+    "image": "images/35_lachs_step5.jpg"
+  },
+  {
+    "id": 48,
+    "recipeId": 12,
+    "stepNumber": 6,
+    "title_en": "Plating",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the rice and Thai curry among deep plates. Arrange the salmon on top and garnish with spring onion rings and pickled red onions. Enjoy your meal!",
+    "instruction_de": "Reis und Thai-Curry auf tiefen Tellern verteilen. Lachs darauf anrichten und mit Frühlingszwiebelringen und eingelegten roten Zwiebeln garnieren. Guten Appetit!",
+    "image": "images/35_lachs_step6.jpg"
+  },
+  {
+    "id": 49,
+    "recipeId": 13,
+    "stepNumber": 1,
+    "title_en": "Prep work",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Bring plenty of water to a boil in the kettle. Peel the carrots and cut into 2 cm cubes. Fill a large pot with plenty of hot water, salt* it, and bring to a boil. Cook the vegetables in it for 6–8 min. until soft. Meanwhile, continue with the recipe.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Karotten schälen und in 2 cm Würfel schneiden. In einen großen Topf reichlich heißes Wasser füllen, salzen* und aufkochen lassen. Gemüse darin 6–8 Min. weich garen. In der Zwischenzeit mit dem Rezept fortfahren.",
+    "image": "images/53_gnocchi_step1.jpg"
+  },
+  {
+    "id": 50,
+    "recipeId": 13,
+    "stepNumber": 2,
+    "title_en": "Fry the gnocchi",
+    "title_de": "Gnocchi braten",
+    "instruction_en": "Heat 1 tbsp olive oil* and 2 tbsp butter* in a large pan. Fry the gnocchi in it for 6–8 min. until golden brown. Meanwhile, continue with the recipe.",
+    "instruction_de": "In einer großen Pfanne 0,5 EL [0,75 EL] [1 EL] Olivenöl* und 1 EL [1,5 EL] [2 EL] Butter* erhitzen. Gnocchi darin 6–8 Min. goldbraun anbraten. In der Zwischenzeit mit dem Rezept fortfahren.",
+    "image": "images/53_gnocchi_step2.jpg"
+  },
+  {
+    "id": 51,
+    "recipeId": 13,
+    "stepNumber": 3,
+    "title_en": "Cut the onion",
+    "title_de": "Zwiebel schneiden",
+    "instruction_en": "Halve the onion and cut into thin strips. Crumble the feta with your hands.",
+    "instruction_de": "Zwiebel halbieren und in feine Streifen schneiden. Hirtenkäse mit den Händen zerbröseln.",
+    "image": "images/53_gnocchi_step3.jpg"
+  },
+  {
+    "id": 52,
+    "recipeId": 13,
+    "stepNumber": 4,
+    "title_en": "Fry the vegetables",
+    "title_de": "Gemüse anbraten",
+    "instruction_en": "Once cooked, drain the vegetables through a sieve. Then add them to the pan with the gnocchi along with the onion and half of the chili mix (caution: spicy!) and fry for another 2 min.",
+    "instruction_de": "Gemüse nach der Garzeit durch ein Sieb abgießen. Dann zusammen mit Zwiebel und Hälfte vom Chili-Mix (Achtung: scharf!) in die Pfanne mit den Gnocchi geben und 2 weitere Min. braten.",
+    "image": "images/53_gnocchi_step4.jpg"
+  },
+  {
+    "id": 53,
+    "recipeId": 13,
+    "stepNumber": 5,
+    "title_en": "Finish the sauce",
+    "title_de": "Soße vollenden",
+    "instruction_en": "Add the tomato sugo and half of the crumbled feta to the pan and cook for 1 min., until the cheese has melted slightly. Season to taste with salt* and pepper*.",
+    "instruction_de": "Tomatensugo und Hälfte der Hirtenkäsebrösel in die Pfanne geben und 1 Min. kochen, bis der Käse leicht geschmolzen ist. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/53_gnocchi_step5.jpg"
+  },
+  {
+    "id": 54,
+    "recipeId": 13,
+    "stepNumber": 6,
+    "title_en": "Plating",
+    "title_de": "Anrichten",
+    "instruction_en": "Arrange the gnocchi on deep plates and, if desired, top with basil paste, remaining chili mix, and remaining feta. Enjoy your meal!",
+    "instruction_de": "Gnocchi auf tiefen Tellern anrichten und nach Belieben mit Basilikumpaste, restlichem Chili-Mix und restlichem Hirtenkäse toppen. Guten Appetit!",
+    "image": "images/53_gnocchi_step6.jpg"
+  },
+  {
+    "id": 55,
+    "recipeId": 14,
+    "stepNumber": 1,
+    "title_en": "Prep work",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Finely grate the garlic, setting aside a knife-tip's worth for later. Finely dice the onion. Drain the bean mix through a sieve and rinse with water.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Knoblauch fein reiben. Die Menge von einer Messerspitze beiseitelegen. Zwiebel fein würfeln. Bohnen-Mix durch ein Sieb abgießen und mit Wasser abspülen.",
+    "image": "images/67_dal_makhani_step1.jpg"
+  },
+  {
+    "id": 56,
+    "recipeId": 14,
+    "stepNumber": 2,
+    "title_en": "Start the curry sauce",
+    "title_de": "Currysoße anfangen",
+    "instruction_en": "Heat 4 tbsp plant-based margarine* in a large pan. Sauté the onions in it for 3–4 min. Add the beans, garlic, ginger paste, \"Hello Curry\" mix, Madras curry powder, 1 tsp salt*, pepper*, and 2 tsp sugar* to the pan and fry for 1 min. Deglaze with the chopped tomatoes, dal sauce, and vegetable stock. Let the sauce simmer for 10–15 min.",
+    "instruction_de": "In einer großen Pfanne 2 EL [3 EL] [4 EL] pflanzliche Margarine* erhitzen. Zwiebeln darin 3–4 Min. anschwitzen. Bohnen, Knoblauch, Ingwerpaste, „Hello Curry\", Madras Curry, 0,5 TL [0,75 TL] [1 TL] Salz*, Pfeffer* und 1 TL [1,5 TL] [2 TL] Zucker* in die Pfanne geben und 1 Min. mitbraten. Mit stückigen Tomaten, Dalsoße und Gemüsebrühe ablöschen. Soße 10–15 Min. köcheln lassen.",
+    "image": "images/67_dal_makhani_step2.jpg"
+  },
+  {
+    "id": 57,
+    "recipeId": 14,
+    "stepNumber": 3,
+    "title_en": "Prepare the bread",
+    "title_de": "Brot vorbereiten",
+    "instruction_en": "Take the flatbread out of the packaging and wrap it in aluminum foil. Warm it in the oven for 5–7 min. Remove the flatbread from the oven and keep it warm wrapped in the foil.",
+    "instruction_de": "Fladenbrot aus der Packung nehmen, und in Aluminiumfolie wickeln. Im Ofen 5–7 Min. aufwärmen lassen. Fladenbrot aus dem Ofen nehmen und in der Aluminiumfolie warmhalten.",
+    "image": "images/67_dal_makhani_step3.jpg"
+  },
+  {
+    "id": 58,
+    "recipeId": 14,
+    "stepNumber": 4,
+    "title_en": "Finish the curry",
+    "title_de": "Curry fertigstellen",
+    "instruction_en": "Roughly chop the coriander. Add the coconut milk and half of the coriander to the pan. Let the sauce simmer gently until the end of the recipe. Season to taste with salt*, pepper*, and sugar*. In a small pan, heat 2 tbsp plant-based margarine* and the remaining garlic until the margarine* has melted.",
+    "instruction_de": "Koriander grob hacken. Kokosmilch und die Hälfte des Korianders in die Pfanne geben. Soße bis zum Ende des Rezepts leicht köcheln lassen. Mit Salz*, Pfeffer* und Zucker* abschmecken. In einer kleinen Pfanne 1 EL [1,5 EL] [2 EL] pflanzliche Margarine* und restlichen Knoblauch erhitzen, bis die Margarine* geschmolzen ist.",
+    "image": "images/67_dal_makhani_step4.jpg"
+  },
+  {
+    "id": 59,
+    "recipeId": 14,
+    "stepNumber": 5,
+    "title_en": "Finish the bread",
+    "title_de": "Brot fertigstellen",
+    "instruction_en": "Take the flatbread out of the foil, halve it horizontally, and drizzle with the garlic margarine*. Season with salt*.",
+    "instruction_de": "Fladenbrot aus der Aluminiumfolie nehmen, waagerecht halbieren und mit Knoblauch-Margarine* beträufeln. Mit Salz* würzen.",
+    "image": "images/67_dal_makhani_step5.jpg"
+  },
+  {
+    "id": 60,
+    "recipeId": 14,
+    "stepNumber": 6,
+    "title_en": "Plating",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the dal makhani among deep plates. Arrange the flatbread alongside. Garnish with the remaining coriander. Enjoy your meal!",
+    "instruction_de": "Dal-Makhani auf tiefe Teller verteilen. Fladenbrot daneben anrichten. Mit restlichem Koriander garnieren. Guten Appetit!",
+    "image": "images/67_dal_makhani_step6.jpg"
+  },
+  {
+    "id": 61,
+    "recipeId": 15,
+    "stepNumber": 1,
+    "title_en": "Bake the potatoes",
+    "title_de": "Kartoffeln backen",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Quarter the washed potatoes lengthwise. Spread the potatoes on a baking sheet lined with parchment paper, toss with half of the 'Hello Paprika' spice mix, 2 tbsp oil*, salt*, and pepper*, and roast in the oven for 25–30 min. until golden brown.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Gewaschene Kartoffeln längs vierteln. Kartoffeln auf einem mit Backpapier belegten Backblech verteilen, mit der Hälfte „Hello Paprika\", 1 EL [1,5 EL] [2 EL] Öl*, Salz* und Pfeffer* vermengen und im Backofen 25–30 Min. garen, bis sie goldbraun sind.",
+    "image": "images/74_chicken_fingers_step1.jpg"
+  },
+  {
+    "id": 62,
+    "recipeId": 15,
+    "stepNumber": 2,
+    "title_en": "Prep work",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "In a small bowl, mix the ketchup and tomato pesto into a dip. Halve the cucumber lengthwise and cut into thin half-moons. Cut the pointed pepper into fine rings.",
+    "instruction_de": "In einer kleinen Schüssel Ketchup und Tomatenpesto zu einem Dip vermengen. Gurke längs halbieren und in dünne Halbmonde schneiden. Spitzpaprika in feine Ringe schneiden.",
+    "image": "images/74_chicken_fingers_step2.jpg"
+  },
+  {
+    "id": 63,
+    "recipeId": 15,
+    "stepNumber": 3,
+    "title_en": "For the salad",
+    "title_de": "Für den Salat",
+    "instruction_en": "In a large bowl, mix a quarter of the mayonnaise, the 'Hello Grünzeug' spice mix, 2 tsp vinegar*, salt*, and pepper* into a dressing. Add the vegetables, toss to combine, and let marinate until the end of the recipe.",
+    "instruction_de": "In einer großen Schüssel ein Viertel der Mayonnaise, „Hello Grünzeug\", 1 TL [1,5 TL] [2 TL] Essig*, Salz* und Pfeffer* zu einem Dressing vermengen. Gemüse dazugeben, vermengen und bis zum Ende des Rezepts marinieren lassen.",
+    "image": "images/74_chicken_fingers_step3.jpg"
+  },
+  {
+    "id": 64,
+    "recipeId": 15,
+    "stepNumber": 4,
+    "title_en": "Bread the chicken",
+    "title_de": "Hähnchen panieren",
+    "instruction_en": "Quarter each chicken breast lengthwise. In a deep plate, mix the remaining mayonnaise, remaining 'Hello Paprika' spice mix, salt*, and pepper*. Put the panko breadcrumbs in a second deep plate. Toss the chicken breast strips in the mayonnaise mixture, then coat them individually in the panko, pressing it on firmly.",
+    "instruction_de": "Jede Hähnchenbrust längs vierteln. In einem tiefen Teller restliche Mayonnaise, restliches „Hello Paprika\", Salz* und Pfeffer* vermengen. Pankomehl in einen zweiten tiefen Teller geben. Hähnchenbruststreifen mit der Mayonnaise vermengen und dann einzeln in dem Pankomehl wenden, dabei das Pankomehl fest andrücken.",
+    "image": "images/74_chicken_fingers_step4.jpg"
+  },
+  {
+    "id": 65,
+    "recipeId": 15,
+    "stepNumber": 5,
+    "title_en": "Fry the chicken fingers",
+    "title_de": "Chicken Fingers frittieren",
+    "instruction_en": "In the last 8–10 min., heat 8 tbsp oil* in a large pan. Fry the breaded chicken for 2–3 min. per side until golden brown and no longer pink inside. Let the chicken fingers drain on paper towels.",
+    "instruction_de": "In den letzten 8–10 Min. in einer großen Pfanne 4 EL [6 EL] [8 EL] Öl* erhitzen. Paniertes Hähnchen 2–3 Min. je Seite goldbraun braten, bis das Fleisch innen nicht mehr rosa ist. Chicken Fingers auf Küchenpapier abtropfen lassen.",
+    "image": "images/74_chicken_fingers_step5.jpg"
+  },
+  {
+    "id": 66,
+    "recipeId": 15,
+    "stepNumber": 6,
+    "title_en": "Plating",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the potato wedges among the plates. Arrange the pepper-cucumber salad and chicken fingers alongside, and serve with the tomato dip. Enjoy your meal!",
+    "instruction_de": "Kartoffelspalten auf Teller verteilen. Paprika-Gurken-Salat und Chicken Fingers daneben anrichten und mit dem Tomatendip servieren. Guten Appetit!",
+    "image": "images/74_chicken_fingers_step6.jpg"
+  },
+  {
+    "id": 67,
+    "recipeId": 16,
+    "stepNumber": 1,
+    "title_en": "Preparation",
+    "title_de": "Vorbereitung",
+    "instruction_en": "Heat plenty of water in the kettle. Fill a large pot with plenty of hot water, add salt and bring to the boil. Place the capers in a sieve, rinse with water and then soak in a small bowl covered with plenty of water (this will make them milder). Roughly chop the sun-dried tomatoes and olives. Peel the garlic.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen großen Topf reichlich kochendes Wasser* füllen, salzen* und aufkochen. Kapern in ein Sieb geben, mit Wasser abspülen und anschließend in einer kleinen Schüssel – mit reichlich Wasser bedeckt – beiseitestellen (dadurch werden sie milder). Getrocknete Tomaten und Oliven grob hacken. Knoblauch fein hacken.",
+    "image": "images/spaghetti_puttanesca_step1.jpg"
+  },
+  {
+    "id": 68,
+    "recipeId": 16,
+    "stepNumber": 2,
+    "title_en": "Start the sauce",
+    "title_de": "Mit der Soße beginnen",
+    "instruction_en": "Drain the capers well and squeeze them lightly. Heat 2 tbsp olive oil in a large frying pan. Add the sun-dried tomatoes, olives, capers and garlic and sauté for 1-2 minutes.",
+    "instruction_de": "Kapern durch das Sieb abgießen und leicht ausdrücken. In einer großen Pfanne 2 EL Olivenöl* bei mittlerer Hitze erhitzen. Getrocknete Tomaten, Oliven, Kapern und Knoblauch darin 1–2 Min. anschwitzen.",
+    "image": "images/spaghetti_puttanesca_step2.jpg"
+  },
+  {
+    "id": 69,
+    "recipeId": 16,
+    "stepNumber": 3,
+    "title_en": "Add tomatoes",
+    "title_de": "Tomaten hinzufügen",
+    "instruction_en": "Add the chopped tomatoes and the Hello Buon Appetito spice mix and simmer everything together for 10-12 minutes. Wash the lemon with hot water and finely grate 1 tsp of the zest.",
+    "instruction_de": "Stückige Tomaten und „Hello Buon Appetito“ hinzufügen und alles zusammen 10–12 Min. köcheln lassen. Zitrone heiß waschen und 1 TL der Schale fein abreiben.",
+    "image": "images/spaghetti_puttanesca_step3.jpg"
+  },
+  {
+    "id": 70,
+    "recipeId": 16,
+    "stepNumber": 4,
+    "title_en": "Cook the pasta",
+    "title_de": "Pasta kochen",
+    "instruction_en": "Cook the spaghetti in the large pot of boiling water for 10-12 minutes until al dente. After 4 minutes of cooking, remove 8 tbsp cooking water and add it to the vegetables in the pan. Then drain the spaghetti.",
+    "instruction_de": "Spaghetti in dem großen Topf mit kochendem Wasser* 10–12 Min. bissfest garen. Nach Ende der Kochzeit 8 EL Kochwasser* abnehmen und zu dem Gemüse in die Pfanne geben. Dann die Spaghetti abgießen.",
+    "image": "images/spaghetti_puttanesca_step4.jpg"
+  },
+  {
+    "id": 71,
+    "recipeId": 16,
+    "stepNumber": 5,
+    "title_en": "Finish the dish",
+    "title_de": "Gericht vollenden",
+    "instruction_en": "Add the spaghetti to the vegetables in the pan and mix well. Season the spaghetti to taste with a little mild chili mix (caution: spicy!), salt, pepper, lemon zest and a little lemon juice.",
+    "instruction_de": "Spaghetti zu dem Gemüse in die Pfanne geben und gut vermengen. Spaghetti nach Belieben mit etwas mildem Chili-Mix (Achtung: scharf!), Salz*, Pfeffer*, Zitronenabrieb und etwas Zitronensaft abschmecken.",
+    "image": "images/spaghetti_puttanesca_step5.jpg"
+  },
+  {
+    "id": 72,
+    "recipeId": 16,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the Spaghetti Puttanesca between deep plates, sprinkle with hard cheese and drizzle the basil paste over the top. Enjoy!",
+    "instruction_de": "Spaghetti Puttanesca auf tiefen Tellern anrichten, mit Hartkäse bestreuen und Basilikumpaste darüber verteilen. Guten Appetit!",
+    "image": "images/spaghetti_puttanesca_step6.jpg"
+  },
+  {
+    "id": 73,
+    "recipeId": 17,
+    "stepNumber": 1,
+    "title_en": "Chop the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Heat plenty of water in the kettle. Halve the leek lengthwise, wash thoroughly and cut only the white and light-green part into approx. 0.5 cm rings. Peel the carrot and cut into approx. 0.5 cm half-moons. Peel the potatoes and cut into approx. 1 cm cubes. Halve the onion and finely dice.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Porree der Länge nach halbieren, gründlich auswaschen und nur den weißen und hellgrünen Teil in ca. 0,5 cm Ringe schneiden. Karotte schälen und in ca. 0,5 cm Halbmonde schneiden. Kartoffeln schälen und in ca. 1 cm Würfel schneiden. Zwiebel halbieren und fein würfeln.",
+    "image": "images/one_pot_linseneintopf_step1.jpg"
+  },
+  {
+    "id": 74,
+    "recipeId": 17,
+    "stepNumber": 2,
+    "title_en": "Sauté the vegetables",
+    "title_de": "Gemüse anbraten",
+    "instruction_en": "Heat 2 tbsp butter in a large pot, add the leek and sauté for 1-2 minutes while stirring. Add the remaining vegetables and sauté for another 1-2 minutes.",
+    "instruction_de": "In einem großen Topf 2 EL Butter* erhitzen, Porree darin 1–2 Min. unter Rühren anschwitzen. Übriges Gemüse hinzugeben und weitere 1–2 Min. anschwitzen.",
+    "image": "images/one_pot_linseneintopf_step2.jpg"
+  },
+  {
+    "id": 75,
+    "recipeId": 17,
+    "stepNumber": 3,
+    "title_en": "Sauté the vegetables",
+    "title_de": "Gemüse anbraten",
+    "instruction_en": "Deglaze the contents of the pot with 800 ml hot water. Stir in the stock powder, cover and simmer for 12-15 minutes until the vegetables are soft enough. Season with salt and pepper.",
+    "instruction_de": "Topfinhalt mit 800 ml heißem Wasser* ablöschen. Brühpulver einrühren und alles abgedeckt 12–15 Min. köcheln lassen, bis das Gemüse weich genug ist. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/one_pot_linseneintopf_step3.jpg"
+  },
+  {
+    "id": 76,
+    "recipeId": 17,
+    "stepNumber": 4,
+    "title_en": "Cut the sausages",
+    "title_de": "Würstchen schneiden",
+    "instruction_en": "Drain the lentils in a sieve. Cut the sausages diagonally into 2 cm slices. Add the lentils and sausages to the soup for the final 5 minutes of cooking.",
+    "instruction_de": "Linsen in ein Sieb gießen. Würstchen schräg in 2 cm Scheiben schneiden. Linsen und Würstchen in den letzten 5 Min. mit in die Suppe geben.",
+    "image": "images/one_pot_linseneintopf_step4.jpg"
+  },
+  {
+    "id": 77,
+    "recipeId": 17,
+    "stepNumber": 5,
+    "title_en": "Prepare the herb sour cream",
+    "title_de": "Kräuterschmand zubereiten",
+    "instruction_en": "Roughly chop the parsley leaves and stir them into the soup. Cut the chives into fine rolls. In a small bowl, mix the sour cream with the chives and season with salt and pepper.",
+    "instruction_de": "Petersilienblätter grob hacken und unter die Suppe rühren. Schnittlauch in feine Röllchen schneiden. In einer kleinen Schüssel Schmand mit Schnittlauchröllchen verrühren und mit Salz* und Pfeffer* würzen.",
+    "image": "images/one_pot_linseneintopf_step5.jpg"
+  },
+  {
+    "id": 78,
+    "recipeId": 17,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the lentil stew between bowls. Top with the chive sour cream and enjoy.",
+    "instruction_de": "Linseneintopf auf Schüsseln verteilen. Mit Schnittlauch-Schmand toppen und genießen. Guten Appetit!",
+    "image": "images/one_pot_linseneintopf_step6.jpg"
+  },
+  {
+    "id": 79,
+    "recipeId": 18,
+    "stepNumber": 1,
+    "title_en": "Fry the bacon and gnocchi",
+    "title_de": "Bacon und Gnocchi anbraten",
+    "instruction_en": "Heat 2 tbsp butter in a large frying pan and fry the gnocchi for 6–8 minutes until golden brown. In a large frying pan without added fat, fry the bacon with 2 tbsp water for 3–4 minutes until golden brown.",
+    "instruction_de": "In einer großen Pfanne 2 EL Butter* erhitzen. Gnocchi darin 6–8 Min. goldbraun anbraten. In einer großen Pfanne ohne Fettzugabe Bacon mit 2 EL Wasser* 3–4 Min. goldbraun anbraten.",
+    "image": "images/gnocchi_speck_rahm_step1.jpg"
+  },
+  {
+    "id": 80,
+    "recipeId": 18,
+    "stepNumber": 2,
+    "title_en": "Prepare the sauce",
+    "title_de": "Soße zubereiten",
+    "instruction_en": "Press the garlic into the pan with the bacon. Deglaze with cooking cream, stock powder and 200 ml water. Simmer for 1–2 minutes until slightly thickened. Fold in the spinach until wilted.",
+    "instruction_de": "Knoblauch in die Pfanne mit dem Bacon pressen. Bacon-Pfanne mit Kochsahne, Brühpulver und 200 ml Wasser* ablöschen. Soße 1–2 Min. köcheln lassen, bis sie leicht eindickt. Spinat unterheben, bis er zusammenfällt.",
+    "image": "images/gnocchi_speck_rahm_step2.jpg"
+  },
+  {
+    "id": 81,
+    "recipeId": 18,
+    "stepNumber": 3,
+    "title_en": "Final steps",
+    "title_de": "Letzte Schritte",
+    "instruction_en": "Fold three quarters of the gnocchi into the sauce. Divide the gnocchi and sauce between deep plates and top with the remaining gnocchi and hard cheese. Enjoy!",
+    "instruction_de": "Drei Viertel der Gnocchi unter die Soße heben. Gnocchi und Soße auf tiefe Teller verteilen, mit restlichen Gnocchi und Hartkäse toppen. Guten Appetit!",
+    "image": "images/gnocchi_speck_rahm_step3.jpg"
+  },
+  {
+    "id": 82,
+    "recipeId": 19,
+    "stepNumber": 1,
+    "title_en": "Cook the apples",
+    "title_de": "Äpfel garen",
+    "instruction_en": "Peel the apples if desired, quarter, core and cut into 2 cm cubes. Add 100 ml water to a small pot with a lid, lightly salt and bring to the boil. Add the apples and cook covered for 8–10 minutes until soft. Meanwhile continue with the recipe.",
+    "instruction_de": "Äpfel nach Belieben schälen, vierteln, entkernen und in 2 cm Würfel schneiden. In einen kleinen Topf mit Deckel 100 ml Wasser* geben, leicht salzen* und aufkochen lassen. Äpfel hinzugeben und 8–10 Min. abgedeckt weich kochen. Währenddessen mit dem Rezept fortfahren.",
+    "image": "images/himmel_un_aed_step1.jpg"
+  },
+  {
+    "id": 83,
+    "recipeId": 19,
+    "stepNumber": 2,
+    "title_en": "Cook the potatoes",
+    "title_de": "Kartoffeln garen",
+    "instruction_en": "In a large pot, bring the potatoes to the boil with 300 ml milk and simmer for 3–4 minutes.",
+    "instruction_de": "In einem großen Topf die Kartoffeln mit 300 ml Milch* aufkochen und für 3–4 Min. köcheln.",
+    "image": "images/himmel_un_aed_step2.jpg"
+  },
+  {
+    "id": 84,
+    "recipeId": 19,
+    "stepNumber": 3,
+    "title_en": "Fry the bratwursts",
+    "title_de": "Bratwürste braten",
+    "instruction_en": "Heat 1 tbsp oil in a large frying pan. Fry the bratwursts on all sides for 4–6 minutes.",
+    "instruction_de": "In der großen Pfanne 1 EL Öl* erhitzen. Bratwürste darin 4–6 Min. rundum anbraten.",
+    "image": "images/himmel_un_aed_step3.jpg"
+  },
+  {
+    "id": 85,
+    "recipeId": 19,
+    "stepNumber": 4,
+    "title_en": "Mash potatoes and apple",
+    "title_de": "Kartoffeln und Apfel stampfen",
+    "instruction_en": "Add Hello Muskat and 2 tbsp butter to the potatoes and mash with a potato masher. Season with salt and pepper. Once cooked, mash the apple with a potato masher.",
+    "instruction_de": "„Hello Muskat“ und 2 EL Butter* zu den Kartoffeln geben und mithilfe eines Kartoffelstampfers zu einem Stampf verarbeiten. Mit Salz* und Pfeffer* abschmecken. Apfel nach der Garzeit mithilfe eines Kartoffelstampfers zu einem Stampf verarbeiten.",
+    "image": "images/himmel_un_aed_step4.jpg"
+  },
+  {
+    "id": 86,
+    "recipeId": 19,
+    "stepNumber": 5,
+    "title_en": "For the salad",
+    "title_de": "Für den Salat",
+    "instruction_en": "In a large bowl, mix the lamb's lettuce with the buttermilk-lemon dressing.",
+    "instruction_de": "In einer großen Schüssel Feldsalat mit Buttermilch-Zitronen-Dressing vermischen.",
+    "image": "images/himmel_un_aed_step5.jpg"
+  },
+  {
+    "id": 87,
+    "recipeId": 19,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Serve the potato mash, apple purée, Thuringian bratwurst and lamb's lettuce on plates. Serve with mustard as desired and enjoy!",
+    "instruction_de": "Kartoffelstampf, Apfelpüree, Thüringer und Feldsalat auf Tellern anrichten. Nach Belieben Senf dazu reichen und genießen. Guten Appetit!",
+    "image": "images/himmel_un_aed_step6.jpg"
+  },
+  {
+    "id": 88,
+    "recipeId": 20,
+    "stepNumber": 1,
+    "title_en": "To begin",
+    "title_de": "Zum Beginn",
+    "instruction_en": "Heat plenty of water in the kettle. Bring 8 tbsp butter to room temperature in a small bowl. Peel and quarter or halve the potatoes. Peel the carrot and cut into 2 cm pieces. Fill a large pot with plenty of hot water, salt and bring to the boil. Cook the potatoes and carrots for 12–15 minutes until soft.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Bringe in einer kleinen Schüssel 8 EL Butter* auf Raumtemperatur. Kartoffeln schälen und vierteln oder halbieren. Karotte schälen und in 2 cm Stücke schneiden. In einen großen Topf reichlich heißes Wasser* füllen, salzen* und aufkochen lassen. Kartoffeln und Karotten darin 12–15 Min. garen, bis sie weich sind.",
+    "image": "images/hueftsteak_baerlauchbutter_step1.jpg"
+  },
+  {
+    "id": 89,
+    "recipeId": 20,
+    "stepNumber": 2,
+    "title_en": "Chop the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Finely dice the shallot. Cut the mushrooms into thin slices.",
+    "instruction_de": "Schalotte fein würfeln. Champignons in dünne Scheiben schneiden.",
+    "image": "images/hueftsteak_baerlauchbutter_step2.jpg"
+  },
+  {
+    "id": 90,
+    "recipeId": 20,
+    "stepNumber": 3,
+    "title_en": "Prepare wild garlic butter",
+    "title_de": "Bärlauchbutter zubereiten",
+    "instruction_en": "Roughly chop the wild garlic leaves. Add the wild garlic to the small bowl with the butter and mix. Season with salt and pepper.",
+    "instruction_de": "Bärlauchblätter grob hacken. Bärlauch in die kleine Schüssel mit der Butter geben und vermengen. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/hueftsteak_baerlauchbutter_step3.jpg"
+  },
+  {
+    "id": 91,
+    "recipeId": 20,
+    "stepNumber": 4,
+    "title_en": "Fry the mushrooms",
+    "title_de": "Champignons braten",
+    "instruction_en": "Heat 2 tbsp oil in a large frying pan. Fry the mushrooms and shallot for 5–8 minutes until golden brown. Season with salt and pepper. Drain the cooked vegetables through a sieve, return to the pot, add a little milk and mash with a potato masher. Season with salt and pepper.",
+    "instruction_de": "In einer großen Pfanne 2 EL Öl* erhitzen. Champignons und Schalotte 5–8 Min. goldbraun braten. Mit Salz* und Pfeffer* würzen. Gemüse nach der Garzeit durch ein Sieb abgießen. Zurück in den Topf geben, etwas Milch* dazugeben und mithilfe eines Kartoffelstampfers zu einem Stampf verarbeiten. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/hueftsteak_baerlauchbutter_step4.jpg"
+  },
+  {
+    "id": 92,
+    "recipeId": 20,
+    "stepNumber": 5,
+    "title_en": "Fry the steak",
+    "title_de": "Steak anbraten",
+    "instruction_en": "Salt the beef steaks on both sides. Heat a little oil in a second large frying pan. Fry the steaks for 1–2 minutes per side for rare, 2–3 minutes for medium or 3–5 minutes for well done. Wrap in aluminium foil and rest for at least 5 minutes.",
+    "instruction_de": "Rindersteaks von beiden Seiten salzen*. In einer zweiten großen Pfanne etwas Öl* erhitzen. Rindersteaks je Seite 1–2 Min. für rare, 2–3 Min. für medium und 3–5 Min. für well done anbraten. Steaks danach in Aluminiumfolie wickeln und mind. 5 Min. ruhen lassen.",
+    "image": "images/hueftsteak_baerlauchbutter_step5.jpg"
+  },
+  {
+    "id": 93,
+    "recipeId": 20,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Slice the steaks if desired. Divide the potato-carrot mash between plates. Arrange the steak and mushrooms on top and serve with wild garlic butter. Enjoy!",
+    "instruction_de": "Steaks nach Belieben in Scheiben schneiden. Kartoffel-Karottenstampf auf Teller verteilen. Steak und Champignons darauf anrichten und mit Bärlauchbutter servieren. Guten Appetit!",
+    "image": "images/hueftsteak_baerlauchbutter_step6.jpg"
+  },
+  {
+    "id": 94,
+    "recipeId": 21,
+    "stepNumber": 1,
+    "title_en": "Chop the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Heat plenty of water in the kettle. Halve and deseed the bell pepper and cut into 0.5 cm cubes. Finely dice the onion and garlic.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Paprika halbieren, entkernen und in 0,5 cm Würfel schneiden. Zwiebel und Knoblauch fein würfeln.",
+    "image": "images/maltagliati_kirschtomaten_paprika_step1.jpg"
+  },
+  {
+    "id": 95,
+    "recipeId": 21,
+    "stepNumber": 2,
+    "title_en": "Toast the sunflower seeds",
+    "title_de": "Sonnenblumenkerne rösten",
+    "instruction_en": "Toast the sunflower seeds in a large pot with a lid without added fat for 1–2 minutes. Remove.",
+    "instruction_de": "In einem großen Topf mit Deckel Sonnenblumenkerne ohne Fettzugabe 1–2 Min. anrösten. Herausnehmen.",
+    "image": "images/maltagliati_kirschtomaten_paprika_step2.jpg"
+  },
+  {
+    "id": 96,
+    "recipeId": 21,
+    "stepNumber": 3,
+    "title_en": "For the tomato sauce",
+    "title_de": "Für die Tomatensoße",
+    "instruction_en": "Heat 2 tbsp oil in the same pot. Sauté the diced bell pepper, onion and garlic for 2–3 minutes. Add the chopped tomatoes and Hello Mediterraneo and simmer covered for 10–12 minutes until the vegetables are soft, stirring occasionally. Cut the basil leaves into strips.",
+    "instruction_de": "In demselben Topf 2 EL Öl* erhitzen. Paprikawürfel, Zwiebel und Knoblauch 2–3 Min. anschwitzen. Stückige Tomaten und „Hello Mediterraneo“ dazugeben und 10–12 Min. abgedeckt köcheln lassen, bis das Gemüse weich ist. Dabei ab und zu umrühren. Basilikumblätter in Streifen schneiden.",
+    "image": "images/maltagliati_kirschtomaten_paprika_step3.jpg"
+  },
+  {
+    "id": 97,
+    "recipeId": 21,
+    "stepNumber": 4,
+    "title_en": "Cook the maltagliati",
+    "title_de": "Maltagliati kochen",
+    "instruction_en": "Fill a second large pot with plenty of hot water, add salt and bring to the boil. Stack two thirds of the lasagne sheets, cut lengthwise into 3 strips, then cut each strip into 5 equal pieces. Separate the pasta pieces by hand, add to the boiling water and cook for about 5 minutes until al dente.",
+    "instruction_de": "In einen zweiten großen Topf reichlich heißes Wasser* füllen, salzen* und zum Kochen bringen. Zwei Drittel der Lasagneplatten übereinander legen, längs in 3 Streifen schneiden. Jeden Streifen in 5 gleich große Stücke schneiden. Pastastücke mit den Händen voneinander trennen, in das kochende Wasser* geben und ca. 5 Min. bissfest kochen.",
+    "image": "images/maltagliati_kirschtomaten_paprika_step4.jpg"
+  },
+  {
+    "id": 98,
+    "recipeId": 21,
+    "stepNumber": 5,
+    "title_en": "Finish the dish",
+    "title_de": "Fertigstellen",
+    "instruction_en": "Halve the cherry tomatoes and add them to the sauce. Drain the pasta, reserving 100 ml cooking water. Add the pasta and reserved cooking water to the tomato sauce and stir. Season with 0.5 tsp sugar, salt and pepper.",
+    "instruction_de": "Kirschtomaten halbieren und zur Soße geben. Pasta nach der Kochzeit durch ein Sieb abgießen, dabei 100 ml Kochwasser auffangen. Pasta und abgemessenes Kochwasser zur Tomatensoße geben und unterrühren. Mit 0,5 TL Zucker*, Salz* und Pfeffer* abschmecken.",
+    "image": "images/maltagliati_kirschtomaten_paprika_step5.jpg"
+  },
+  {
+    "id": 99,
+    "recipeId": 21,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the maltagliati with tomato sauce between deep plates. Top with grated hard cheese, toasted sunflower seeds and basil. Enjoy!",
+    "instruction_de": "Maltagliati mit Tomatensoße auf tiefe Teller verteilen. Mit geriebenem Hartkäse, gerösteten Sonnenblumenkernen und Basilikum toppen. Guten Appetit!",
+    "image": "images/maltagliati_kirschtomaten_paprika_step6.jpg"
+  },
+  {
+    "id": 100,
+    "recipeId": 22,
+    "stepNumber": 1,
+    "title_en": "Bake the potatoes",
+    "title_de": "Kartoffeln backen",
+    "instruction_en": "Preheat the oven to 220°C conventional (200°C fan). Bring 6 tbsp butter to room temperature. Heat plenty of water in the kettle. Halve the washed potatoes and cut into 1 cm wedges. Mix with Hello Patatas and 2 tbsp oil, spread on a lined baking tray and bake for 25–30 minutes until golden.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Bringe 6 EL Butter auf Zimmertemperatur. Erhitze reichlich Wasser im Wasserkocher. Gewaschene Kartoffeln halbieren und in 1 cm Spalten schneiden. In einer großen Schüssel Kartoffeln mit „Hello Patatas“ und 2 EL Öl vermengen, auf einem mit Backpapier belegten Backblech verteilen und 25–30 Min. goldbraun backen.",
+    "image": "images/schweinelachssteak_brokkoli_step1.jpg"
+  },
+  {
+    "id": 101,
+    "recipeId": 22,
+    "stepNumber": 2,
+    "title_en": "Prepare the broccoli",
+    "title_de": "Brokkoli vorbereiten",
+    "instruction_en": "Cut the broccoli into bite-size pieces.",
+    "instruction_de": "Brokkoli in mundgerechte Stücke schneiden.",
+    "image": "images/schweinelachssteak_brokkoli_step2.jpg"
+  },
+  {
+    "id": 102,
+    "recipeId": 22,
+    "stepNumber": 3,
+    "title_en": "Prepare the herb butter",
+    "title_de": "Kräuterbutter zubereiten",
+    "instruction_en": "Finely chop the parsley and thyme leaves together. Mix the softened butter with half the herbs and season with salt and pepper. Peel the garlic. Cut the shallot into thin rings.",
+    "instruction_de": "Petersilien- und Thymianblätter zusammen fein hacken. In einer kleinen Schüssel weiche Butter mit der Hälfte der Kräuter mischen und mit etwas Salz und Pfeffer würzen. Knoblauch abziehen. Schalotte in feine Ringe schneiden.",
+    "image": "images/schweinelachssteak_brokkoli_step3.jpg"
+  },
+  {
+    "id": 103,
+    "recipeId": 22,
+    "stepNumber": 4,
+    "title_en": "Fry the steaks",
+    "title_de": "Steaks anbraten",
+    "instruction_en": "Season the pork loin steaks with salt and pepper on both sides. Heat 2 tbsp oil in a large frying pan and fry the steaks over medium heat for 3–5 minutes per side until only very slightly pink in the centre.",
+    "instruction_de": "Schweinelachssteaks von beiden Seiten salzen und pfeffern. In einer großen Pfanne 2 EL Öl erhitzen. Schweinelachssteaks darin bei mittlerer Hitze 3–5 Min. je Seite braten, bis sie in der Mitte nur noch ganz leicht rosa sind.",
+    "image": "images/schweinelachssteak_brokkoli_step4.jpg"
+  },
+  {
+    "id": 104,
+    "recipeId": 22,
+    "stepNumber": 5,
+    "title_en": "Fry the broccoli",
+    "title_de": "Brokkoli anbraten",
+    "instruction_en": "Heat 2 tbsp oil in a second large frying pan. Fry the shallot and broccoli for 4–5 minutes. Press in the garlic and fry for another minute. Deglaze with 100 ml water and simmer for 3–5 minutes until the broccoli is cooked and the water has evaporated. Stir in the remaining herbs and season with salt and pepper.",
+    "instruction_de": "In einer zweiten großen Pfanne 2 EL Öl erhitzen. Zwiebel und Brokkoli darin 4–5 Min. anbraten. Knoblauch dazupressen und 1 weitere Min. anbraten. Mit 100 ml Wasser ablöschen und 3–5 Min. köcheln lassen, bis der Brokkoli gar und das Wasser verdampft ist. Restliche Kräuter unterrühren und nach Geschmack mit Salz und Pfeffer würzen.",
+    "image": "images/schweinelachssteak_brokkoli_step5.jpg"
+  },
+  {
+    "id": 105,
+    "recipeId": 22,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the potato wedges between plates and serve with the broccoli and pork loin steaks. Spoon the herb butter over the steaks and enjoy!",
+    "instruction_de": "Kartoffelecken auf Teller verteilen, Brokkoli und Schweinelachssteaks dazu anrichten. Kräuterbutter auf den Schweinelachssteaks verteilen und genießen. Guten Appetit!",
+    "image": "images/schweinelachssteak_brokkoli_step6.jpg"
+  },
+  {
+    "id": 106,
+    "recipeId": 23,
+    "stepNumber": 1,
+    "title_en": "Cook the pasta",
+    "title_de": "Pasta kochen",
+    "instruction_en": "Heat plenty of water in the kettle. Fill a large pot with plenty of hot water, salt generously and bring to the boil. Add the pasta and cook for 10–11 minutes until al dente. Drain and rinse with cold water.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen großen Topf reichlich heißes Wasser füllen, kräftig salzen und aufkochen lassen. Pasta hinzufügen und 10–11 Min. bissfest garen. Danach durch ein Sieb gießen und mit kaltem Wasser abspülen.",
+    "image": "images/thueringer_speckmantel_nudelsalat_step1.jpg"
+  },
+  {
+    "id": 107,
+    "recipeId": 23,
+    "stepNumber": 2,
+    "title_en": "For the dressing",
+    "title_de": "Für das Dressing",
+    "instruction_en": "In a large bowl, mix the yogurt, mayonnaise, mustard, stock powder, two thirds of the Hello Paprika, honey, white wine vinegar, salt and pepper into a dressing.",
+    "instruction_de": "In einer großen Schüssel Joghurt, Mayonnaise, Senf, Brühpulver, zwei Drittel „Hello Paprika“, Honig, Weißweinessig, Salz und Pfeffer zu einem Dressing verrühren.",
+    "image": "images/thueringer_speckmantel_nudelsalat_step2.jpg"
+  },
+  {
+    "id": 108,
+    "recipeId": 23,
+    "stepNumber": 3,
+    "title_en": "Prepare the vegetables",
+    "title_de": "Gemüse vorbereiten",
+    "instruction_en": "Halve the cucumber lengthwise and cut into 0.5 cm half-moons. Halve the cherry tomatoes. Slice the radishes. Halve the onion and cut into thin strips.",
+    "instruction_de": "Gurke längs halbieren und in 0,5 cm Halbmonde schneiden. Kirschtomaten halbieren. Radieschen in Scheiben schneiden. Zwiebel halbieren und in feine Streifen schneiden.",
+    "image": "images/thueringer_speckmantel_nudelsalat_step3.jpg"
+  },
+  {
+    "id": 109,
+    "recipeId": 23,
+    "stepNumber": 4,
+    "title_en": "Wrap the bratwursts",
+    "title_de": "Thüringer umwickeln",
+    "instruction_en": "Wrap each Thuringian bratwurst with 2 slices of bacon. Tip: If any bacon is left over, chop it and fry it later with the onions.",
+    "instruction_de": "Thüringer mit jeweils 2 Scheiben Bacon umwickeln. Tipp: Falls etwas Bacon übrig bleibt, kannst Du ihn klein schneiden und später zusammen mit den Zwiebeln anbraten.",
+    "image": "images/thueringer_speckmantel_nudelsalat_step4.jpg"
+  },
+  {
+    "id": 110,
+    "recipeId": 23,
+    "stepNumber": 5,
+    "title_en": "Fry the bratwursts",
+    "title_de": "Thüringer braten",
+    "instruction_en": "Add the cooled fusilli, cherry tomatoes, radishes and cucumber to the dressing and mix gently. Fry the bacon-wrapped bratwursts and onions in a large frying pan for 6–8 minutes on all sides. Season with the remaining Hello Paprika, salt and pepper.",
+    "instruction_de": "Abgekühlte Fusilli, Kirschtomaten, Radieschen und Gurken in das Dressing geben und vorsichtig vermengen. In einer großen Pfanne Thüringer im Speckmantel und Zwiebeln 6–8 Min. rundum anbraten. Mit restlichem „Hello Paprika“, Salz und Pfeffer würzen.",
+    "image": "images/thueringer_speckmantel_nudelsalat_step5.jpg"
+  },
+  {
+    "id": 111,
+    "recipeId": 23,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Slice the bratwursts. Divide the pasta salad between deep plates. Arrange the bratwurst on top and finish with the paprika-seasoned onions. Enjoy!",
+    "instruction_de": "Thüringer in Scheiben schneiden. Nudelsalat auf tiefe Teller verteilen. Thüringer darauf anrichten und mit Paprika-Zwiebeln toppen. Guten Appetit!",
+    "image": "images/thueringer_speckmantel_nudelsalat_step6.jpg"
+  },
+  {
+    "id": 112,
+    "recipeId": 24,
+    "stepNumber": 1,
+    "title_en": "Small preparation",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Preheat the oven to 220°C conventional (200°C fan). Drain the lentils and canned cherry tomatoes through a sieve. Cut the aubergine first into 1 cm slices and then into 1 cm cubes.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Linsen und Kirschtomaten durch ein Sieb abgießen. Aubergine zuerst in 1 cm Scheiben, diese dann in 1 cm Würfel schneiden.",
+    "image": "images/veggie_moussaka_step1.jpg"
+  },
+  {
+    "id": 113,
+    "recipeId": 24,
+    "stepNumber": 2,
+    "title_en": "Bake the aubergine",
+    "title_de": "Aubergine backen",
+    "instruction_en": "Spread the diced aubergine on a baking tray lined with baking paper and mix with 4 tbsp olive oil, salt and pepper. Bake for 20 minutes until soft.",
+    "instruction_de": "Auberginenwürfel auf einem mit Backpapier belegten Backblech verteilen, mit 4 EL Olivenöl*, Salz* und Pfeffer* vermengen. Auberginenwürfel 20 Min. im Ofen backen, bis sie weich sind.",
+    "image": "images/veggie_moussaka_step2.jpg"
+  },
+  {
+    "id": 114,
+    "recipeId": 24,
+    "stepNumber": 3,
+    "title_en": "For the casserole",
+    "title_de": "Für den Auflauf",
+    "instruction_en": "In a baking dish, mix the cherry tomatoes, lentils, tomato sugo, Hello Souflaki (caution: spicy!), 2 tsp honey, salt and pepper and spread evenly.",
+    "instruction_de": "In einer Auflaufform Kirschtomaten, Linsen, Tomatensugo, „Hello Souflaki“ (Achtung: scharf!), 2 TL Honig*, Salz* und Pfeffer* vermengen und gleichmäßig verteilen.",
+    "image": "images/veggie_moussaka_step3.jpg"
+  },
+  {
+    "id": 115,
+    "recipeId": 24,
+    "stepNumber": 4,
+    "title_en": "Prepare the sour cream mixture",
+    "title_de": "Schmand-Mischung zubereiten",
+    "instruction_en": "In a small bowl, stir Hello Muskat with 4 tbsp hot water until smooth. Stir in the sour cream. Halve the romaine lettuce lengthwise and cut into 1 cm strips.",
+    "instruction_de": "In einer kleinen Schüssel „Hello Muskat“ mit 4 EL heißem Wasser* glattrühren. Schmand unterrühren. Romana Salat längs halbieren und in 1 cm Streifen schneiden.",
+    "image": "images/veggie_moussaka_step4.jpg"
+  },
+  {
+    "id": 116,
+    "recipeId": 24,
+    "stepNumber": 5,
+    "title_en": "Gratinate",
+    "title_de": "Gratinieren",
+    "instruction_en": "Spread the baked aubergine cubes over the lentil mixture. Distribute the sour cream mixture evenly over the casserole. Sprinkle with grated cheese and gratinate in the oven for 10 minutes. Meanwhile, mix balsamic cream, 2 tsp olive oil, salt and pepper in a large bowl to make a dressing. Toss the lettuce with the dressing.",
+    "instruction_de": "Gebackene Auberginenwürfel auf der Linsenmischung verteilen. Schmand-Mischung gleichmäßig über den Auflauf verteilen. Mit geriebenem Käse bestreuen und 10 Min. im Ofen gratinieren lassen. Inzwischen in einer großen Schüssel Balsamicocreme, 2 TL Olivenöl*, Salz* und Pfeffer* zu einem Dressing verrühren. Salat unter das Dressing heben.",
+    "image": "images/veggie_moussaka_step5.jpg"
+  },
+  {
+    "id": 117,
+    "recipeId": 24,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the vegetarian moussaka between plates and enjoy with the salad. Enjoy!",
+    "instruction_de": "Vegetarisches Moussaka auf Teller verteilen und mit dem Salat genießen. Guten Appetit!",
+    "image": "images/veggie_moussaka_step6.jpg"
+  },
+  {
+    "id": 118,
+    "recipeId": 25,
+    "stepNumber": 1,
+    "title_en": "Cook the potatoes",
+    "title_de": "Kartoffeln kochen",
+    "instruction_en": "Heat plenty of water in the kettle. Peel and quarter the potatoes. Fill a large pot with about 2 L hot water, add 2 tsp salt and bring to the boil. Add the potatoes and cook for 12–15 minutes until soft. Meanwhile, continue with the recipe.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Kartoffeln schälen und vierteln. In einen großen Topf ca. 2 L heißes Wasser* füllen, 2 TL Salz* dazugeben und aufkochen lassen. Kartoffeln zugeben und 12–15 Min. garen, bis sie weich sind. Währenddessen mit dem Rezept fortfahren.",
+    "image": "images/wiener_paprika_gulasch_step1.jpg"
+  },
+  {
+    "id": 119,
+    "recipeId": 25,
+    "stepNumber": 2,
+    "title_en": "Chop the ingredients",
+    "title_de": "Zutaten schneiden",
+    "instruction_en": "Halve and deseed the bell peppers and cut into 3 cm pieces. Quarter the onion and cut into thin strips. Cut the Vienna sausages into 2 cm pieces.",
+    "instruction_de": "Paprika halbieren, entkernen und in 3 cm Stücke schneiden. Zwiebel vierteln und in feine Streifen schneiden. Wiener Würstchen in 2 cm Stücke schneiden.",
+    "image": "images/wiener_paprika_gulasch_step2.jpg"
+  },
+  {
+    "id": 120,
+    "recipeId": 25,
+    "stepNumber": 3,
+    "title_en": "Fry the peppers",
+    "title_de": "Paprika anbraten",
+    "instruction_en": "Heat 2 tbsp oil in a large frying pan. Fry the bell pepper and onion for 3–4 minutes. In a measuring jug, mix 200 ml warm water with ketchup, Hello Paprika, Hello Smoky Paprika and cornstarch.",
+    "instruction_de": "In einer großen Pfanne 2 EL Öl* erhitzen. Paprika und Zwiebel darin 3–4 Min. anbraten. In einem Messbecher 200 ml warmes Wasser* mit Ketchup, „Hello Paprika“, „Hello Smoky Paprika“ und Maisstärke verrühren.",
+    "image": "images/wiener_paprika_gulasch_step3.jpg"
+  },
+  {
+    "id": 121,
+    "recipeId": 25,
+    "stepNumber": 4,
+    "title_en": "Cook the goulash",
+    "title_de": "Gulasch kochen",
+    "instruction_en": "Deglaze the pan with the prepared sauce. Add the sausages and thyme sprigs and simmer everything for 4–5 minutes. Cut the chives into fine rolls.",
+    "instruction_de": "Pfanneninhalt mit angerührter Soße ablöschen. Würstchen und Thymianzweige hineingeben und alles 4–5 Min. köcheln lassen. Schnittlauch in feine Röllchen schneiden.",
+    "image": "images/wiener_paprika_gulasch_step4.jpg"
+  },
+  {
+    "id": 122,
+    "recipeId": 25,
+    "stepNumber": 5,
+    "title_en": "Make the mash",
+    "title_de": "Für das Püree",
+    "instruction_en": "Drain the cooked potatoes through a sieve, reserving 50 ml cooking water. Return the potatoes to the pot, add Hello Muskat, grated cheese, 2 tbsp butter and the reserved cooking water, then mash with a potato masher. Season with salt and pepper.",
+    "instruction_de": "Kartoffeln nach der Garzeit durch ein Sieb abgießen, dabei 50 ml Kochwasser auffangen. Kartoffeln zurück in den Topf geben, „Hello Muskat“, geriebenen Käse, 2 EL Butter* und aufgefangenes Kochwasser dazugeben und mithilfe eines Kartoffelstampfers zu einem Püree stampfen. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/wiener_paprika_gulasch_step5.jpg"
+  },
+  {
+    "id": 123,
+    "recipeId": 25,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Remove the thyme from the pan and season the sausage goulash with salt and pepper. Divide the sausage goulash and cheesy mashed potatoes between deep plates. Garnish with chives. Enjoy!",
+    "instruction_de": "Thymian aus der Pfanne entfernen und Würstchen-Gulasch mit Salz* und Pfeffer* abschmecken. Würstchen-Gulasch und käsiges Kartoffelpüree auf tiefe Teller verteilen. Mit Schnittlauch garnieren. Guten Appetit!",
+    "image": "images/wiener_paprika_gulasch_step6.jpg"
+  },
+  {
+    "id": 124,
+    "recipeId": 26,
+    "stepNumber": 1,
+    "title_en": "Small preparation",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Heat plenty of water. Slice onion thinly and mushrooms into thin slices. Mix 100 ml water, cooking cream and stock powder. Fill a large pot with plenty of hot salted water and bring to the boil.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Zwiebel in feine Streifen schneiden. Champignons in dünne Scheiben schneiden. In einem hohen Rührgefäß 100 ml Wasser, Kochsahne und Brühpulver miteinander verrühren. In einen großen Topf reichlich heißes Wasser füllen, salzen und zum Kochen bringen.",
+    "image": "images/bacon_rahmschwammerl_step1.jpg"
+  },
+  {
+    "id": 125,
+    "recipeId": 26,
+    "stepNumber": 2,
+    "title_en": "Cook the dumplings",
+    "title_de": "Klöße kochen",
+    "instruction_en": "Add mini dumplings to the hot water. Reduce heat and let them steep for 8–10 minutes; they should not boil vigorously. Finely chop parsley.",
+    "instruction_de": "Miniklöße in das heiße Wasser geben. Anschließend Hitze reduzieren und Klöße 8–10 Min. ziehen lassen. Wichtig ist, dass die Knödel ziehen und nicht sprudelnd kochen. Petersilienblätter fein hacken.",
+    "image": "images/bacon_rahmschwammerl_step2.jpg"
+  },
+  {
+    "id": 126,
+    "recipeId": 26,
+    "stepNumber": 3,
+    "title_en": "Fry the ingredients",
+    "title_de": "Zutaten anbraten",
+    "instruction_en": "Fry bacon, onion strips and mushroom slices in a large pan over medium heat for 4–6 minutes.",
+    "instruction_de": "In einer großen Pfanne Bacon, Zwiebelstreifen und Champignonscheiben 4–6 Min. bei mittlerer Hitze braten.",
+    "image": "images/bacon_rahmschwammerl_step3.jpg"
+  },
+  {
+    "id": 127,
+    "recipeId": 26,
+    "stepNumber": 4,
+    "title_en": "Finish the creamy mushrooms",
+    "title_de": "Rahmschwammerl vollenden",
+    "instruction_en": "Deglaze with the prepared sauce and simmer for 1–2 minutes until slightly thickened. Season with pepper.",
+    "instruction_de": "Pfanneninhalt mit der vorbereiteten Soße ablöschen und alles zusammen 1–2 Min. köcheln lassen, bis die Soße etwas eindickt. Mit Pfeffer abschmecken.",
+    "image": "images/bacon_rahmschwammerl_step4.jpg"
+  },
+  {
+    "id": 128,
+    "recipeId": 26,
+    "stepNumber": 5,
+    "title_en": "For the salad",
+    "title_de": "Für den Salat",
+    "instruction_en": "Mix half the mustard, 2 tsp honey, 2 tbsp vinegar and 2 tbsp oil into a dressing. Season with salt and pepper and toss with lamb's lettuce.",
+    "instruction_de": "In einer großen Schüssel Hälfte vom Senf, 2 TL Honig, 2 EL Essig und 2 EL Öl zu einem Dressing verrühren. Mit Salz und Pfeffer abschmecken. Feldsalat untermischen.",
+    "image": "images/bacon_rahmschwammerl_step5.jpg"
+  },
+  {
+    "id": 129,
+    "recipeId": 26,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Carefully drain or lift out the mini dumplings and divide between plates. Sprinkle with parsley. Serve creamy mushrooms and salad alongside.",
+    "instruction_de": "Miniklöße vorsichtig abgießen oder mit einer Schöpfkelle herausnehmen und auf Teller verteilen. Mit Petersilie bestreuen. Rahmschwammerl und Salat daneben anrichten und genießen.",
+    "image": "images/bacon_rahmschwammerl_step6.jpg"
+  },
+  {
+    "id": 130,
+    "recipeId": 27,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Heat plenty of water in the kettle. Add 700 ml hot water and 0.5 tsp salt to a small pot with a lid and bring to the boil. Add the rice and simmer covered over low heat for 12 minutes. Remove from the heat and keep covered.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen kleinen Topf mit Deckel 700 ml heißes Wasser füllen, 0,5 TL Salz dazugeben und aufkochen lassen. Reis zugeben und bei niedriger Hitze 12 Min. abgedeckt köcheln lassen. Anschließend vom Herd nehmen und abgedeckt beiseite stellen.",
+    "image": "images/burrito_bowl_chorizo_step1.jpg"
+  },
+  {
+    "id": 131,
+    "recipeId": 27,
+    "stepNumber": 2,
+    "title_en": "Cut the chorizo",
+    "title_de": "Chorizo schneiden",
+    "instruction_en": "Cut the chorizo into small cubes. Slice the white and green parts of the spring onions separately into thin rings. Finely dice the garlic. Drain half of the black beans through a sieve.",
+    "instruction_de": "Chorizo in kleine Würfel schneiden. Weißen und grünen Teil der Frühlingszwiebel getrennt voneinander in feine Ringe schneiden. Knoblauch fein würfeln. Hälfte der schwarzen Bohnen durch ein Sieb abgießen.",
+    "image": "images/burrito_bowl_chorizo_step2.jpg"
+  },
+  {
+    "id": 132,
+    "recipeId": 27,
+    "stepNumber": 3,
+    "title_en": "Fry the chorizo",
+    "title_de": "Chorizo braten",
+    "instruction_en": "Heat 2 tbsp oil in a large frying pan over medium heat. Fry the chorizo for 2–3 minutes. Add Hello Harissa, black beans, garlic and 2 tbsp water and fry for another 2–3 minutes until the water has cooked away.",
+    "instruction_de": "In einer großen Pfanne 2 EL Öl bei mittlerer Hitze erhitzen. Chorizo darin 2–3 Min. braten. „Hello Harissa“, schwarze Bohnen, Knoblauch und 2 EL Wasser dazugeben und weitere 2–3 Min. braten, bis das Wasser eingekocht ist.",
+    "image": "images/burrito_bowl_chorizo_step3.jpg"
+  },
+  {
+    "id": 133,
+    "recipeId": 27,
+    "stepNumber": 4,
+    "title_en": "Prepare the salsa",
+    "title_de": "Salsa zubereiten",
+    "instruction_en": "Finely chop the herbs. Halve and stone the avocado and cut into 2 cm cubes. Peel the kiwi and cut into 1 cm cubes. Halve the lime. Mix the kiwi and avocado, green spring-onion rings and half the herbs with 2 tbsp lime juice and season with salt and pepper.",
+    "instruction_de": "Kräuter fein hacken. Avocado halbieren, entkernen und in 2 cm Würfel schneiden. Kiwi schälen und in 1 cm Würfel schneiden. Limette halbieren. In einer großen Schüssel Kiwi- und Avocadowürfel, grüne Frühlingszwiebelringe und Hälfte der Kräuter mit 2 EL Limettensaft vermengen und mit Salz und Pfeffer abschmecken.",
+    "image": "images/burrito_bowl_chorizo_step4.jpg"
+  },
+  {
+    "id": 134,
+    "recipeId": 27,
+    "stepNumber": 5,
+    "title_en": "Finish the rice",
+    "title_de": "Reis verfeinern",
+    "instruction_en": "Fluff the cooked rice with a fork and stir in 2 tbsp lime juice and the white spring-onion rings.",
+    "instruction_de": "Fertig gegarten Reis mit einer Gabel auflockern, 2 EL Limettensaft und weiße Frühlingszwiebelringe unterrühren.",
+    "image": "images/burrito_bowl_chorizo_step5.jpg"
+  },
+  {
+    "id": 135,
+    "recipeId": 27,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the rice between plates and top with the chorizo-bean mixture and avocado-kiwi salsa. Finish with sour cream and the remaining herbs and enjoy!",
+    "instruction_de": "Reis auf Teller verteilen, Chorizo-Bohnen und Avocado-Kiwi-Salsa darauf anrichten. Mit saurer Sahne und restlichen Kräutern toppen und genießen. Guten Appetit!",
+    "image": "images/burrito_bowl_chorizo_step6.jpg"
+  },
+  {
+    "id": 136,
+    "recipeId": 28,
+    "stepNumber": 1,
+    "title_en": "Small preparation",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Slice the white and green parts of the spring onion separately. Quarter the lime. Drain the beans. Heat 2 tbsp oil in a large pan, press in garlic and sauté for 1 minute. Transfer to a small bowl and mix with sour cream and juice from 2 lime quarters. Season.",
+    "instruction_de": "Weißen und grünen Teil der Frühlingszwiebel getrennt voneinander in feine Ringe schneiden. Limette vierteln. Bohnen durch ein Sieb abgießen. In einer großen Pfanne 2 EL Öl erhitzen. Knoblauch dazupressen und 1 Min. anschwitzen. Anschließend in eine kleine Schüssel geben und mit saurer Sahne und Saft von 2 Limettenvierteln vermengen. Mit Salz und Pfeffer abschmecken.",
+    "image": "images/chili_bowl_weiderind_step1.jpg"
+  },
+  {
+    "id": 137,
+    "recipeId": 28,
+    "stepNumber": 2,
+    "title_en": "Fry the meat",
+    "title_de": "Fleisch anbraten",
+    "instruction_en": "In the large pan without extra fat, fry minced beef and white spring-onion rings for 2–3 minutes until lightly browned. Add Hello Fiesta and beans and fry for 1 minute. Add chopped tomatoes, 100 ml water and 2 tsp sugar and simmer for 3–4 minutes. Season.",
+    "instruction_de": "In der großen Pfanne ohne extra Fettzugabe Hackfleisch und weiße Frühlingszwiebelringe 2–3 Min. scharf anbraten, bis das Fleisch leicht bräunt. „Hello Fiesta“ und Bohnen dazugeben und 1 Min. mitbraten. Mit stückigen Tomaten, 100 ml Wasser und 2 TL Zucker ablöschen und 3–4 Min. köcheln. Mit Salz und Pfeffer abschmecken.",
+    "image": "images/chili_bowl_weiderind_step2.jpg"
+  },
+  {
+    "id": 138,
+    "recipeId": 28,
+    "stepNumber": 3,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the bean-and-beef chili between deep plates. Serve tortilla chips, lime crema and salsa verde alongside. Garnish with green spring-onion rings and remaining lime wedges.",
+    "instruction_de": "Bohnen-Hack-Chili auf tiefe Teller verteilen. Tortilla Chips, Limetten-Crema und Salsa Verde daneben anrichten. Mit grünen Frühlingszwiebelringen garnieren und mit restlichen Limettenvierteln servieren.",
+    "image": "images/chili_bowl_weiderind_step3.jpg"
+  },
+  {
+    "id": 139,
+    "recipeId": 29,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Heat 600 ml water. Add it to a small lidded pot with 0.5 tsp salt. Stir in rice and thyme, bring to a boil, cover and simmer on low for about 10 minutes. Remove from heat and rest covered for 10 minutes.",
+    "instruction_de": "Erhitze 600 ml Wasser im Wasserkocher. In einen kleinen Topf mit Deckel 600 ml heißes Wasser füllen, 0,5 TL Salz zufügen. Reis und Thymianzweige einrühren und einmal aufkochen lassen. Deckel aufsetzen und bei niedriger Hitze ca. 10 Min. weiterköcheln lassen. Dann vom Herd nehmen und 10 Min. abgedeckt ruhen lassen.",
+    "image": "images/chipotle_bohnenpfanne_step1.jpg"
+  },
+  {
+    "id": 140,
+    "recipeId": 29,
+    "stepNumber": 2,
+    "title_en": "Cut the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Peel the garlic. Halve the onion and cut into strips. Halve and deseed the peppers and cut into 1 cm strips. Drain the beans.",
+    "instruction_de": "Knoblauch abziehen. Zwiebel halbieren und in Streifen schneiden. Paprika halbieren, entkernen und in 1 cm Streifen schneiden. Bohnen durch ein Sieb abgießen.",
+    "image": "images/chipotle_bohnenpfanne_step2.jpg"
+  },
+  {
+    "id": 141,
+    "recipeId": 29,
+    "stepNumber": 3,
+    "title_en": "Fry the vegetables",
+    "title_de": "Gemüse anbraten",
+    "instruction_en": "Heat 2 tbsp oil in a large lidded pan. Fry onion and pepper strips for 2–3 minutes. Press in half the garlic, add the spice mix and fry for 1 minute. Season with salt and pepper.",
+    "instruction_de": "In einer großen Pfanne mit Deckel 2 EL Öl erhitzen. Zwiebel- und Paprikastreifen darin 2–3 Min. scharf anbraten. Hälfte des Knoblauchs dazupressen. „Hello Fiesta“ hinzugeben und alles 1 Min. anbraten. Mit Salz und Pfeffer würzen.",
+    "image": "images/chipotle_bohnenpfanne_step3.jpg"
+  },
+  {
+    "id": 142,
+    "recipeId": 29,
+    "stepNumber": 4,
+    "title_en": "Cook the beans",
+    "title_de": "Bohnen kochen",
+    "instruction_en": "Add beans, chopped tomatoes, stock powder and half the chipotle paste. Cover and simmer on low for 15–20 minutes until the peppers are soft and the mixture is creamy. Season with salt and pepper.",
+    "instruction_de": "Bohnen, stückige Tomaten, Brühpulver und die Hälfte der Chipotle Paste zugeben. Bohnenpfanne abgedeckt 15–20 Min. auf niedriger Stufe köcheln lassen, bis die Paprika weich sind und die Bohnenpfanne cremig ist. Mit Salz und Pfeffer abschmecken.",
+    "image": "images/chipotle_bohnenpfanne_step4.jpg"
+  },
+  {
+    "id": 143,
+    "recipeId": 29,
+    "stepNumber": 5,
+    "title_en": "Mix the sour cream",
+    "title_de": "Schmand verrühren",
+    "instruction_en": "Finely chop the parsley. Put the sour cream in a small bowl, press in the remaining garlic and season. Crush the tortilla chips finely in the bag.",
+    "instruction_de": "Petersilie fein hacken. Schmand in eine kleine Schüssel geben. Restlichen Knoblauch zum Schmand pressen und mit Salz und Pfeffer abschmecken. Tortilla Chips in der Tüte fein zerbröseln.",
+    "image": "images/chipotle_bohnenpfanne_step5.jpg"
+  },
+  {
+    "id": 144,
+    "recipeId": 29,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Remove the thyme from the rice and divide the rice between plates. Add the bean skillet, sprinkle with tortilla crumbs and parsley, and serve with garlic sour cream.",
+    "instruction_de": "Thymian aus dem Reis entfernen und Reis auf Teller verteilen. Bohnenpfanne dazu anrichten und mit Tortillabröseln und Petersilie bestreuen. Mit einem Klecks Knoblauchschmand genießen.",
+    "image": "images/chipotle_bohnenpfanne_step6.jpg"
+  },
+  {
+    "id": 145,
+    "recipeId": 30,
+    "stepNumber": 1,
+    "title_en": "Small preparation",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Finely chop the herbs. Quarter the lemon. Halve the cucumber lengthwise and cut into thin half-moons. Cut the romaine lettuce into 2 cm strips. On a separate chopping board, cut the fish into 1 cm cubes.",
+    "instruction_de": "Kräuter fein hacken. Zitrone vierteln. Gurke längs halbieren und in dünne Halbmonde schneiden. Romanasalat in 2 cm Streifen schneiden. Auf einem weiteren Schneidebrett Fisch in 1 cm Würfel schneiden.",
+    "image": "images/fish_boulette_step1.jpg"
+  },
+  {
+    "id": 146,
+    "recipeId": 30,
+    "stepNumber": 2,
+    "title_en": "Cook the potatoes",
+    "title_de": "Kartoffeln kochen",
+    "instruction_en": "Bring enough salted water to the boil in a small pot with a lid. Halve the potatoes and cook them in the boiling water for 12-15 minutes until tender.",
+    "instruction_de": "In einem kleinen Topf mit Deckel ausreichend gesalzenes Wasser* zum Kochen bringen. Kartoffeln halbieren und im kochenden Wasser* 12–15 Min. gar kochen.",
+    "image": "images/fish_boulette_step2.jpg"
+  },
+  {
+    "id": 147,
+    "recipeId": 30,
+    "stepNumber": 3,
+    "title_en": "Shape the patties",
+    "title_de": "Bouletten formen",
+    "instruction_en": "In a large bowl, knead the diced fish with 4 tsp flour, 4 tsp mustard, half the herbs, Hello Umami and half the breadcrumbs for about 1 minute, breaking up the fish and mixing thoroughly until a shapeable mixture forms. Put the remaining breadcrumbs on a plate, shape the mixture into 4 flat patties, then coat them in the remaining breadcrumbs and press them on.",
+    "instruction_de": "In einer großen Schüssel Fischwürfel mit 4 TL Mehl*, 4 TL Senf*, Hälfte der Kräuter, Hello Umami und Hälfte der Semmelbrösel ca. 1 Min. verkneten, sodass sie zerbrechen und sich gründlich mit den Zutaten vermengen, bis eine formbare Masse entsteht. Restliche Semmelbrösel auf einen Teller geben, aus der Masse 4 flache Bouletten formen und diese in den restlichen Semmelbröseln wälzen und andrücken.",
+    "image": "images/fish_boulette_step3.jpg"
+  },
+  {
+    "id": 148,
+    "recipeId": 30,
+    "stepNumber": 4,
+    "title_en": "Fry the patties",
+    "title_de": "Bouletten braten",
+    "instruction_en": "Heat 2 tbsp oil in a large frying pan over medium heat. Add the patties and fry for about 4-5 minutes per side until golden brown outside and no longer translucent inside.",
+    "instruction_de": "In einer großen Pfanne 2 EL Öl* bei mittlerer Hitze erhitzen. Frikadellen zugeben und je Seite ca. 4–5 Min. braten, bis sie außen goldbraun und innen nicht mehr glasig sind.",
+    "image": "images/fish_boulette_step4.jpg"
+  },
+  {
+    "id": 149,
+    "recipeId": 30,
+    "stepNumber": 5,
+    "title_en": "Make the dip",
+    "title_de": "Für den Dip",
+    "instruction_en": "In a small bowl, mix half of the remaining herbs with three quarters of the yogurt. Season with salt and pepper. Drain the potatoes using the lid and toss them in the pot with the remaining herbs and 2 tsp butter.",
+    "instruction_de": "In einer kleinen Schüssel Hälfte der restlichen Kräuter mit drei Vierteln vom Joghurt vermischen. Mit Salz* und Pfeffer* abschmecken. Kartoffeln mithilfe des Deckels abgießen und im Topf mit den restlichen Kräutern und 2 TL Butter vermengen.",
+    "image": "images/fish_boulette_step5.jpg"
+  },
+  {
+    "id": 150,
+    "recipeId": 30,
+    "stepNumber": 6,
+    "title_en": "Make the salad and serve",
+    "title_de": "Für den Salat",
+    "instruction_en": "In a large bowl, mix the remaining yogurt, juice from 2 lemon wedges, 1 tsp salt and pepper with the lettuce and cucumber. Serve the fish patties with the potatoes, salad and dip. Enjoy!",
+    "instruction_de": "In einer großen Schüssel restlichen Joghurt, Saft von 2 Zitronenspalten, 1 TL Salz* und Pfeffer* mit Salat und Gurken vermischen. Fischbouletten mit Kartoffeln, Salat und Dip auf Tellern anrichten. Guten Appetit!",
+    "image": "images/fish_boulette_step6.jpg"
+  },
+  {
+    "id": 151,
+    "recipeId": 31,
+    "stepNumber": 1,
+    "title_en": "Cook potatoes & parsnip",
+    "title_de": "Kartoffeln & Pastinake kochen",
+    "instruction_en": "Heat 800 ml water in the kettle. Peel the potatoes and parsnips and cut both into 2 cm cubes. Fill a large pot with 800 ml hot water, add salt and bring to the boil. Add the vegetables and cook for 12–14 minutes until soft, then drain.",
+    "instruction_de": "Erhitze 800 ml Wasser im Wasserkocher. Kartoffeln schälen und in 2 cm Würfel schneiden. Pastinaken schälen und in 2 cm Würfel schneiden. In einen großen Topf 800 ml heißes Wasser* füllen, salzen* und aufkochen lassen. Gemüse hinzugeben und 12–14 Min. weich garen. Danach durch ein Sieb abgießen.",
+    "image": "images/garnelen_pastinakenstampf_step1.jpg"
+  },
+  {
+    "id": 152,
+    "recipeId": 31,
+    "stepNumber": 2,
+    "title_en": "In the meantime",
+    "title_de": "In der Zwischenzeit",
+    "instruction_en": "Finely chop the parsley and chives. Mix the yogurt, herbs, salt and pepper in a small bowl to make a dip. Cut the romaine lettuce into bite-size pieces. In a large bowl, mix mustard, 2 tbsp oil, 2 tsp honey, 2 tbsp vinegar, salt and pepper into a dressing. Add the lettuce but do not toss yet.",
+    "instruction_de": "Petersilie und Schnittlauch fein hacken. In einer kleinen Schüssel Joghurt, Kräuter, Salz* und Pfeffer* zu einem Dip vermengen. Salatherz in mundgerechte Stücke schneiden. In einer großen Schüssel Senf, 2 EL Öl*, 2 TL Honig*, 2 EL Essig*, Salz* und Pfeffer* zu einem Dressing vermengen. Salat hinzugeben und noch nicht vermengen.",
+    "image": "images/garnelen_pastinakenstampf_step2.jpg"
+  },
+  {
+    "id": 153,
+    "recipeId": 31,
+    "stepNumber": 3,
+    "title_en": "Prepare the beans",
+    "title_de": "Bohnen vorbereiten",
+    "instruction_en": "Finely dice the shallot. Finely chop the garlic. Trim the ends from the green beans and halve the beans.",
+    "instruction_de": "Schalotte fein würfeln. Knoblauch fein hacken. Enden der Buschbohnen entfernen und Bohnen halbieren.",
+    "image": "images/garnelen_pastinakenstampf_step3.jpg"
+  },
+  {
+    "id": 154,
+    "recipeId": 31,
+    "stepNumber": 4,
+    "title_en": "Fry the shrimp",
+    "title_de": "Garnelen braten",
+    "instruction_en": "Heat 2 tbsp olive oil in a large frying pan. Cook the green beans for 5–6 minutes. Add the shallot, garlic and shrimp and cook for another 3–4 minutes until the beans are tender. Season with pepper. Keep warm if necessary.",
+    "instruction_de": "In einer großen Pfanne 2 EL Olivenöl* erhitzen. Buschbohnen darin 5–6 Min. garen. Schalotte, Knoblauch und Garnelen hinzugeben und 3–4 weitere Min. garen, bis die Bohnen weich sind. Mit Pfeffer* abschmecken. Ggfs. warm halten.",
+    "image": "images/garnelen_pastinakenstampf_step4.jpg"
+  },
+  {
+    "id": 155,
+    "recipeId": 31,
+    "stepNumber": 5,
+    "title_en": "For the mash",
+    "title_de": "Für den Stampf",
+    "instruction_en": "Return the potatoes and parsnips to the pot with half the dip, stock powder, 2 tbsp butter, salt and pepper and mash with a potato masher.",
+    "instruction_de": "Kartoffeln und Pastinaken zusammen mit der Hälfte des Dips, Brühpulver, 2 EL Butter*, Salz* und Pfeffer* zurück in den Topf geben und mithilfe eines Kartoffelstampfers zu einem Stampf verarbeiten.",
+    "image": "images/garnelen_pastinakenstampf_step5.jpg"
+  },
+  {
+    "id": 156,
+    "recipeId": 31,
+    "stepNumber": 6,
+    "title_en": "Serve",
+    "title_de": "Anrichten",
+    "instruction_en": "Toss the salad with the dressing. Divide the parsnip mash between plates. Arrange the shrimp on top and top with the yogurt. Serve the salad alongside and enjoy!",
+    "instruction_de": "Salat mit dem Dressing vermengen. Pastinakenstampf auf Teller verteilen. Garnelen darauf anrichten und mit dem Joghurt toppen. Salat daneben anrichten und genießen. Guten Appetit!",
+    "image": "images/garnelen_pastinakenstampf_step6.jpg"
   }
 ]

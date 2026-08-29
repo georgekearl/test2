@@ -36,5 +36,265 @@
     "source": "HelloFresh",
     "durationMinutes": "30-40",
     "kcal": 766
+  },
+  {
+    "id": 6,
+    "name_en": "Chicken Fillets in Sticky Orange-Onion Sauce with Broccoli and Rosemary Potato Wedges",
+    "name_de": "Hähnchenfilets in sticky Orangen-Zwiebelsoße mit Brokkoli und Rosmarin-Kartoffelspalten",
+    "servings": 4,
+    "heroImage": "images/r6-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 688
+  },
+  {
+    "id": 7,
+    "name_en": "Pork Loin Steak with Celeriac Mash, Spinach and Demi-Glace Sauce",
+    "name_de": "Schweinelachssteak mit Knollensellleriestampf, dazu Spinat und Demi-Glace-Soße",
+    "servings": 4,
+    "heroImage": "images/r7-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 607
+  },
+  {
+    "id": 8,
+    "name_en": "Spicy Chicken Breast with Almonds, Balsamic Onion Sauce and Sweet Potato Mash",
+    "name_de": "Würzige Hähnchenbrust mit Mandeln, dazu Balsamico-Zwiebelsoße und Süßkartoffelstampf",
+    "servings": 4,
+    "heroImage": "images/r8-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 756
+  },
+  {
+    "id": 9,
+    "name_en": "Colorful Rice with Chicken, Bell Pepper Vegetables and Herb Cream Sauce",
+    "name_de": "Bunter Reis mit Hähnchen, Paprikagemüse und Kräuter-Sahnesoße",
+    "servings": 4,
+    "heroImage": "images/r9-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 768
+  },
+  {
+    "id": 10,
+    "name_en": "Cuban Bowl with Grass-Fed Beef Mince, Coriander Rice and Olives",
+    "name_de": "Kubanische Bowl mit Hackfleisch vom Weiderind, Koriander-Reis und Oliven",
+    "servings": 4,
+    "heroImage": "images/r10-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 715
+  },
+  {
+    "id": 11,
+    "name_en": "Filo Pastry Snails with Feta and Onions, with Hot Honey and a Tomato Salad",
+    "name_de": "Filo-Schnecken mit Hirtenkäse und Zwiebeln, dazu Hot Honey und ein Tomatensalat",
+    "servings": 4,
+    "heroImage": "images/r11-hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "40-50",
+    "kcal": 831
+  },
+  {
+    "id": 12,
+    "name_en": "Salmon in Thai Curry Sauce with Zucchini, Golden Rice and Pickled Red Onions",
+    "name_de": "Lachs in Thai-Curry-Soße mit Zucchini, goldenem Reis und eingelegten roten Zwiebeln",
+    "servings": 4,
+    "heroImage": "images/35_lachs_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 829
+  },
+  {
+    "id": 13,
+    "name_en": "Gnocchi in Feta-Tomato Sauce with Carrot and Basil Topping",
+    "name_de": "Gnocchi in Hirtenkäse-Tomatensoße mit Karotte und Basilikumtopping",
+    "servings": 4,
+    "heroImage": "images/53_gnocchi_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 629
+  },
+  {
+    "id": 14,
+    "name_en": "Vegan Dal Makhani: Spicy Bean Curry with Garlic Flatbread and Coriander",
+    "name_de": "Veganes Dal Makhani: Pikantes Bohnen-Curry mit Knoblauch-Fladenbrot und Koriander",
+    "servings": 4,
+    "heroImage": "images/67_dal_makhani_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 788
+  },
+  {
+    "id": 15,
+    "name_en": "Chicken Fingers with Tomato Dip, Potato Wedges and Pepper-Cucumber Salad",
+    "name_de": "Chicken Fingers mit Tomatendip dazu Kartoffelspalten und Paprika-Gurken-Salat",
+    "servings": 4,
+    "heroImage": "images/74_chicken_fingers_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 949
+  },
+  {
+    "id": 16,
+    "name_en": "Spaghetti Puttanesca with Capers, Kalamata Olives and Sun-Dried Tomatoes",
+    "name_de": "Spaghetti Puttanesca mit Kapern, Kalamata-Oliven und getrockneten Tomaten",
+    "servings": 4,
+    "heroImage": "images/spaghetti_puttanesca_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "35-45",
+    "kcal": 842
+  },
+  {
+    "id": 17,
+    "name_en": "One-Pot Lentil Stew with Vienna Sausages, Colorful Vegetables and Chive Sour Cream",
+    "name_de": "One-Pot-Linseneintopf mit Wiener Würstchen, buntem Gemüse und Schnittlauch-Schmand",
+    "servings": 4,
+    "heroImage": "images/one_pot_linseneintopf_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 861
+  },
+  {
+    "id": 18,
+    "name_en": "Gnocchi in Creamy Bacon Sauce with Baby Spinach and Hard Cheese",
+    "name_de": "Gnocchi in Speck-Rahm-Soße mit Babyspinat und Hartkäse",
+    "servings": 4,
+    "heroImage": "images/gnocchi_speck_rahm_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 647
+  },
+  {
+    "id": 19,
+    "name_en": "Himmel un Äd! Thuringian Bratwurst with Potato-Apple Mash & Salad",
+    "name_de": "Himmel un Äd! Thüringer Rostbratwurst mit Kartoffel- und Apfelstampf & Salat",
+    "servings": 4,
+    "heroImage": "images/himmel_un_aed_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 747
+  },
+  {
+    "id": 20,
+    "name_en": "Pasture-Raised Beef Rump Steak with Wild Garlic Butter on Colorful Mash with Mushrooms",
+    "name_de": "Hüftsteak vom Weiderind mit Bärlauchbutter auf buntem Stampf mit Champignons",
+    "servings": 4,
+    "heroImage": "images/hueftsteak_baerlauchbutter_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 573
+  },
+  {
+    "id": 21,
+    "name_en": "Maltagliati! Hand-Cut Pasta in Cherry Tomato and Bell Pepper Sauce with Basil",
+    "name_de": "Maltagliati! Handgeschnittene Pasta in Kirschtomaten-Paprika-Soße mit Basilikum",
+    "servings": 4,
+    "heroImage": "images/maltagliati_kirschtomaten_paprika_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 581
+  },
+  {
+    "id": 22,
+    "name_en": "Pork Loin Steak with Broccoli and Homemade Thyme Herb Butter",
+    "name_de": "Schweinelachssteak mit Brokkoligemüse dazu selbstgemachte Thymian-Kräuterbutter",
+    "servings": 4,
+    "heroImage": "images/schweinelachssteak_brokkoli_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 732
+  },
+  {
+    "id": 23,
+    "name_en": "Thuringian Bratwurst Wrapped in Bacon on Pasta Salad with Paprika-Mustard Dressing",
+    "name_de": "Thüringer Rostbratwurst im Speckmantel auf Nudelsalat, mit Paprika-Senf-Dressing",
+    "servings": 4,
+    "heroImage": "images/thueringer_speckmantel_nudelsalat_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 1102
+  },
+  {
+    "id": 24,
+    "name_en": "Veggie Moussaka with Lentils & Aubergine with Fresh Salad",
+    "name_de": "Veggie Moussaka mit Linsen & Aubergine dazu frischer Salat",
+    "servings": 4,
+    "heroImage": "images/veggie_moussaka_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "40-50",
+    "kcal": 681
+  },
+  {
+    "id": 25,
+    "name_en": "Vienna Sausage and Bell Pepper Goulash with Cheesy Mashed Potatoes",
+    "name_de": "Wiener Würstchen-Paprika-Gulasch mit cheesy Kartoffelpüree",
+    "servings": 4,
+    "heroImage": "images/wiener_paprika_gulasch_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 719
+  },
+  {
+    "id": 26,
+    "name_en": "Creamy Bacon Mushrooms with Potato Dumplings",
+    "name_de": "Bacon-Rahmschwammerl mit Kartoffelklößen",
+    "servings": 4,
+    "heroImage": "images/bacon_rahmschwammerl_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 599
+  },
+  {
+    "id": 27,
+    "name_en": "Colorful Burrito Bowl with Chorizo, Avocado-Kiwi Salsa and Lime Rice",
+    "name_de": "Bunte Burrito-Bowl mit Chorizo, Avocado-Kiwi-Salsa und Limettenreis",
+    "servings": 4,
+    "heroImage": "images/burrito_bowl_chorizo_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 870
+  },
+  {
+    "id": 28,
+    "name_en": "Chili Bowl with Pasture-Raised Beef Mince & Tortilla Chips",
+    "name_de": "Chili-Bowl mit Hack vom Weiderind & Tortilla Chips",
+    "servings": 4,
+    "heroImage": "images/chili_bowl_weiderind_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 863
+  },
+  {
+    "id": 29,
+    "name_en": "Chipotle Bean Skillet with Tortilla Crunch",
+    "name_de": "Chipotle-Bohnenpfanne mit Tortilla-Crunch",
+    "servings": 4,
+    "heroImage": "images/chipotle_bohnenpfanne_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 920
+  },
+  {
+    "id": 30,
+    "name_en": "Spicy Fish Patties in Herb Crust with Crunchy Salad, Boiled Potatoes and Yogurt Dip",
+    "name_de": "Würzige Fischboulette in Kräuterpanade mit knackigem Salat, Pellkartoffeln & Joghurtdip",
+    "servings": 4,
+    "heroImage": "images/fish_boulette_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 497
+  },
+  {
+    "id": 31,
+    "name_en": "Shrimp on Herbed Parsnip Mash with Green Beans and Honey-Mustard Salad",
+    "name_de": "Garnelen auf Kräuter-Pastinakenstampf mit grünen Bohnen und Honig-Senf-Salat",
+    "servings": 4,
+    "heroImage": "images/garnelen_pastinakenstampf_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 443
   }
 ]
