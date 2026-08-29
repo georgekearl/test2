@@ -147,8 +147,12 @@ function useSharedFridge() {
   }, []);
 
   const setFridge = (updaterOrValue) => {
-    const next = typeof updaterOrValue === "function" ? updaterOrValue(fridge || {}) : updaterOrValue;
-    db.ref("mealPlanner/fridge").set(next);
+    setFridgeLocal(prevLocal => {
+      const base = prevLocal || {};
+      const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
+      db.ref("mealPlanner/fridge").set(next); // syncs to other devices; Firebase's own listener will re-confirm this locally too, harmlessly
+      return next; // update this screen immediately, don't wait on the round-trip
+    });
   };
 
   return [fridge, setFridge];
@@ -166,9 +170,12 @@ function useSharedSelected() {
   }, []);
 
   const setSelected = (updaterOrValue) => {
-    const current = selected || new Set();
-    const next = typeof updaterOrValue === "function" ? updaterOrValue(current) : updaterOrValue;
-    db.ref("mealPlanner/selected").set(Array.from(next));
+    setSelectedLocal(prevLocal => {
+      const base = prevLocal || new Set();
+      const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
+      db.ref("mealPlanner/selected").set(Array.from(next)); // syncs to other devices
+      return next; // update this screen immediately
+    });
   };
 
   return [selected, setSelected];
