@@ -350,16 +350,16 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
 
       <div className="main-row">
         <div className="tile">
-          <div className="tile-hdr">Was kann ich kochen? — Name antippen zum Öffnen, Zeile für Einkaufsliste</div>
+          <div className="tile-hdr">Was kann ich kochen? — Zeile antippen zum Öffnen, Häkchen für die Einkaufsliste</div>
           {recipes.map(r => {
             const s = statuses[r.id];
             const isSel = selected.has(r.id);
             return (
-              <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")}>
-                <span className="check" onClick={() => toggleRecipe(r.id)}>✓</span>
+              <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")} onClick={() => onOpenRecipe(r.id)}>
+                <span className="check" onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}>✓</span>
                 <span className={"dot " + s.level}></span>
                 <span>
-                  <span className="recipe-title" onClick={() => onOpenRecipe(r.id)}>{r.name}</span>
+                  <span className="recipe-title">{r.name}</span>
                   {s.missing.length > 0 && (
                     <span className="sugg-missing">
                       {" — fehlt: "}
