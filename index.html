@@ -161,6 +161,9 @@ const STRINGS = {
     add: "Hinzufügen",
     fridgeSyncHint: "Änderungen werden live mit allen Geräten synchronisiert, die diese Seite geöffnet haben.",
     allRecipes: "Alle Rezepte",
+    readyOnly: "Nur Kochbereite",
+    showAll: "Alle anzeigen",
+    noReadyRecipes: "Aktuell ist kein Rezept kochbereit.",
     loading: "Wird geladen…",
   },
   en: {
@@ -195,6 +198,9 @@ const STRINGS = {
     add: "Add",
     fridgeSyncHint: "Changes sync live with every device that has this page open.",
     allRecipes: "All Recipes",
+    readyOnly: "Ready to Cook Only",
+    showAll: "Show All",
+    noReadyRecipes: "Nothing is ready to cook right now.",
     loading: "Loading…",
   },
 };
@@ -342,6 +348,7 @@ function App() {
   const [selected, setSelected] = useSharedSelected();
   const [fridge, setFridge] = useSharedFridge();
   const [lang, setLangState] = useState(loadLang);
+  const [recipesFilter, setRecipesFilter] = useState("all"); // all | ready
 
   const setLang = (l) => {
     setLangState(l);
@@ -423,6 +430,8 @@ function App() {
         onGoHome={goHome}
         lang={lang}
         setLang={setLang}
+        filter={recipesFilter}
+        setFilter={setRecipesFilter}
       />
     );
   }
@@ -435,14 +444,15 @@ function App() {
       setSelected={setSelected}
       onOpenRecipe={openRecipe}
       onOpenFridge={() => setView("fridge")}
-      onOpenRecipesList={() => setView("recipes")}
+      onOpenRecipesList={() => { setRecipesFilter("all"); setView("recipes"); }}
+      onOpenReadyToCook={() => { setRecipesFilter("ready"); setView("recipes"); }}
       lang={lang}
       setLang={setLang}
     />
   );
 }
 
-function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, lang, setLang }) {
+function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, onOpenReadyToCook, lang, setLang }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
@@ -492,7 +502,7 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
         <Kpi label={t(lang, "recipes")} value={recipes.length} onClick={onOpenRecipesList} />
         <Kpi label={t(lang, "inFridge")} value={nFridgeItems} onClick={onOpenFridge} />
         <Kpi label={t(lang, "toBuy")} value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} />
-        <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} />
+        <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} onClick={onOpenReadyToCook} />
       </div>
 
       <div className="main-row">
@@ -558,7 +568,7 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
 // Dedicated full-page recipe browser — every recipe in the database,
 // with photo, status, and the same add-to-shopping-list checkbox as
 // the Home Screen tile, just roomier and easier to scroll through.
-function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack, onGoHome, lang, setLang }) {
+function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack, onGoHome, lang, setLang, filter, setFilter }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
@@ -566,6 +576,8 @@ function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack
     for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, fridge);
     return map;
   }, [recipes, recipeIngredients, ingredientsById, fridge]);
+
+  const visibleRecipes = filter === "ready" ? recipes.filter(r => statuses[r.id].level === "green") : recipes;
 
   const toggleRecipe = (id) => {
     setSelected(prev => {
@@ -585,9 +597,20 @@ function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack
         </div>
       </div>
 
-      <h2 style={{ color: "var(--text)", marginTop: 0, marginBottom: 16 }}>{t(lang, "allRecipes")}</h2>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 16 }}>
+        <h2 style={{ color: "var(--text)", margin: 0 }}>
+          {filter === "ready" ? t(lang, "readyOnly") : t(lang, "allRecipes")}
+        </h2>
+        <span className="back" onClick={() => setFilter(filter === "ready" ? "all" : "ready")}>
+          {filter === "ready" ? t(lang, "showAll") : t(lang, "readyOnly")}
+        </span>
+      </div>
 
-      {recipes.map(r => {
+      {visibleRecipes.length === 0 && (
+        <div className="empty-msg">{t(lang, "noReadyRecipes")}</div>
+      )}
+
+      {visibleRecipes.map(r => {
         const s = statuses[r.id];
         const isSel = selected.has(r.id);
         return (
