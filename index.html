@@ -174,6 +174,7 @@ const STRINGS = {
     readyToCook: "Kochbereit",
     whatCanICook: "Was kann ich kochen?",
     whatCanICookHint: "Zeile antippen zum Öffnen, ★ für Favoriten, Häkchen für die Einkaufsliste",
+    fridgeSuggestionsHint: "alle Rezepte, sortiert nach dem, was du gerade im Kühlschrank hast",
     searchRecipes: "Rezept suchen…",
     noSearchResults: "Keine Rezepte gefunden.",
     favoriteTitle: "Als Favorit markieren",
@@ -218,6 +219,7 @@ const STRINGS = {
     readyToCook: "Ready to Cook",
     whatCanICook: "What can I cook?",
     whatCanICookHint: "Tap a row to open, ★ to favorite, checkmark for the shopping list",
+    fridgeSuggestionsHint: "every recipe, sorted by what you currently have in the fridge",
     searchRecipes: "Search recipes…",
     noSearchResults: "No recipes found.",
     favoriteTitle: "Mark as favorite",
@@ -408,6 +410,9 @@ const SECTIONS = [
   { key: "meat", categories: ["Meat", "Fish"], de: "Fleisch, Wurst & Fisch", en: "Meat & Fish" },
   { key: "pantry", categories: ["Pantry"], de: "Trockenwaren & Konserven", en: "Pantry & Dry Goods" },
   { key: "spice", categories: ["Spice"], de: "Gewürze & Zutaten", en: "Spices & Seasonings" },
+  { key: "frozen", categories: ["Frozen"], de: "Tiefkühl", en: "Frozen" },
+  { key: "beverage", categories: ["Beverage"], de: "Getränke", en: "Beverages" },
+  { key: "household", categories: ["Household"], de: "Drogerie & Haushalt", en: "Drugstore & Household" },
   { key: "other", categories: [], de: "Sonstiges", en: "Other" },
 ];
 
@@ -468,6 +473,40 @@ function ImgWithFallback({ src, alt, className, style }) {
     );
   }
   return <img className={className} style={style} src={src} alt={alt} onError={() => setBroken(true)} />;
+}
+
+// Shared row renderer for a recipe suggestion list (checkbox to add to
+// the shopping list, traffic-light dot, missing ingredients, favorite
+// star). Used on the Home Screen (capped top 10), the Fridge screen
+// (full list based on current stock), and the Ready-to-Cook KPI's
+// inline expansion (green-only) - one component, three contexts, so
+// the row itself never drifts out of sync between them.
+function RecipeSuggestionList({ list, statuses, selected, toggleRecipe, favorites, toggleFavorite, onOpenRecipe, lang }) {
+  return list.map(r => {
+    const s = statuses[r.id];
+    const isSel = selected.has(r.id);
+    const isFav = favorites.has(r.id);
+    return (
+      <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")} onClick={() => onOpenRecipe(r.id)}>
+        <span className="check" onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}>✓</span>
+        <span className={"dot " + s.level}></span>
+        <span className="sugg-text">
+          <span className="recipe-title">{localName(r, lang)}</span>
+          {s.missing.length > 0 && (
+            <span className="sugg-missing">
+              {` — ${t(lang, "missingLabel")}: `}
+              {s.missing.map(m => `${localName(m.ing, lang)} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
+            </span>
+          )}
+        </span>
+        <span
+          className={"star" + (isFav ? " active" : "")}
+          onClick={(e) => { e.stopPropagation(); toggleFavorite(r.id); }}
+          title={t(lang, "favoriteTitle")}
+        >{isFav ? "★" : "☆"}</span>
+      </div>
+    );
+  });
 }
 
 function useData() {
@@ -564,6 +603,11 @@ function App() {
         data={data}
         fridge={fridge}
         setFridge={setFridge}
+        selected={selected}
+        setSelected={setSelected}
+        favorites={favorites}
+        setFavorites={setFavorites}
+        onOpenRecipe={openRecipe}
         onBack={goHome}
         onGoHome={goHome}
         lang={lang}
@@ -667,6 +711,16 @@ function Dashboard({ data, fridge, selected, setSelected, favorites, setFavorite
     [recipes, statuses, favorites, lang]
   );
 
+  // Full, uncapped green-only list for the Ready-to-Cook KPI's inline
+  // expansion - deliberately not favorites-prioritized or limited,
+  // since the point here is "show me literally everything I can make
+  // right now", not a curated shortlist.
+  const [showReadyList, setShowReadyList] = useState(false);
+  const readyRecipes = useMemo(
+    () => sortRecipes(recipes.filter(r => statuses[r.id].level === "green"), statuses, favorites, lang),
+    [recipes, statuses, favorites, lang]
+  );
+
   const toggleRecipe = (id) => {
     setSelected(prev => {
       const next = new Set(prev);
@@ -700,37 +754,45 @@ function Dashboard({ data, fridge, selected, setSelected, favorites, setFavorite
         <Kpi label={t(lang, "recipes")} value={recipes.length} onClick={onOpenRecipesList} />
         <Kpi label={t(lang, "inFridge")} value={nFridgeItems} onClick={onOpenFridge} />
         <Kpi label={t(lang, "toBuy")} value={remainingToBuy} tone={remainingToBuy > 0 ? "warn" : "good"} onClick={onOpenShoppingList} />
-        <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} onClick={onOpenReadyToCook} />
+        <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} onClick={() => setShowReadyList(v => !v)} />
       </div>
+
+      {showReadyList && (
+        <div className="tile" style={{ marginBottom: 14 }}>
+          <div className="tile-hdr">{t(lang, "readyToCook")} ({nCook})</div>
+          {nCook === 0 ? (
+            <div className="empty-msg">{t(lang, "noReadyRecipes")}</div>
+          ) : (
+            <RecipeSuggestionList
+              list={readyRecipes}
+              statuses={statuses}
+              selected={selected}
+              toggleRecipe={toggleRecipe}
+              favorites={favorites}
+              toggleFavorite={toggleFavorite}
+              onOpenRecipe={onOpenRecipe}
+              lang={lang}
+            />
+          )}
+          <span className="back" style={{ display: "inline-block", marginTop: 8 }} onClick={onOpenReadyToCook}>
+            {t(lang, "showAll")} ›
+          </span>
+        </div>
+      )}
 
       <div className="main-row">
         <div className="tile">
           <div className="tile-hdr">{t(lang, "whatCanICook")} — {t(lang, "whatCanICookHint")}</div>
-          {topSuggestions.map(r => {
-            const s = statuses[r.id];
-            const isSel = selected.has(r.id);
-            const isFav = favorites.has(r.id);
-            return (
-              <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")} onClick={() => onOpenRecipe(r.id)}>
-                <span className="check" onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}>✓</span>
-                <span className={"dot " + s.level}></span>
-                <span className="sugg-text">
-                  <span className="recipe-title">{localName(r, lang)}</span>
-                  {s.missing.length > 0 && (
-                    <span className="sugg-missing">
-                      {` — ${t(lang, "missingLabel")}: `}
-                      {s.missing.map(m => `${localName(m.ing, lang)} (${m.short}${m.unit === "pcs" ? "" : " " + m.unit})`).join(", ")}
-                    </span>
-                  )}
-                </span>
-                <span
-                  className={"star" + (isFav ? " active" : "")}
-                  onClick={(e) => { e.stopPropagation(); toggleFavorite(r.id); }}
-                  title={t(lang, "favoriteTitle")}
-                >{isFav ? "★" : "☆"}</span>
-              </div>
-            );
-          })}
+          <RecipeSuggestionList
+            list={topSuggestions}
+            statuses={statuses}
+            selected={selected}
+            toggleRecipe={toggleRecipe}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            onOpenRecipe={onOpenRecipe}
+            lang={lang}
+          />
         </div>
 
         <div className="right-col">
@@ -972,11 +1034,40 @@ function ShoppingListPage({ data, fridge, selected, checked, setChecked, onBack,
   );
 }
 
-function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang }) {
+function FridgeScreen({ data, fridge, setFridge, selected, setSelected, favorites, setFavorites, onOpenRecipe, onBack, onGoHome, lang, setLang }) {
   const [addId, setAddId] = useState("");
   const [addQty, setAddQty] = useState("1");
   const [addQuery, setAddQuery] = useState("");
   const [showAddList, setShowAddList] = useState(false);
+
+  const { recipes, recipeIngredients, ingredientsById } = data;
+  const statuses = useMemo(() => {
+    const map = {};
+    for (const r of recipes) map[r.id] = computeStatus(r, recipeIngredients, ingredientsById, fridge);
+    return map;
+  }, [recipes, recipeIngredients, ingredientsById, fridge]);
+  // Full list, sorted green -> amber -> red based on what's actually in
+  // the fridge right now - not capped, not favorites-only, since the
+  // point of putting this here is a complete "what can I make with what
+  // I have" reference right where you're looking at your stock.
+  const fridgeSuggestions = useMemo(
+    () => sortRecipes(recipes, statuses, favorites, lang),
+    [recipes, statuses, favorites, lang]
+  );
+  const toggleRecipe = (id) => {
+    setSelected(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
+  const toggleFavorite = (id) => {
+    setFavorites(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
 
   const entries = Object.entries(fridge)
     .map(([id, qty]) => ({ id, qty, ing: data.ingredientsById[id] }))
@@ -1073,6 +1164,20 @@ function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang
         </div>
         <input type="number" min="0" step="any" value={addQty} onChange={ev => setAddQty(ev.target.value)} />
         <button className="btn primary" onClick={handleAdd} disabled={!addId}>{t(lang, "add")}</button>
+      </div>
+
+      <div className="tile" style={{ marginTop: 20 }}>
+        <div className="tile-hdr">{t(lang, "whatCanICook")} — {t(lang, "fridgeSuggestionsHint")}</div>
+        <RecipeSuggestionList
+          list={fridgeSuggestions}
+          statuses={statuses}
+          selected={selected}
+          toggleRecipe={toggleRecipe}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+          onOpenRecipe={onOpenRecipe}
+          lang={lang}
+        />
       </div>
 
       <p className="hint" style={{ marginTop: 20 }}>{t(lang, "fridgeSyncHint")}</p>

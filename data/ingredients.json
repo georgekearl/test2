@@ -1555,5 +1555,338 @@
     "unit": "pcs",
     "critical": true,
     "type": "Pieces"
+  },
+  {
+    "id": 231,
+    "name_en": "Toilet cleaner (Toilet Duck)",
+    "name_de": "WC-Ente",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 232,
+    "name_en": "Dental floss",
+    "name_de": "Zahnseide",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 233,
+    "name_en": "Toilet paper",
+    "name_de": "Toilettenpapier",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 234,
+    "name_en": "Kitchen roll (Zewa)",
+    "name_de": "Zewa Küchenrolle",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 235,
+    "name_en": "UHT milk",
+    "name_de": "H-Milch",
+    "category": "Dairy",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 236,
+    "name_en": "Toothpaste (Dr. Wolff Bioniq)",
+    "name_de": "Dr. Wolff Bioniq Zahnpasta",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 237,
+    "name_en": "Toilet cleaner (Bref)",
+    "name_de": "Bref",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 238,
+    "name_en": "Coffee beans",
+    "name_de": "Kaffeebohnen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 239,
+    "name_en": "Dish soap",
+    "name_de": "Spülmittel",
+    "category": "Household",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 240,
+    "name_en": "Laundry pods",
+    "name_de": "Waschmittel-Pods",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 241,
+    "name_en": "Chia seeds",
+    "name_de": "Chiasamen",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 242,
+    "name_en": "Walnuts",
+    "name_de": "Walnüsse",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 243,
+    "name_en": "Spelt flakes",
+    "name_de": "Dinkelflakes",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 244,
+    "name_en": "Cheddar slices",
+    "name_de": "Cheddar Scheiben",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 245,
+    "name_en": "Gouda slices",
+    "name_de": "Gouda Scheiben",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 246,
+    "name_en": "Cheddar, grated",
+    "name_de": "Geriebener Cheddar",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 247,
+    "name_en": "Yogurt with Smarties",
+    "name_de": "Joghurt mit Smarties",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 248,
+    "name_en": "Müller Ecke yogurt",
+    "name_de": "Müller Ecke Joghurt",
+    "category": "Dairy",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 249,
+    "name_en": "Cologne-style liverwurst",
+    "name_de": "Kölner Leberwurst",
+    "category": "Meat",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 250,
+    "name_en": "Meat skewers",
+    "name_de": "Fleischspieße",
+    "category": "Meat",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 251,
+    "name_en": "Grillfackel (grilled meat torch)",
+    "name_de": "Grillfackel",
+    "category": "Meat",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 252,
+    "name_en": "Cheese-mix skewers",
+    "name_de": "Käse-Mix-Spieße",
+    "category": "Dairy",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 253,
+    "name_en": "Lamb fillet",
+    "name_de": "Lammfilet",
+    "category": "Meat",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 254,
+    "name_en": "Fillet steak",
+    "name_de": "Filetsteak",
+    "category": "Meat",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 255,
+    "name_en": "Wet wipes",
+    "name_de": "Feuchttücher",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 256,
+    "name_en": "Liquid hand soap",
+    "name_de": "Flüssige Handseife",
+    "category": "Household",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 257,
+    "name_en": "Toothpaste (Jess)",
+    "name_de": "Jess Zahnpasta",
+    "category": "Household",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 258,
+    "name_en": "Sweets",
+    "name_de": "Süßigkeiten",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 259,
+    "name_en": "Chocolate",
+    "name_de": "Schokolade",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 260,
+    "name_en": "Beer",
+    "name_de": "Bier",
+    "category": "Beverage",
+    "unit": "ml",
+    "critical": false,
+    "type": "Volume"
+  },
+  {
+    "id": 261,
+    "name_en": "Frozen bread rolls",
+    "name_de": "TK-Brötchen",
+    "category": "Frozen",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 262,
+    "name_en": "Frozen pizza",
+    "name_de": "TK-Pizza",
+    "category": "Frozen",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
+  },
+  {
+    "id": 263,
+    "name_en": "Cured ham",
+    "name_de": "Roher Schinken",
+    "category": "Meat",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 264,
+    "name_en": "Cooked ham",
+    "name_de": "Gekochter Schinken",
+    "category": "Meat",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 265,
+    "name_en": "Jam",
+    "name_de": "Marmelade",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 266,
+    "name_en": "Nutella",
+    "name_de": "Nutella",
+    "category": "Pantry",
+    "unit": "g",
+    "critical": false,
+    "type": "Weight"
+  },
+  {
+    "id": 267,
+    "name_en": "Pear",
+    "name_de": "Birne",
+    "category": "Fruit",
+    "unit": "pcs",
+    "critical": false,
+    "type": "Pieces"
   }
 ]
