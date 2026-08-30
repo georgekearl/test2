@@ -207,6 +207,7 @@ const STRINGS = {
     readyOnly: "Nur Kochbereite",
     showAll: "Alle anzeigen",
     noReadyRecipes: "Aktuell ist kein Rezept kochbereit.",
+    almostReady: "Fehlt nur wenig",
     shoppingListTitle: "Einkaufsliste",
     resetChecks: "Häkchen zurücksetzen",
     loading: "Wird geladen…",
@@ -252,6 +253,7 @@ const STRINGS = {
     readyOnly: "Ready to Cook Only",
     showAll: "Show All",
     noReadyRecipes: "Nothing is ready to cook right now.",
+    almostReady: "Just missing a few things",
     shoppingListTitle: "Shopping List",
     resetChecks: "Reset Checkmarks",
     loading: "Loading…",
@@ -711,13 +713,21 @@ function Dashboard({ data, fridge, selected, setSelected, favorites, setFavorite
     [recipes, statuses, favorites, lang]
   );
 
-  // Full, uncapped green-only list for the Ready-to-Cook KPI's inline
-  // expansion - deliberately not favorites-prioritized or limited,
-  // since the point here is "show me literally everything I can make
-  // right now", not a curated shortlist.
+  // Full, uncapped lists for the Ready-to-Cook KPI's inline expansion -
+  // deliberately not favorites-prioritized or limited, since the point
+  // here is a complete, honest picture, not a curated shortlist.
+  // Split into two groups: fully ready (green, matches the KPI number
+  // exactly) and "just missing a few things" (amber) - kept separate
+  // rather than merged into one list, so the KPI's own number keeps
+  // meaning "ready right now" and doesn't quietly start including
+  // recipes that actually need a shopping trip first.
   const [showReadyList, setShowReadyList] = useState(false);
   const readyRecipes = useMemo(
     () => sortRecipes(recipes.filter(r => statuses[r.id].level === "green"), statuses, favorites, lang),
+    [recipes, statuses, favorites, lang]
+  );
+  const almostReadyRecipes = useMemo(
+    () => sortRecipes(recipes.filter(r => statuses[r.id].level === "amber"), statuses, favorites, lang),
     [recipes, statuses, favorites, lang]
   );
 
@@ -774,6 +784,25 @@ function Dashboard({ data, fridge, selected, setSelected, favorites, setFavorite
               lang={lang}
             />
           )}
+
+          {almostReadyRecipes.length > 0 && (
+            <React.Fragment>
+              <div className="tile-hdr" style={{ marginTop: 14 }}>
+                {t(lang, "almostReady")} ({almostReadyRecipes.length})
+              </div>
+              <RecipeSuggestionList
+                list={almostReadyRecipes}
+                statuses={statuses}
+                selected={selected}
+                toggleRecipe={toggleRecipe}
+                favorites={favorites}
+                toggleFavorite={toggleFavorite}
+                onOpenRecipe={onOpenRecipe}
+                lang={lang}
+              />
+            </React.Fragment>
+          )}
+
           <span className="back" style={{ display: "inline-block", marginTop: 8 }} onClick={onOpenReadyToCook}>
             {t(lang, "showAll")} ›
           </span>
