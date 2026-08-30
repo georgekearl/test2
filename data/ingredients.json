@@ -58,45 +58,45 @@
     "name_en": "Milk",
     "name_de": "Milch",
     "category": "Dairy",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": true,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 8,
     "name_en": "Butter",
     "name_de": "Butter",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 9,
     "name_en": "Cream",
     "name_de": "Sahne",
     "category": "Dairy",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": true,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 10,
     "name_en": "Parmesan",
     "name_de": "Parmesan",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": true,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 11,
     "name_en": "Mozzarella",
     "name_de": "Mozzarella",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": true,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 12,
@@ -247,9 +247,9 @@
     "name_en": "Rice",
     "name_de": "Reis",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 29,
@@ -274,9 +274,9 @@
     "name_en": "Pasta",
     "name_de": "Nudeln",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 32,
@@ -328,45 +328,45 @@
     "name_en": "Olive oil",
     "name_de": "Olivenöl",
     "category": "Pantry",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 38,
     "name_en": "Vegetable oil",
     "name_de": "Pflanzenöl",
     "category": "Pantry",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 47,
     "name_en": "Honey",
     "name_de": "Honig",
     "category": "Pantry",
-    "unit": "tbsp",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 51,
     "name_en": "Salt",
     "name_de": "Salz",
     "category": "Spice",
-    "unit": "tsp",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 52,
     "name_en": "Pepper",
     "name_de": "Pfeffer",
     "category": "Spice",
-    "unit": "pinch",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 64,
@@ -382,9 +382,9 @@
     "name_en": "Strawberry",
     "name_de": "Erdbeere",
     "category": "Fruit",
-    "unit": "g",
+    "unit": "pcs",
     "critical": true,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 101,
@@ -1597,9 +1597,9 @@
     "name_en": "UHT milk",
     "name_de": "H-Milch",
     "category": "Dairy",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 236,
@@ -1624,18 +1624,18 @@
     "name_en": "Coffee beans",
     "name_de": "Kaffeebohnen",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 239,
     "name_en": "Dish soap",
     "name_de": "Spülmittel",
     "category": "Household",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 240,
@@ -1651,81 +1651,72 @@
     "name_en": "Chia seeds",
     "name_de": "Chiasamen",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 242,
     "name_en": "Walnuts",
     "name_de": "Walnüsse",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 243,
     "name_en": "Spelt flakes",
     "name_de": "Dinkelflakes",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 244,
     "name_en": "Cheddar slices",
     "name_de": "Cheddar Scheiben",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 245,
     "name_en": "Gouda slices",
     "name_de": "Gouda Scheiben",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
-  },
-  {
-    "id": 246,
-    "name_en": "Cheddar, grated",
-    "name_de": "Geriebener Cheddar",
-    "category": "Dairy",
-    "unit": "g",
-    "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 247,
     "name_en": "Yogurt with Smarties",
     "name_de": "Joghurt mit Smarties",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 248,
     "name_en": "Müller Ecke yogurt",
     "name_de": "Müller Ecke Joghurt",
     "category": "Dairy",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 249,
     "name_en": "Cologne-style liverwurst",
     "name_de": "Kölner Leberwurst",
     "category": "Meat",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 250,
@@ -1759,18 +1750,18 @@
     "name_en": "Lamb fillet",
     "name_de": "Lammfilet",
     "category": "Meat",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 254,
     "name_en": "Fillet steak",
     "name_de": "Filetsteak",
     "category": "Meat",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 255,
@@ -1786,9 +1777,9 @@
     "name_en": "Liquid hand soap",
     "name_de": "Flüssige Handseife",
     "category": "Household",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 257,
@@ -1804,27 +1795,27 @@
     "name_en": "Sweets",
     "name_de": "Süßigkeiten",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 259,
     "name_en": "Chocolate",
     "name_de": "Schokolade",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 260,
     "name_en": "Beer",
     "name_de": "Bier",
     "category": "Beverage",
-    "unit": "ml",
+    "unit": "pcs",
     "critical": false,
-    "type": "Volume"
+    "type": "Pieces"
   },
   {
     "id": 261,
@@ -1849,36 +1840,36 @@
     "name_en": "Cured ham",
     "name_de": "Roher Schinken",
     "category": "Meat",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 264,
     "name_en": "Cooked ham",
     "name_de": "Gekochter Schinken",
     "category": "Meat",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 265,
     "name_en": "Jam",
     "name_de": "Marmelade",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 266,
     "name_en": "Nutella",
     "name_de": "Nutella",
     "category": "Pantry",
-    "unit": "g",
+    "unit": "pcs",
     "critical": false,
-    "type": "Weight"
+    "type": "Pieces"
   },
   {
     "id": 267,

@@ -100,7 +100,8 @@
   .fridge-controls { display:flex; align-items:center; gap:10px; }
   .stepper-btn { width:30px; height:30px; border-radius:8px; background:var(--tile-hi); border:1px solid var(--border); color:var(--text); font-size:16px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; }
   .stepper-btn:hover { background:var(--accent); color:rgb(20,24,40); border-color:var(--accent); }
-  .fridge-qty { min-width:44px; text-align:center; font-size:14.5px; color:var(--text); }
+  .fridge-qty { min-width:58px; text-align:center; font-size:14.5px; color:var(--text); }
+  .fridge-unit { font-size:11.5px; color:var(--muted); margin-left:3px; }
   .remove-btn { width:26px; height:26px; border-radius:50%; background:transparent; border:1px solid var(--border); color:var(--muted); font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:4px; }
   .remove-btn:hover { background:var(--red); color:white; border-color:var(--red); }
   .add-row { display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
@@ -276,6 +277,23 @@ function localField(item, field, lang) {
   return item[field + "_" + lang] || item[field + "_de"] || item[field + "_en"] || "";
 }
 
+// Display label for a stored unit code - "pcs" reads as "Stk." in
+// German fridge/shopping views, matching how a shopping list is
+// normally written by hand, rather than the English abbreviation.
+function formatUnit(unit, lang) {
+  const table = {
+    pcs: { de: "Stk.", en: "pcs" },
+    g: { de: "g", en: "g" },
+    ml: { de: "ml", en: "ml" },
+    tbsp: { de: "EL", en: "tbsp" },
+    tsp: { de: "TL", en: "tsp" },
+    pinch: { de: "Prise", en: "pinch" },
+  };
+  const entry = table[unit];
+  if (!entry) return unit || "";
+  return entry[lang] || entry.de;
+}
+
 const LANG_STORAGE_KEY = "mealPlannerLang";
 function loadLang() {
   try {
@@ -302,7 +320,7 @@ function LangToggle({ lang, setLang }) {
 // old fridge key "egg"), and would break constantly once
 // names change per language. IDs are stable in both cases.
 // =====================================================
-const DEFAULT_FRIDGE = { 64: 1, 21: 5, 65: 2, 27: 4, 6: 3, 7: 1000 };
+const DEFAULT_FRIDGE = { 64: 1, 21: 5, 65: 2, 27: 4, 6: 3, 7: 1 };
 
 function useSharedFridge() {
   const [fridge, setFridgeLocal] = React.useState(null); // null = still loading
@@ -1159,7 +1177,7 @@ function FridgeScreen({ data, fridge, setFridge, selected, setSelected, favorite
             <span className="fridge-name">{localName(e.ing, lang)}</span>
             <div className="fridge-controls">
               <button className="stepper-btn" onClick={() => adjust(e.id, -1)}>−</button>
-              <span className="fridge-qty">{e.qty}</span>
+              <span className="fridge-qty">{e.qty}<span className="fridge-unit">{formatUnit(e.ing.unit, lang)}</span></span>
               <button className="stepper-btn" onClick={() => adjust(e.id, 1)}>+</button>
               <button className="remove-btn" onClick={() => remove(e.id)} title="✕">✕</button>
             </div>
