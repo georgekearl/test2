@@ -296,5 +296,165 @@
     "source": "HelloFresh",
     "durationMinutes": "30-40",
     "kcal": 443
+  },
+  {
+    "id": 32,
+    "name_en": "Pork Tenderloin with Mustard Cream",
+    "name_de": "Saftiges Schweinefilet mit Senfrahm, dazu gerösteter Zucchini und Rosmarinkartoffeln",
+    "servings": 4,
+    "heroImage": "images/schweinefilet_senfrahm_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 752
+  },
+  {
+    "id": 33,
+    "name_en": "Spaghetti al Limone",
+    "name_de": "Spaghetti al Limone, zitronige Pasta mit Brokkoli und Panko-Bröseln",
+    "servings": 4,
+    "heroImage": "images/spaghetti_al_limone_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 959
+  },
+  {
+    "id": 34,
+    "name_en": "Spinach Ricotta Tortellini with Ham",
+    "name_de": "Spinat-Ricotta-Tortellini mit Krustenschinken und grünen Bohnen in Sahnesoße",
+    "servings": 4,
+    "heroImage": "images/spinat_ricotta_tortellini_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 711
+  },
+  {
+    "id": 35,
+    "name_en": "Teriyaki Donburi with Beef Mince",
+    "name_de": "Teriyaki Donburi mit Hackfleisch, Champignons und Pak Choi auf Limettenreis",
+    "servings": 4,
+    "heroImage": "images/teriyaki_donburi_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 694
+  },
+  {
+    "id": 36,
+    "name_en": "Baked Tortellini Casserole",
+    "name_de": "Gratinierter Tortellini-Auflauf mit Zucchini und Sonnenblumenkernen",
+    "servings": 4,
+    "heroImage": "images/tortellini_auflauf_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 873
+  },
+  {
+    "id": 37,
+    "name_en": "Turkish Beef Mince Pasta",
+    "name_de": "Türkische Rinderhackfleisch-Pasta in Mezze-Tomatensoße mit Minz-Joghurt-Topping",
+    "servings": 4,
+    "heroImage": "images/tuerkische_rinderhack_pasta_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "20-30",
+    "kcal": 909
+  },
+  {
+    "id": 38,
+    "name_en": "Yaki Udon Japanese Noodle Bowl with Beef",
+    "name_de": "Yaki Udon: Japanische Noodle-Bowl mit Weiderind in süßer Soja-Chili-Soße mit Pak Choi und Sesam",
+    "servings": 4,
+    "heroImage": "images/yaki_udon_weiderind_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 781
+  },
+  {
+    "id": 39,
+    "name_en": "Cajun-Style Pasta with Caramelised Bacon",
+    "name_de": "Cajun-Style Pasta mit karamellisiertem Bacon und gebackenen Kirschtomaten",
+    "servings": 4,
+    "heroImage": "images/cajun_pasta_bacon_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "40-50",
+    "kcal": 873
+  },
+  {
+    "id": 40,
+    "name_en": "Girasoli in Tomato Pesto Sauce",
+    "name_de": "Girasoli in Tomaten-Pesto-Soße mit Babyspinat, Pinienkernen und Hartkäse",
+    "servings": 4,
+    "heroImage": "images/girasoli_tomaten_pesto_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 755
+  },
+  {
+    "id": 41,
+    "name_en": "Spicy Grilling Cheese Tacos",
+    "name_de": "Würzig-feurige Grillkäse-Tacos mit karamellisierten Zwiebeln und Aioli",
+    "servings": 4,
+    "heroImage": "images/grillkaese_tacos_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 891
+  },
+  {
+    "id": 42,
+    "name_en": "Chicken with Apricot Curry Sauce",
+    "name_de": "Hähnchen mit Aprikosen-Curry-Soße, dazu Ofenkarotten und fluffiger Reis",
+    "servings": 4,
+    "heroImage": "images/haehnchen_aprikosen_curry_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 767
+  },
+  {
+    "id": 43,
+    "name_en": "Marinated Chicken Fillet with Oregano",
+    "name_de": "Mariniertes Hähnchenfilet mit Oregano, dazu Zaziki, Minz-Reis und griechischer Salat",
+    "servings": 4,
+    "heroImage": "images/haehnchen_oregano_zaziki_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "30-40",
+    "kcal": 706
+  },
+  {
+    "id": 44,
+    "name_en": "Keema Matar Curry with Chicken",
+    "name_de": "Keema Matar Curry mit Hähnchen und buttrigem Naan",
+    "servings": 4,
+    "heroImage": "images/keema_matar_haehnchen_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "15-25",
+    "kcal": 621
+  },
+  {
+    "id": 45,
+    "name_en": "Mild Beef Chili con Carne",
+    "name_de": "Mildes Chili con Carne mit Rinderhackfleisch, getoppt mit Käse auf fluffigem Basmatireis",
+    "servings": 4,
+    "heroImage": "images/mildes_chili_con_carne_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "35-45",
+    "kcal": 934
+  },
+  {
+    "id": 46,
+    "name_en": "Miso Beef Burger with Sesame Cucumber Salad",
+    "name_de": "Miso Beef Burger mit Sesam-Gurken-Salat, dazu knusprige Kartoffelspalten",
+    "servings": 4,
+    "heroImage": "images/miso_beef_burger_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "40-50",
+    "kcal": 1051
+  },
+  {
+    "id": 47,
+    "name_en": "Provençal Fish on Fennel Vegetables",
+    "name_de": "Provenzalischer Fisch auf Fenchelgemüse, dazu Couscous und grüne Oliven",
+    "servings": 4,
+    "heroImage": "images/provenzalischer_fisch_hero.jpg",
+    "source": "HelloFresh",
+    "durationMinutes": "25-35",
+    "kcal": 646
   }
 ]

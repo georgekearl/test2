@@ -1558,5 +1558,905 @@
     "instruction_en": "Toss the salad with the dressing. Divide the parsnip mash between plates. Arrange the shrimp on top and top with the yogurt. Serve the salad alongside and enjoy!",
     "instruction_de": "Salat mit dem Dressing vermengen. Pastinakenstampf auf Teller verteilen. Garnelen darauf anrichten und mit dem Joghurt toppen. Salat daneben anrichten und genießen. Guten Appetit!",
     "image": "images/garnelen_pastinakenstampf_step6.jpg"
+  },
+  {
+    "id": 157,
+    "recipeId": 32,
+    "stepNumber": 1,
+    "title_en": "Prepare the zucchini",
+    "title_de": "Zucchini zubereiten",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Cut the zucchini into 1cm slices. Spread on a baking-paper-lined tray (leaving some room for the potatoes) and season with 1 tbsp [1.5 tbsp | 2 tbsp] oil*, salt*, and pepper*.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Zucchini in 1 cm Scheiben schneiden. Zucchini auf einem mit Backpapier belegten Backblech verteilen (etwas Platz für die Kartoffeln lassen) und mit 1 EL [1,5 EL | 2 EL] Öl*, Salz* und Pfeffer* würzen.",
+    "image": "images/schweinefilet_senfrahm_step1.jpg"
+  },
+  {
+    "id": 158,
+    "recipeId": 32,
+    "stepNumber": 2,
+    "title_en": "Prepare the potatoes",
+    "title_de": "Kartoffeln zubereiten",
+    "instruction_en": "Finely chop the rosemary needles and parsley leaves separately. Quarter or halve the washed, unpeeled potatoes depending on size. Spread the potatoes next to the zucchini on the tray and toss with 1 tbsp [1.5 tbsp | 2 tbsp] oil* and the rosemary needles. Bake the zucchini and potatoes for 25–30 min until golden brown.",
+    "instruction_de": "Rosmarinnadeln und Petersilienblätter getrennt fein hacken. Gewaschene Kartoffeln ungeschält je nach Größe vierteln oder halbieren. Kartoffeln neben die Zucchini auf dem Backblech verteilen und mit 1 EL [1,5 EL | 2 EL] Öl* und Rosmarinnadeln vermengen. Zucchini und Kartoffeln 25–30 Min. goldbraun backen.",
+    "image": "images/schweinefilet_senfrahm_step2.jpg"
+  },
+  {
+    "id": 159,
+    "recipeId": 32,
+    "stepNumber": 3,
+    "title_en": "Fry the pork tenderloin",
+    "title_de": "Schweinefilets braten",
+    "instruction_en": "Salt* and pepper* the pork tenderloins all over. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan. Sear the fillets on all sides for 3–4 min.",
+    "instruction_de": "Schweinefilets rundherum salzen* und pfeffern*. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Filets darin 3–4 Min. rundherum scharf anbraten.",
+    "image": "images/schweinefilet_senfrahm_step3.jpg"
+  },
+  {
+    "id": 160,
+    "recipeId": 32,
+    "stepNumber": 4,
+    "title_en": "Bake the pork tenderloin",
+    "title_de": "Schweinefilets backen",
+    "instruction_en": "Remove the tenderloins from the pan and place on the tray for the last 10 min of the potatoes' cooking time, baking until the meat is only slightly pink inside.",
+    "instruction_de": "Schweinefilets aus der Pfanne nehmen und für die letzten 10 Min. der Kartoffel-Garzeit mit auf das Backblech geben und backen, bis das Fleisch innen nur noch leicht rosa ist.",
+    "image": "images/schweinefilet_senfrahm_step4.jpg"
+  },
+  {
+    "id": 161,
+    "recipeId": 32,
+    "stepNumber": 5,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Add the cooking cream, stock powder, sweet mustard, and 50ml [75ml | 100ml] water* to the pan. Bring to a boil and simmer for 1–2 min until the sauce has thickened slightly. Season with salt* and pepper*.",
+    "instruction_de": "Kochsahne, Brühepulver, süßen Senf und 50 ml [75 ml | 100 ml] Wasser* in die Pfanne geben. Aufkochen und 1–2 Min. einköcheln lassen, bis die Soße etwas eingedickt ist. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/schweinefilet_senfrahm_step5.jpg"
+  },
+  {
+    "id": 162,
+    "recipeId": 32,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Remove the tenderloins from the oven, slice, and divide between plates. Arrange the potato wedges and zucchini alongside, sprinkle with parsley, and enjoy with the sauce. Enjoy!",
+    "instruction_de": "Schweinefilets aus dem Backofen nehmen, in Scheiben schneiden und auf Teller verteilen. Kartoffelspalten und Zucchini dazu anrichten, mit Petersilie bestreuen und mit der Soße genießen. Guten Appetit!",
+    "image": "images/schweinefilet_senfrahm_step6.jpg"
+  },
+  {
+    "id": 163,
+    "recipeId": 33,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil plenty of water in the kettle. Finely chop the parsley and thyme leaves separately. Wash the lemon in hot water and finely grate 1 tsp [1.5 tsp | 2 tsp] of the zest. Quarter the lemon. Peel the garlic. Finely chop the shallot. Break the broccoli into small florets.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Petersilien- und Thymianblätter getrennt voneinander fein hacken. Zitrone heiß waschen und 1 TL [1,5 TL | 2 TL] der Schale fein abreiben. Zitrone vierteln. Knoblauch abziehen. Schalotte fein hacken. Brokkoli in kleine Röschen teilen.",
+    "image": "images/spaghetti_al_limone_step1.jpg"
+  },
+  {
+    "id": 164,
+    "recipeId": 33,
+    "stepNumber": 2,
+    "title_en": "For the crumbs",
+    "title_de": "Für die Brösel",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] butter* in a large pan over medium heat. Toast the panko and chopped lemon thyme for 1–2 min, stirring, until golden brown. Transfer to a small bowl, let cool briefly, and mix with half of the hard cheese.",
+    "instruction_de": "In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Butter* bei mittlerer Hitze erhitzen. Pankomehl und gehackten Zitronenthymian 1–2 Min. unter Rühren rösten, bis die Brösel goldbraun sind. Danach in eine kleine Schüssel geben, kurz abkühlen lassen und mit der Hälfte vom Hartkäse vermengen.",
+    "image": "images/spaghetti_al_limone_step2.jpg"
+  },
+  {
+    "id": 165,
+    "recipeId": 33,
+    "stepNumber": 3,
+    "title_en": "Cook the pasta",
+    "title_de": "Pasta kochen",
+    "instruction_en": "Fill a large pot with plenty of hot water*, salt* it, and bring to a boil. Add the spaghetti and cook for 2 min. After 2 min, add the broccoli and cook for another 5–6 min, until the spaghetti is al dente and the broccoli is tender.",
+    "instruction_de": "In einen großen Topf reichlich heißes Wasser* füllen, salzen* und aufkochen lassen. Spaghetti hineingeben und 2 Min. kochen. Nach 2 Min. Brokkoli hinzugeben und weitere 5–6 Min. kochen, bis die Spaghetti bissfest sind und der Brokkoli gar ist.",
+    "image": "images/spaghetti_al_limone_step3.jpg"
+  },
+  {
+    "id": 166,
+    "recipeId": 33,
+    "stepNumber": 4,
+    "title_en": "Meanwhile",
+    "title_de": "Währenddessen",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in the pan from step 2 over medium heat. Press in the garlic, add the shallot, and sauté together for 2 min until translucent. Deglaze with the cooking cream and 150ml [225ml | 300ml] water*. Stir in the stock powder and chopped parsley.",
+    "instruction_de": "In der Pfanne aus Schritt 2 1 EL [1,5 EL | 2 EL] Öl* bei mittlerer Hitze erhitzen. Knoblauch hineinpressen, Schalotte hinzufügen und zusammen 2 Min. glasig anschwitzen. Pfanneninhalt mit Kochsahne und 150 ml [225 ml | 300 ml] Wasser* ablöschen. Brühepulver und gehackte Petersilie unterrühren.",
+    "image": "images/spaghetti_al_limone_step4.jpg"
+  },
+  {
+    "id": 167,
+    "recipeId": 33,
+    "stepNumber": 5,
+    "title_en": "Finish the pasta",
+    "title_de": "Pasta vollenden",
+    "instruction_en": "Add the lemon zest, remaining hard cheese, and mild chili mix, and bring to a boil once, stirring. Season with salt* and pepper* and remove from the heat. Drain the pasta and broccoli and immediately toss with the sauce. Season with lemon juice to taste.",
+    "instruction_de": "Zitronenabrieb, restlichen Hartkäse und milden Chili-Mix zugeben und alles unter Rühren einmal aufkochen lassen. Mit Salz* und Pfeffer* abschmecken und Pfanne vom Herd nehmen. Pasta und Brokkoli durch ein Sieb abgießen und beides sofort mit der Soße vermengen. Pasta nach Belieben mit Zitronensaft abschmecken.",
+    "image": "images/spaghetti_al_limone_step5.jpg"
+  },
+  {
+    "id": 168,
+    "recipeId": 33,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the finished pasta between deep plates and top with the herb crumbs. Serve with the remaining lemon wedges and enjoy. Enjoy!",
+    "instruction_de": "Fertige Pasta auf tiefe Teller verteilen und mit Kräuterbröseln toppen. Restliche Zitronenspalten dazu reichen und genießen. Guten Appetit!",
+    "image": "images/spaghetti_al_limone_step6.jpg"
+  },
+  {
+    "id": 169,
+    "recipeId": 34,
+    "stepNumber": 1,
+    "title_en": "To start",
+    "title_de": "Zu Beginn",
+    "instruction_en": "Boil plenty of water in the kettle. Fill a large pot with plenty of hot water*, salt* it, and bring to a boil.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen großen Topf reichlich heißes Wasser* füllen, salzen* und aufkochen lassen.",
+    "image": "images/spinat_ricotta_tortellini_step1.jpg"
+  },
+  {
+    "id": 170,
+    "recipeId": 34,
+    "stepNumber": 2,
+    "title_en": "Cook the beans",
+    "title_de": "Bohnen kochen",
+    "instruction_en": "Trim the ends off the green beans and cut into 1cm pieces. Add to the pot of boiling water* and cook for 6–7 min until tender. Add the tortellini for the last 3–4 min of cooking. Drain both, reserving 100ml [150ml | 200ml] of the cooking water.",
+    "instruction_de": "Enden der Buschbohnen entfernen und Buschbohnen in 1 cm Stücke schneiden. Buschbohnen in den großen Topf mit kochendem Wasser* geben und 6–7 Min. weich garen. Tortellini in den letzten 3–4 Min. der Garzeit in den Topf geben. Danach beides durch ein Sieb abschütten und dabei 100 ml [150 ml | 200 ml] Kochwasser auffangen.",
+    "image": "images/spinat_ricotta_tortellini_step2.jpg"
+  },
+  {
+    "id": 171,
+    "recipeId": 34,
+    "stepNumber": 3,
+    "title_en": "Meanwhile",
+    "title_de": "Währenddessen",
+    "instruction_en": "Cut the crispy ham into 1cm strips. Finely chop the garlic.",
+    "instruction_de": "Krustenschinken in 1 cm Streifen schneiden. Knoblauch fein hacken.",
+    "image": "images/spinat_ricotta_tortellini_step3.jpg"
+  },
+  {
+    "id": 172,
+    "recipeId": 34,
+    "stepNumber": 4,
+    "title_en": "Fry the ham",
+    "title_de": "Schinken anbraten",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan. Fry the crispy ham and garlic for 2–3 min, until the ham takes on some color. Deglaze with the cooking cream, cooking water, and stock powder. Reduce the heat and stir in the grated hard cheese.",
+    "instruction_de": "In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Krustenschinken und Knoblauch 2–3 Min. anbraten, bis der Schinken etwas Farbe bekommt. Pfanneninhalt mit Kochsahne, Kochwasser und Brühepulver ablöschen. Hitze reduzieren und geriebenen Hartkäse unterrühren.",
+    "image": "images/spinat_ricotta_tortellini_step4.jpg"
+  },
+  {
+    "id": 173,
+    "recipeId": 34,
+    "stepNumber": 5,
+    "title_en": "Finish the sauce",
+    "title_de": "Soße vollenden",
+    "instruction_en": "Add the tortellini and beans to the pan once cooked and combine until a creamy sauce forms. Season with salt* and pepper*.",
+    "instruction_de": "Tortellini und Bohnen nach der Garzeit in die Pfanne geben und vermengen, bis eine sämige Soße entsteht. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/spinat_ricotta_tortellini_step5.jpg"
+  },
+  {
+    "id": 174,
+    "recipeId": 34,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Arrange the tortellini on deep plates and enjoy. Enjoy!",
+    "instruction_de": "Tortellini auf tiefen Tellern anrichten und genießen. Guten Appetit!",
+    "image": "images/spinat_ricotta_tortellini_step6.jpg"
+  },
+  {
+    "id": 175,
+    "recipeId": 35,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Fill a small pot with a lid with 300ml [450ml | 600ml] water*, salt* lightly, and bring to a boil once. Stir in the rice and simmer covered over low heat for about 10 min. Remove from the heat and let the rice steam, covered, for at least 10 min.",
+    "instruction_de": "In einen kleinen Topf mit Deckel 300 ml [450 ml | 600 ml] Wasser* füllen, leicht salzen* und einmal aufkochen lassen. Reis hineinrühren und bei niedriger Hitze ca. 10 Min. abgedeckt köcheln lassen. Topf vom Herd nehmen und Reis mindestens 10 Min. abgedeckt ziehen lassen.",
+    "image": "images/teriyaki_donburi_step1.jpg"
+  },
+  {
+    "id": 176,
+    "recipeId": 35,
+    "stepNumber": 2,
+    "title_en": "Cut the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Cut off about 0.5cm from the base of the pak choi and cut into 2–3cm pieces. Slice the mushrooms. Cut the white and green parts of the spring onion separately into thin rings.",
+    "instruction_de": "Strunk vom Pak Choi ca. 0,5 cm abschneiden und Pak Choi in 2–3 cm große Stücke schneiden. Champignons in Scheiben schneiden. Weißen und grünen Teil der Frühlingszwiebel getrennt voneinander in feine Ringe schneiden.",
+    "image": "images/teriyaki_donburi_step2.jpg"
+  },
+  {
+    "id": 177,
+    "recipeId": 35,
+    "stepNumber": 3,
+    "title_en": "Cut the chili",
+    "title_de": "Chili schneiden",
+    "instruction_en": "Wash the lime in hot water, finely grate 1 tsp [1.5 tsp | 2 tsp] of the zest, and quarter the lime. Peel and finely chop the garlic. Halve the chili lengthwise, deseed, and cut into thin strips (careful: spicy!).",
+    "instruction_de": "Limette heiß waschen, 1 TL [1,5 TL | 2 TL] der Schale fein abreiben und Limette vierteln. Knoblauch abziehen und fein hacken. Chili längs halbieren, entkernen und in feine Streifen schneiden (Achtung: scharf!).",
+    "image": "images/teriyaki_donburi_step3.jpg"
+  },
+  {
+    "id": 178,
+    "recipeId": 35,
+    "stepNumber": 4,
+    "title_en": "Fry the mince",
+    "title_de": "Hackfleisch braten",
+    "instruction_en": "Add the mince, ginger paste, and garlic to a large, cold pan. Heat everything, stirring, and once the pan is hot, fry for another 1–2 min until crumbly. Add the pak choi, white spring onion rings, and mushrooms, and fry for 3–6 min, until cooked through.",
+    "instruction_de": "Hackfleisch, Ingwerpaste und Knoblauch in eine große, kalte Pfanne geben. Alles unter Rühren erhitzen und wenn die Pfanne heiß ist, weitere 1–2 Min. krümelig anbraten. Pak Choi, weiße Frühlingszwiebelringe und Champignons zugeben und 3–6 Min. mit braten, bis das Hackfleisch durchgegart ist.",
+    "image": "images/teriyaki_donburi_step4.jpg"
+  },
+  {
+    "id": 179,
+    "recipeId": 35,
+    "stepNumber": 5,
+    "title_en": "Finish the stir fry",
+    "title_de": "Stir fry fertigstellen",
+    "instruction_en": "Deglaze the mince with the teriyaki sauce, the juice of 1 [1.5 | 2] lime wedges, and 50ml [75ml | 100ml] water*, and simmer for 1 min. Season with pepper*.",
+    "instruction_de": "Hackfleisch mit Teriyakisoße, Saft von 1 [1,5 | 2] Limettenviertel und 50 ml [75 ml | 100 ml] Wasser* ablöschen und 1 Min. einköcheln lassen. Mit Pfeffer* abschmecken.",
+    "image": "images/teriyaki_donburi_step5.jpg"
+  },
+  {
+    "id": 180,
+    "recipeId": 35,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Once cooked, fluff the rice with a fork, mix in the lime zest, and divide between plates. Arrange the stir fry alongside, topping with green spring onion rings and chili strips to taste (careful: spicy!). Enjoy with the remaining lime wedges. Enjoy!",
+    "instruction_de": "Reis nach Ende der Kochzeit mit einer Gabel etwas auflockern, Limettenabrieb untermischen und auf Teller verteilen. Stir Fry daneben anrichten, mit grünen Frühlingszwiebelringen und Chilistreifen nach Geschmack (Achtung: scharf!) toppen. Mit restlichen Limettenvierteln genießen. Guten Appetit!",
+    "image": "images/teriyaki_donburi_step6.jpg"
+  },
+  {
+    "id": 181,
+    "recipeId": 36,
+    "stepNumber": 1,
+    "title_en": "Cut the vegetables",
+    "title_de": "Gemüse schneiden",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Boil plenty of water in the kettle. Halve the zucchini lengthwise and cut into 1cm half-moons. Cut the tomato into 2cm cubes. Peel the garlic. Cut the white and green parts of the spring onion separately into thin rings.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Erhitze reichlich Wasser im Wasserkocher. Zucchini längs halbieren und in 1 cm Halbmonde schneiden. Tomate in 2 cm Würfel schneiden. Knoblauch abziehen. Weißen und grünen Teil der Frühlingszwiebel getrennt voneinander in feine Ringe schneiden.",
+    "image": "images/tortellini_auflauf_step1.jpg"
+  },
+  {
+    "id": 182,
+    "recipeId": 36,
+    "stepNumber": 2,
+    "title_en": "Pre-cook the zucchini",
+    "title_de": "Zucchini vorkochen",
+    "instruction_en": "Fill a large pot with plenty of hot water*, salt* it, and bring to a boil once. Simmer the zucchini for 1–2 min, until soft but still firm to the bite. Remove with a slotted spoon and place in a baking dish.",
+    "instruction_de": "In einen großen Topf reichlich heißes Wasser* füllen, salzen* und einmal aufkochen lassen. Zucchini darin 1–2 Min. köcheln, bis sie weich, aber noch bissfest sind. Zucchini mit einem Schaumlöffel herausnehmen und in eine Auflaufform geben.",
+    "image": "images/tortellini_auflauf_step2.jpg"
+  },
+  {
+    "id": 183,
+    "recipeId": 36,
+    "stepNumber": 3,
+    "title_en": "Pre-cook the tortellini",
+    "title_de": "Tortellini vorkochen",
+    "instruction_en": "Bring the water back to a boil. Cook the tortellini for 2–3 min. Skim off 100ml [150ml | 200ml] of the cooking water*, then drain the tortellini.",
+    "instruction_de": "Wasser in dem Topf erneut aufkochen lassen. Tortellini darin 2–3 Min. kochen. 100 ml [150 ml | 200 ml] Kochwasser* abschöpfen, Tortellini durch ein Sieb abgießen.",
+    "image": "images/tortellini_auflauf_step3.jpg"
+  },
+  {
+    "id": 184,
+    "recipeId": 36,
+    "stepNumber": 4,
+    "title_en": "Mix the sauce",
+    "title_de": "Soße anrühren",
+    "instruction_en": "Add the tortellini to the zucchini in the baking dish and mix with the diced tomato. Stir the reserved cooking water* together with the cooking cream, stock powder, and tomato pesto. Add the white spring onion rings, press in the garlic, and stir well. Season with salt* and pepper*.",
+    "instruction_de": "Tortellini zu den Zucchini in die Auflaufform geben, mit Tomatenwürfeln vermengen. In dem Messbecher das aufgefangene Kochwasser* mit Kochsahne, Brühepulver und Tomatenpesto verrühren. Weiße Frühlingszwiebelringe dazugeben, Knoblauch hineinpressen und alles gut verrühren. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/tortellini_auflauf_step4.jpg"
+  },
+  {
+    "id": 185,
+    "recipeId": 36,
+    "stepNumber": 5,
+    "title_en": "Gratinate the bake",
+    "title_de": "Auflauf gratinieren",
+    "instruction_en": "Pour the mixed sauce over the tortellini-zucchini mixture and gently combine. Sprinkle with the grated cheese and gratinate on the middle rack for 6–7 min. Meanwhile, toast the sunflower seeds in a small pan with no added fat for 1–2 min.",
+    "instruction_de": "Angerührte Soße über die Tortellini-Zucchini-Mischung geben und vorsichtig vermengen. Mit geriebenem Käse bestreuen und auf der mittleren Schiene im Backofen 6–7 Min. gratinieren. Inzwischen Sonnenblumenkerne in einer kleinen Pfanne ohne Fettzugabe 1–2 Min. anrösten.",
+    "image": "images/tortellini_auflauf_step5.jpg"
+  },
+  {
+    "id": 186,
+    "recipeId": 36,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the tortellini bake between plates, sprinkling with sunflower seeds and green spring onion rings. Enjoy!",
+    "instruction_de": "Tortellini-Auflauf auf Teller verteilen, mit Sonnenblumenkernen und grünen Frühlingszwiebelringen bestreuen. Guten Appetit!",
+    "image": "images/tortellini_auflauf_step6.jpg"
+  },
+  {
+    "id": 187,
+    "recipeId": 37,
+    "stepNumber": 1,
+    "title_en": "To start",
+    "title_de": "Zu Beginn",
+    "instruction_en": "Fill a large pot with plenty of water, salt* it, and bring to a boil.",
+    "instruction_de": "In einen großen Topf reichlich Wasser füllen, salzen* und aufkochen lassen.",
+    "image": "images/tuerkische_rinderhack_pasta_step1.jpg"
+  },
+  {
+    "id": 188,
+    "recipeId": 37,
+    "stepNumber": 2,
+    "title_en": "Prep",
+    "title_de": "Vorbereitungen",
+    "instruction_en": "Finely dice the shallot. Finely chop the garlic.",
+    "instruction_de": "Schalotte fein würfeln. Knoblauch fein hacken.",
+    "image": "images/tuerkische_rinderhack_pasta_step2.jpg"
+  },
+  {
+    "id": 189,
+    "recipeId": 37,
+    "stepNumber": 3,
+    "title_en": "Fry the mince",
+    "title_de": "Hackfleisch braten",
+    "instruction_en": "In a large pan with a lid, fry the mince, shallot, and garlic for 3–4 min with no added fat, until crumbly. Add the tomato paste and \"Hello Mezze\" and fry for 1 more min. Reduce the heat. Add the cherry tomatoes, stock powder, and 50ml [75ml | 100ml] water*, and simmer covered for 12 min. Season with a pinch of oregano, sugar*, salt*, and pepper*.",
+    "instruction_de": "In einer großen Pfanne mit Deckel ohne Fettzugabe Hackfleisch, Schalotte und Knoblauch 3–4 Min. anbraten, bis das Hackfleisch krümelig ist. Tomatenmark und „Hello Mezze“ zugeben und 1 Min. weiterbraten. Hitze reduzieren. Kirschtomaten, Brühepulver und 50 ml [75 ml | 100 ml] Wasser* zugeben und 12 Min. abgedeckt köcheln lassen. Mit einer Prise gerebeltem Oregano, einer Prise Zucker*, Salz* und Pfeffer* abschmecken.",
+    "image": "images/tuerkische_rinderhack_pasta_step3.jpg"
+  },
+  {
+    "id": 190,
+    "recipeId": 37,
+    "stepNumber": 4,
+    "title_en": "Cook the fusilli",
+    "title_de": "Fusilli kochen",
+    "instruction_en": "Add the fusilli to the boiling water* and cook for 10–11 min until al dente. Drain. Continue with the recipe in the meantime.",
+    "instruction_de": "Fusilli in das kochende Wasser* geben und 10–11 Min. bissfest garen. Danach durch ein Sieb abgießen. Währenddessen mit dem Rezept fortfahren.",
+    "image": "images/tuerkische_rinderhack_pasta_step4.jpg"
+  },
+  {
+    "id": 191,
+    "recipeId": 37,
+    "stepNumber": 5,
+    "title_en": "For the dip",
+    "title_de": "Für den Dip",
+    "instruction_en": "Finely chop the herbs. Mix the yogurt with the chopped herbs in a small bowl. Season with salt* and pepper*.",
+    "instruction_de": "Kräuter fein hacken. In einer kleinen Schüssel Joghurt mit gehackten Kräutern verrühren. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/tuerkische_rinderhack_pasta_step5.jpg"
+  },
+  {
+    "id": 192,
+    "recipeId": 37,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the fusilli between plates. Spoon the mince and tomato mixture on top and finish with the herb yogurt. Enjoy!",
+    "instruction_de": "Fusilli auf Teller verteilen. Hack-Tomaten-Pfanne darüber geben und mit Kräuter-Joghurt toppen. Guten Appetit!",
+    "image": "images/tuerkische_rinderhack_pasta_step6.jpg"
+  },
+  {
+    "id": 193,
+    "recipeId": 38,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Cut about 0.5cm off the base of the pak choi and cut into 1cm strips. Slice the mushrooms. Cut the onion into thin strips.",
+    "instruction_de": "Strunk vom Pak Choi ca. 0,5 cm abschneiden und Pak Choi in 1 cm Streifen schneiden. Champignons in Scheiben schneiden. Zwiebel in feine Streifen schneiden.",
+    "image": "images/yaki_udon_weiderind_step1.jpg"
+  },
+  {
+    "id": 194,
+    "recipeId": 38,
+    "stepNumber": 2,
+    "title_en": "Fry the meat & vegetables",
+    "title_de": "Fleisch & Gemüse braten",
+    "instruction_en": "Heat 1.5 tbsp [2.25 tbsp | 3 tbsp] oil* in a large pan. Fry the onion, mushrooms, and pak choi for 4–5 min. Heat a second large pan with no added fat. Fry the mince for 4–5 min until crumbly. Press the garlic in with the vegetables and add the mince along with its fat to the same pan. Add the soy sauce, sweet chili sauce, 1 tsp [1.5 tsp | 2 tsp] sugar*, and 1 tsp [1.5 tsp | 2 tsp] balsamic vinegar*, and mix.",
+    "instruction_de": "In einer großen Pfanne 1,5 EL [2,25 EL | 3 EL] Öl* erhitzen. Zwiebel, Champignons und Pak Choi darin 4–5 Min. anbraten. Einer zweiten großen Pfanne ohne Fettzugabe erhitzen. Hackfleisch darin 4–5 Min. krümelig anbraten. Knoblauch zu dem Gemüse pressen und Hackfleisch samt Fett ebenfalls in die Pfanne geben. Sojasoße, Sweet Chili Soße, 1 TL [1,5 TL | 2 TL] Zucker* und 1 TL [1,5 TL | 2 TL] Balsamicoessig* dazugeben und vermengen.",
+    "image": "images/yaki_udon_weiderind_step2.jpg"
+  },
+  {
+    "id": 195,
+    "recipeId": 38,
+    "stepNumber": 3,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Add the udon noodles to the pan and heat for 2 min. Divide the beef udon between deep plates. Garnish with sesame. Enjoy!",
+    "instruction_de": "Udon Nudeln in die Pfanne geben und 2 Min. erhitzen. Beef Udon auf tiefe Teller verteilen. Mit Sesam garnieren. Guten Appetit!",
+    "image": "images/yaki_udon_weiderind_step3.jpg"
+  },
+  {
+    "id": 196,
+    "recipeId": 39,
+    "stepNumber": 1,
+    "title_en": "Cook the pasta",
+    "title_de": "Pasta kochen",
+    "instruction_en": "Boil plenty of water in the kettle. Fill a large pot with plenty of hot water*, salt* generously, and bring to a boil. Add the penne and cook for 10–11 min until al dente. Continue with the recipe in the meantime. Halve the chili (careful: spicy!), deseed, and cut into thin strips. Peel the garlic. Halve the cherry tomatoes.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen großen Topf reichlich heißes Wasser* füllen, kräftig salzen* und aufkochen. Penne hinzugeben und 10–11 Min. bissfest garen. Währenddessen mit dem Rezept fortfahren. Chilischote (Achtung: scharf!) längs halbieren, entkernen und in feine Streifen schneiden. Knoblauch abziehen. Kirschtomaten halbieren.",
+    "image": "images/cajun_pasta_bacon_step1.jpg"
+  },
+  {
+    "id": 197,
+    "recipeId": 39,
+    "stepNumber": 2,
+    "title_en": "Fry the bacon",
+    "title_de": "Bacon braten",
+    "instruction_en": "Halve the bacon slices crosswise and lay side by side in a large, cold pan. Heat and fry over medium to medium-high heat for 5–6 min until crispy. Reduce the heat and carefully pour off the bacon fat.",
+    "instruction_de": "Baconscheiben quer halbieren und nebeneinander in eine große, kalte Pfanne legen. Pfanne erhitzen und bei mittlerer bis mittelhoher Hitze Baconscheiben 5–6 Min. knusprig braten. Anschließend Hitze reduzieren und das Baconfett vorsichtig abgießen.",
+    "image": "images/cajun_pasta_bacon_step2.jpg"
+  },
+  {
+    "id": 198,
+    "recipeId": 39,
+    "stepNumber": 3,
+    "title_en": "Glaze the bacon",
+    "title_de": "Bacon glasieren",
+    "instruction_en": "Carefully add the \"Hello Cajun\" spice mix, 1 tsp [1.5 tsp | 2 tsp] sugar*, and 2 tbsp [3 tbsp | 4 tbsp] water* to the bacon, and glaze for 1 min, until the sugar has melted. Remove the bacon from the pan.",
+    "instruction_de": "„Hello Cajun“, 1 TL [1,5 TL | 2 TL] Zucker* und 2 EL [3 EL | 4 EL] Wasser* vorsichtig zum Bacon in die Pfanne geben und Bacon 1 Min. glasieren, bis der Zucker geschmolzen ist. Bacon aus der Pfanne nehmen.",
+    "image": "images/cajun_pasta_bacon_step3.jpg"
+  },
+  {
+    "id": 199,
+    "recipeId": 39,
+    "stepNumber": 4,
+    "title_en": "For the sauce",
+    "title_de": "Für die Soße",
+    "instruction_en": "Add the cherry tomatoes to the same pan. Press in the garlic, add the herb butter, and fry for 4–5 min. Drain the pasta, reserving about 50ml [75ml | 100ml] of the cooking water.",
+    "instruction_de": "In dieselbe Pfanne Kirschtomaten geben. Knoblauch dazupressen, Kräuterbutter dazugeben und Kirschtomaten 4–5 Min. anbraten. Pasta nach Ende der Kochzeit durch ein Sieb abgießen, dabei ca. 50 ml [75 ml | 100 ml] vom Kochwasser auffangen.",
+    "image": "images/cajun_pasta_bacon_step4.jpg"
+  },
+  {
+    "id": 200,
+    "recipeId": 39,
+    "stepNumber": 5,
+    "title_en": "Finish the pasta",
+    "title_de": "Pasta vollenden",
+    "instruction_en": "Add the pasta, baby spinach, and reserved pasta water to the tomatoes and bring to a boil for 1 min, stirring. Season with salt* and pepper*.",
+    "instruction_de": "Pasta, Babyspinat und abgemessenes Pastawasser zu den Tomaten in die Pfanne geben und unter Rühren 1 Min. aufkochen lassen. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/cajun_pasta_bacon_step5.jpg"
+  },
+  {
+    "id": 201,
+    "recipeId": 39,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Arrange the finished pasta on deep plates, top with the bacon, and sprinkle with chili strips. Enjoy!",
+    "instruction_de": "Fertige Pasta auf tiefen Tellern anrichten, mit Bacon toppen und mit Chilistreifen bestreuen. Guten Appetit!",
+    "image": "images/cajun_pasta_bacon_step6.jpg"
+  },
+  {
+    "id": 202,
+    "recipeId": 40,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil plenty of water in the kettle. Dice the onion. Finely chop the garlic. Toast the pine nuts in a large pan with no added fat for 1–2 min. Remove.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. Zwiebel würfeln. Knoblauch fein hacken. In einer großen Pfanne ohne Fettzugabe Pinienkerne 1–2 Min. rösten. Herausnehmen.",
+    "image": "images/girasoli_tomaten_pesto_step1.jpg"
+  },
+  {
+    "id": 203,
+    "recipeId": 40,
+    "stepNumber": 2,
+    "title_en": "Start the sauce",
+    "title_de": "Soße ansetzen",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] olive oil* in the same pan. Fry the onion for 4–5 min. Add the garlic, stock powder, and half [three-quarters | all] of the oregano, and fry for 1 min.",
+    "instruction_de": "In derselben Pfanne 1 EL [1,5 EL | 2 EL] Olivenöl* erhitzen. Zwiebel darin 4–5 Min. anbraten. Knoblauch, Brühepulver und Hälfte [drei Viertel | gesamten] Oregano zugeben und 1 Min. anbraten.",
+    "image": "images/girasoli_tomaten_pesto_step2.jpg"
+  },
+  {
+    "id": 204,
+    "recipeId": 40,
+    "stepNumber": 3,
+    "title_en": "Cook the pasta",
+    "title_de": "Nudeln garen",
+    "instruction_en": "Fill a large pot with plenty of hot water*, salt* it, and bring to a boil. Reduce the heat, add the pasta, and let steep for 5–6 min. Drain. Tip: once the girasoli are in the water, don't let it boil again, or they'll burst.",
+    "instruction_de": "In einen großen Topf reichlich heißes Wasser* füllen, salzen* und aufkochen lassen. Hitze reduzieren, Pasta hinzugeben und 5–6 Min. ziehen lassen. Danach durch ein Sieb abgießen. Tipp: Sobald die Girasoli im Wasser sind, Wasser nicht mehr kochen lassen, sonst platzen sie auf.",
+    "image": "images/girasoli_tomaten_pesto_step3.jpg"
+  },
+  {
+    "id": 205,
+    "recipeId": 40,
+    "stepNumber": 4,
+    "title_en": "Finish the sauce",
+    "title_de": "Soße vollenden",
+    "instruction_en": "Deglaze the pan with the tomato pesto, chopped tomatoes, and 100ml [150ml | 200ml] water*. Bring to a boil, reduce the heat, and simmer for 6–8 min. Season with salt*, pepper*, and sugar*.",
+    "instruction_de": "Pfanneninhalt mit Tomatenpesto, stückigen Tomaten und 100 ml [150 ml | 200 ml] Wasser* ablöschen, aufkochen, Hitze reduzieren und 6–8 Min. köcheln lassen. Mit Salz*, Pfeffer* und Zucker* abschmecken.",
+    "image": "images/girasoli_tomaten_pesto_step4.jpg"
+  },
+  {
+    "id": 206,
+    "recipeId": 40,
+    "stepNumber": 5,
+    "title_en": "Final steps",
+    "title_de": "Letzte Schritte",
+    "instruction_en": "Add the girasoli, spinach, and half of the cheese to the pan with the sauce and cook until the spinach wilts.",
+    "instruction_de": "Girasoli, Spinat und Hälfte Käse in die große Pfanne mit der Soße geben und kochen, bis der Spinat zusammenfällt.",
+    "image": "images/girasoli_tomaten_pesto_step5.jpg"
+  },
+  {
+    "id": 207,
+    "recipeId": 40,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Divide the girasoli between deep plates and top with hard cheese and pine nuts. Enjoy!",
+    "instruction_de": "Girasoli auf tiefen Tellern verteilen und mit Hartkäse und Pinienkernen toppen. Guten Appetit!",
+    "image": "images/girasoli_tomaten_pesto_step6.jpg"
+  },
+  {
+    "id": 208,
+    "recipeId": 41,
+    "stepNumber": 1,
+    "title_en": "Dice the cucumber",
+    "title_de": "Gurke würfeln",
+    "instruction_en": "Cut off the ends of the cucumber and dice into 1cm cubes. Cut the lemon into 6 wedges. Cut the grilling cheese into 8 [12 | 16] equal-sized sticks.",
+    "instruction_de": "Enden der Gurke abschneiden und Gurke in 1 cm Würfel schneiden. Zitrone in 6 Spalten schneiden. Grillkäse in 8 [12 | 16] gleich große Stäbchen schneiden.",
+    "image": "images/grillkaese_tacos_step1.jpg"
+  },
+  {
+    "id": 209,
+    "recipeId": 41,
+    "stepNumber": 2,
+    "title_en": "Cut the onion",
+    "title_de": "Zwiebel schneiden",
+    "instruction_en": "Halve the onion and cut into thin strips. Peel the garlic, roughly chop, sprinkle with a pinch of salt*, and crush into a paste using the flat side of the knife. Halve the chili lengthwise and cut into thin strips (careful: spicy!). Tip: for less heat, remove the seeds.",
+    "instruction_de": "Zwiebel halbieren und in dünne Streifen schneiden. Knoblauch abziehen, grob hacken, 1 Prise Salz* daraufgeben und mit der Seitenfläche der Klinge den Knoblauch zu einer Paste zerdrücken. Chili längs halbieren und in feine Streifen schneiden (Achtung: scharf!). Tipp: Wenn Du es nicht so scharf magst, entkerne einfach die Chilischote.",
+    "image": "images/grillkaese_tacos_step2.jpg"
+  },
+  {
+    "id": 210,
+    "recipeId": 41,
+    "stepNumber": 3,
+    "title_en": "Caramelize the onions",
+    "title_de": "Zwiebeln karamellisieren",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a small pan over medium heat. Fry the onion strips until translucent for 10 min. Then add 1 tbsp [1.5 tbsp | 2 tbsp] water*, 1 tsp [1.5 tsp | 2 tsp] balsamic vinegar*, and a pinch of sugar*, and fry for another 4–5 min.",
+    "instruction_de": "In einer kleinen Pfanne 1 EL [1,5 EL | 2 EL] Öl* bei mittlerer Hitze erwärmen. Zwiebelstreifen darin 10 Min. glasig braten. Anschließend 1 EL [1,5 EL | 2 EL] Wasser*, 1 TL [1,5 TL | 2 TL] Balsamicoessig* und 1 Prise Zucker* zugeben und 4–5 Min. weiterbraten.",
+    "image": "images/grillkaese_tacos_step3.jpg"
+  },
+  {
+    "id": 211,
+    "recipeId": 41,
+    "stepNumber": 4,
+    "title_en": "Marinate the grilling cheese",
+    "title_de": "Grillkäse marinieren",
+    "instruction_en": "In a small bowl, marinate the grilling cheese sticks with oregano and 1 tbsp [1.5 tbsp | 2 tbsp] oil*. In another bowl, mix the mayonnaise with half the garlic paste, a few drops of lemon juice (to taste), salt*, and pepper*, to make an aioli.",
+    "instruction_de": "In einer kleinen Schüssel Grillkäsesticks mit Oregano und 1 EL [1,5 EL | 2 EL] Öl* marinieren. In einer weiteren kleinen Schüssel Mayonnaise mit der Hälfte der Knoblauchpaste, einigen Tropfen Zitronensaft (nach Belieben), etwas Salz* und Pfeffer* zu einer Aioli vermischen.",
+    "image": "images/grillkaese_tacos_step4.jpg"
+  },
+  {
+    "id": 212,
+    "recipeId": 41,
+    "stepNumber": 5,
+    "title_en": "Fry the grilling cheese",
+    "title_de": "Grillkäse braten",
+    "instruction_en": "Heat a large pan over medium heat. Fry the grilling cheese sticks with no added fat for 3–4 min, until golden brown all over. Add the remaining garlic paste and chili strips to taste (careful: spicy!). Remove and wipe the pan clean.",
+    "instruction_de": "Eine große Pfanne bei mittlerer Hitze erwärmen. Grillkäsesticks ohne Fettzugabe 3–4 Min. rundherum goldbraun anbraten. Restliche Knoblauchpaste und nach Belieben Chilistreifen (Achtung: scharf!) zugeben. Aus der Pfanne nehmen und Pfanne auswischen.",
+    "image": "images/grillkaese_tacos_step5.jpg"
+  },
+  {
+    "id": 213,
+    "recipeId": 41,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Lightly warm the tortilla wraps in the pan. Spread the aioli on the tortillas. Divide the rocket, caramelized onions, grilling cheese sticks, and diced cucumber on top, and enjoy with lemon wedges. Enjoy!",
+    "instruction_de": "Tortilla-Wraps in der Pfanne leicht erwärmen. Aioli auf den Tortillas verteilen. Rucola, karamellisierte Zwiebeln, Grillkäsesticks und Gurkenwürfel darauf verteilen und mit Zitronenspalten genießen. Guten Appetit!",
+    "image": "images/grillkaese_tacos_step6.jpg"
+  },
+  {
+    "id": 214,
+    "recipeId": 42,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Boil 300ml [450ml | 600ml] water* in the kettle. Fill a small pot with a lid with 300ml [450ml | 600ml] hot water*. Add 0.25 tsp [0.5 tsp | 0.5 tsp] salt* and bring to a boil. Add the rice and simmer covered over low heat for 10 min. Remove from the heat and let stand covered for 10 min.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Erhitze 300 ml [450 ml | 600 ml] Wasser* im Wasserkocher. In einen kleinen Topf mit Deckel 300 ml [450 ml | 600 ml] heißes Wasser* füllen. 0,25 TL [0,5 TL | 0,5 TL] Salz* dazugeben und aufkochen lassen. Reis zugeben und bei niedriger Hitze 10 Min. abgedeckt köcheln lassen. Anschließend vom Herd nehmen und abgedeckt 10 Min. ziehen lassen.",
+    "image": "images/haehnchen_aprikosen_curry_step1.jpg"
+  },
+  {
+    "id": 215,
+    "recipeId": 42,
+    "stepNumber": 2,
+    "title_en": "Cut the carrots",
+    "title_de": "Karotten schneiden",
+    "instruction_en": "Peel the carrots, halve crosswise, then cut lengthwise into batons. Spread on a baking-paper-lined tray (leaving room for the chicken), and toss with \"Hello Paprika\", 1 tbsp [1.5 tbsp | 2 tbsp] oil*, salt*, and pepper*. Roast for 20–25 min, until soft.",
+    "instruction_de": "Karotten schälen, quer halbieren, dann längs in Stifte schneiden. Karottenstifte auf einem mit Backpapier belegten Backblech verteilen (etwas Platz für das Hähnchen lassen), mit „Hello Paprika“, 1 EL [1,5 EL | 2 EL] Öl*, Salz* und Pfeffer* vermengen. Karotten 20–25 Min. im Ofen backen, bis sie weich sind.",
+    "image": "images/haehnchen_aprikosen_curry_step2.jpg"
+  },
+  {
+    "id": 216,
+    "recipeId": 42,
+    "stepNumber": 3,
+    "title_en": "Fry the chicken",
+    "title_de": "Hähnchen braten",
+    "instruction_en": "Season the chicken breast fillets with salt* and pepper* on both sides. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan over high heat. Fry for 2 min per side until golden brown. Remove and place in the oven for the last 10 min of the carrots' cooking time, until no longer pink inside.",
+    "instruction_de": "Hähnchenbrustfilets von beiden Seiten mit Salz* und Pfeffer* würzen. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* auf hoher Stufe erhitzen. Hähnchenbrust auf jeder Seite 2 Min. goldbraun anbraten. Fleisch aus der Pfanne nehmen und in den letzten 10 Min. der Karottengarzeit mit in den Ofen geben und fertig backen, bis das Fleisch innen nicht mehr rosa ist.",
+    "image": "images/haehnchen_aprikosen_curry_step3.jpg"
+  },
+  {
+    "id": 217,
+    "recipeId": 42,
+    "stepNumber": 4,
+    "title_en": "Prepare the sauce",
+    "title_de": "Soße vorbereiten",
+    "instruction_en": "Finely dice the shallot and garlic. Finely dice the dried apricots. Finely chop the parsley leaves.",
+    "instruction_de": "Schalotte und Knoblauch fein würfeln. Getrocknete Aprikosen fein würfeln. Petersilienblätter fein hacken.",
+    "image": "images/haehnchen_aprikosen_curry_step4.jpg"
+  },
+  {
+    "id": 218,
+    "recipeId": 42,
+    "stepNumber": 5,
+    "title_en": "Finish the sauce",
+    "title_de": "Soße vollenden",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* again in the large pan. Fry the shallot and garlic for 2 min. Deglaze with 150ml [225ml | 300ml] water*. Add the stock powder, apricot chutney, dried apricots, and \"Hello Curry\", and simmer for about 3 min. Stir in 1 tbsp [1.5 tbsp | 2 tbsp] butter* and simmer until thickened. Season with salt* and pepper*.",
+    "instruction_de": "In der großen Pfanne erneut 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Schalotte und Knoblauch darin 2 Min. anbraten. Mit 150 ml [225 ml | 300 ml] Wasser* ablöschen. Brühepulver, Aprikosenchutney, getrocknete Aprikosen und „Hello Curry“ dazugeben und ca. 3 Min. einköcheln lassen. Zum Schluss 1 EL [1,5 EL | 2 EL] Butter* unterrühren und köcheln lassen, bis die Soße etwas eingedickt ist. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/haehnchen_aprikosen_curry_step5.jpg"
+  },
+  {
+    "id": 219,
+    "recipeId": 42,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Fluff the rice with a fork and stir in 1 tbsp [1.5 tbsp | 2 tbsp] butter*. Divide the rice between plates, and arrange the carrots and chicken breast alongside. Top the chicken with parsley and enjoy with the sauce. Enjoy!",
+    "instruction_de": "Reis mit einer Gabel auflockern und 1 EL [1,5 EL | 2 EL] Butter* unterrühren. Reis auf Teller verteilen, Karotten und Hähnchenbrust dazu anrichten. Hähnchen mit Petersilie toppen und alles zusammen mit der Aprikosen-Curry-Soße genießen. Guten Appetit!",
+    "image": "images/haehnchen_aprikosen_curry_step6.jpg"
+  },
+  {
+    "id": 220,
+    "recipeId": 43,
+    "stepNumber": 1,
+    "title_en": "Marinate the meat",
+    "title_de": "Fleisch marinieren",
+    "instruction_en": "Boil 300ml [450ml | 600ml] water* in the kettle. Wash the lemon in hot water, grate 0.5 tsp [0.75 tsp | 1 tsp] of the zest, and halve. Squeeze half the lemon into a large bowl; cut the other half into wedges. Marinate the chicken breast fillets with the lemon juice, zest, three-quarters of the oregano, salt*, and pepper*.",
+    "instruction_de": "Erhitze 300 ml [450 ml | 600 ml] Wasser* im Wasserkocher. Zitrone heiß waschen, 0,5 TL [0,75 TL | 1 TL] der Schale abreiben und Zitrone halbieren. Hälfte der Zitrone in eine große Schüssel pressen. Andere Hälfte in Spalten schneiden. Hähnchenbrustfilets in der großen Schüssel mit Zitronensaft, Zitronenabrieb, drei Vierteln des gerebelten Oreganos, Salz* und Pfeffer* marinieren.",
+    "image": "images/haehnchen_oregano_zaziki_step1.jpg"
+  },
+  {
+    "id": 221,
+    "recipeId": 43,
+    "stepNumber": 2,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Finely chop the garlic. Cut the onion into thin strips. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pot with a lid. Sauté half the onion strips and half the chopped garlic for 1–2 min until translucent.",
+    "instruction_de": "Knoblauch fein hacken. Zwiebel in feine Streifen schneiden. In einem großen Topf mit Deckel 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Hälfte der Zwiebelstreifen und Hälfte des gehackten Knoblauchs darin 1–2 Min. glasig andünsten.",
+    "image": "images/haehnchen_oregano_zaziki_step2.jpg"
+  },
+  {
+    "id": 222,
+    "recipeId": 43,
+    "stepNumber": 3,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Add the rice to the pot and stir for 1 min. Add 300ml [450ml | 600ml] hot water* and the oregano stems, salt* it, and bring to a boil once. Simmer covered over low heat for 10 min. Remove from the heat and let stand for about 10 min. Coarsely grate the radishes.",
+    "instruction_de": "Reis in den Topf geben und 1 Min. durchrühren. 300 ml [450 ml | 600 ml] heißes Wasser* und Oreganostiele dazugeben, salzen* und einmal aufkochen lassen. Abgedeckt bei niedriger Hitze 10 Min. köcheln lassen. Anschließend Topf vom Herd nehmen und ca. 10 Min. ziehen lassen. Radieschen grob raspeln.",
+    "image": "images/haehnchen_oregano_zaziki_step3.jpg"
+  },
+  {
+    "id": 223,
+    "recipeId": 43,
+    "stepNumber": 4,
+    "title_en": "For the tzatziki",
+    "title_de": "Für das Zaziki",
+    "instruction_en": "In a small bowl, mix half of the grated radishes with the yogurt and remaining garlic. Season with salt* and pepper*. Cut the sun-dried tomatoes into thin strips. In a large bowl, mix the remaining radishes and sun-dried tomatoes with the remaining onion strips and 1 tbsp [1.5 tbsp | 2 tbsp] olive oil*. Season with salt* and pepper*.",
+    "instruction_de": "In einer kleinen Schüssel Hälfte der geraspelten Radieschen mit Joghurt und restlichem Knoblauch verrühren. Mit Salz* und Pfeffer* abschmecken. Getrocknete Tomaten in feine Streifen schneiden. In einer großen Schüssel restliches Radieschen und getrocknete Tomaten mit restlichen Zwiebelstreifen und 1 EL [1,5 EL | 2 EL] Olivenöl* verrühren. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/haehnchen_oregano_zaziki_step4.jpg"
+  },
+  {
+    "id": 224,
+    "recipeId": 43,
+    "stepNumber": 5,
+    "title_en": "Fry the meat",
+    "title_de": "Fleisch braten",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in a large pan. Fry the chicken breast fillets for 5–8 min per side, until no longer pink inside. Meanwhile, finely chop the mint and parsley. Fluff the rice with a fork and stir in 1 tbsp [1.5 tbsp | 2 tbsp] olive oil* and the chopped herbs. Season with salt* and pepper*.",
+    "instruction_de": "In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Hähnchenbrustfilets 5–8 Min. pro Seite braten, bis das Fleisch innen nicht mehr rosa ist. Währenddessen Blätter von Minze und Petersilie fein hacken. Reis mit einer Gabel auflockern, 1 EL [1,5 EL | 2 EL] Olivenöl* und gehackte Kräuter unterrühren. Mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/haehnchen_oregano_zaziki_step5.jpg"
+  },
+  {
+    "id": 225,
+    "recipeId": 43,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Slice the chicken breast fillets. Divide the mint rice, chicken fillets, and tomato-radish salad between plates. Sprinkle with the remaining oregano to taste, and enjoy with the tzatziki and lemon wedges. Enjoy!",
+    "instruction_de": "Hähnchenbrustfilets in Scheiben schneiden. Minz-Reis, Hähnchenfilets und Tomaten-Radieschen-Salat auf Teller verteilen. Nach Belieben mit restlichem Oregano bestreuen und mit Zaziki und Zitronenspalten genießen. Guten Appetit!",
+    "image": "images/haehnchen_oregano_zaziki_step6.jpg"
+  },
+  {
+    "id": 226,
+    "recipeId": 44,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Dice the onions. Finely chop the garlic. Cut the tomato into 2cm cubes. Trim the ends off the green beans. Heat 0.5 tbsp [0.75 tbsp | 1 tbsp] oil* in a large pan with a lid. Sear the chicken strips, green beans, onion, garlic, and ginger paste for 2 min.",
+    "instruction_de": "Zwiebeln würfeln. Knoblauch fein hacken. Tomate in 2 cm Würfel schneiden. Enden der Buschbohnen abschneiden. In einer großen Pfanne mit Deckel 0,5 EL [0,75 EL | 1 EL] Öl* erhitzen. Hähnchengeschnetzeltes, Buschbohnen, Zwiebel, Knoblauch und Ingwerpaste darin 2 Min. scharf anbraten.",
+    "image": "images/keema_matar_haehnchen_step1.jpg"
+  },
+  {
+    "id": 227,
+    "recipeId": 44,
+    "stepNumber": 2,
+    "title_en": "Start the curry",
+    "title_de": "Curry ansetzen",
+    "instruction_en": "Add the tomatoes and \"Hello Curry\" and sauté for 30 sec. Deglaze with 100ml [150ml | 200ml] water*, bring to a boil, and simmer covered for 5 min. Meanwhile, heat a little butter* in a second pan and warm the naan for 2–3 min. Roughly chop the coriander and mint leaves.",
+    "instruction_de": "Tomaten und „Hello Curry“ hinzugeben und 30 Sek. anschwitzen. Pfanneninhalt mit 100 ml [150 ml | 200 ml] Wasser* ablöschen, aufkochen und abgedeckt 5 Min. köcheln. In der Zwischenzeit in einer zweiten großen Pfanne etwas Butter* erhitzen. Naan darin 2–3 Min. erwärmen. Koriander und Minzblätter grob hacken.",
+    "image": "images/keema_matar_haehnchen_step2.jpg"
+  },
+  {
+    "id": 228,
+    "recipeId": 44,
+    "stepNumber": 3,
+    "title_en": "Final steps",
+    "title_de": "Letzte Schritte",
+    "instruction_en": "Add the yogurt and a little butter* to the pan with the curry and season with salt* and pepper*. Divide between deep plates, top with herbs, and serve with the naan bread. Enjoy!",
+    "instruction_de": "Joghurt und etwas Butter* in die große Pfanne mit dem Curry geben und mit Salz* und Pfeffer* abschmecken. Keema Matar auf tiefe Teller verteilen, mit Kräutern toppen und mit Naan Brot servieren. Guten Appetit!",
+    "image": "images/keema_matar_haehnchen_step3.jpg"
+  },
+  {
+    "id": 229,
+    "recipeId": 45,
+    "stepNumber": 1,
+    "title_en": "Cook the rice",
+    "title_de": "Reis kochen",
+    "instruction_en": "Boil plenty of water in the kettle. Fill a small pot with a lid with 300ml [450ml | 600ml] hot water*. Add 0.25 tsp [0.5 tsp | 0.5 tsp] salt* and bring to a boil. Add the rice and simmer covered over low heat for 10 min. Remove from the heat and let stand covered for 10 min.",
+    "instruction_de": "Erhitze reichlich Wasser im Wasserkocher. In einen kleinen Topf mit Deckel 300 ml [450 ml | 600 ml] heißes Wasser* füllen. 0,25 TL [0,5 TL | 0,5 TL] Salz* dazugeben und aufkochen lassen. Reis zugeben und bei niedriger Hitze 10 Min. abgedeckt köcheln lassen. Danach vom Herd nehmen und abgedeckt 10 Min. ziehen lassen.",
+    "image": "images/mildes_chili_con_carne_step1.jpg"
+  },
+  {
+    "id": 230,
+    "recipeId": 45,
+    "stepNumber": 2,
+    "title_en": "Prepare the vegetables",
+    "title_de": "Gemüse vorbereiten",
+    "instruction_en": "Drain the black beans. Halve the bell peppers, remove the seeds, and cut into strips. Halve and finely dice the onion. Peel the garlic.",
+    "instruction_de": "Schwarze Bohnen durch ein Sieb abgießen. Paprika halbieren, entkernen und in Streifen schneiden. Zwiebel halbieren und fein würfeln. Knoblauch abziehen.",
+    "image": "images/mildes_chili_con_carne_step2.jpg"
+  },
+  {
+    "id": 231,
+    "recipeId": 45,
+    "stepNumber": 3,
+    "title_en": "Fry the meat & vegetables",
+    "title_de": "Fleisch & Gemüse anbraten",
+    "instruction_en": "In a large pot with a lid, fry the mince, chopped onion, and pepper strips, stirring, for 2–3 min. Press in the garlic, add \"Hello Fiesta\", and fry for 1 more min. Season with salt* and pepper*.",
+    "instruction_de": "In einem großen Topf mit Deckel Hackfleisch, gehackte Zwiebel und Paprikastreifen unter Rühren 2–3 Min. anbraten. Knoblauch dazu pressen, „Hello Fiesta“ hinzugeben und alles 1 Min. mit anbraten. Mit Salz* und Pfeffer* würzen.",
+    "image": "images/mildes_chili_con_carne_step3.jpg"
+  },
+  {
+    "id": 232,
+    "recipeId": 45,
+    "stepNumber": 4,
+    "title_en": "Cook the chili",
+    "title_de": "Chili kochen",
+    "instruction_en": "Add the chopped tomatoes, stock powder, and beans to the pot. Simmer covered on low for about 25 min, until creamy.",
+    "instruction_de": "Stückige Tomaten, Brühepulver und Bohnen in den Topf geben. Chili ca. 25 Min. auf niedriger Stufe abgedeckt köcheln lassen, bis das Chili cremig ist.",
+    "image": "images/mildes_chili_con_carne_step4.jpg"
+  },
+  {
+    "id": 233,
+    "recipeId": 45,
+    "stepNumber": 5,
+    "title_en": "Season the chili",
+    "title_de": "Chili abschmecken",
+    "instruction_en": "Remove from the heat, and season to taste with balsamic cream and \"Hello Harissa\" (careful: spicy!). Stir well and season with salt* and pepper*.",
+    "instruction_de": "Chili vom Herd nehmen, mit Balsamicocreme und „Hello Harissa“ (Achtung: scharf!) nach Geschmack würzen. Gut umrühren und mit Salz* und Pfeffer* abschmecken.",
+    "image": "images/mildes_chili_con_carne_step5.jpg"
+  },
+  {
+    "id": 234,
+    "recipeId": 45,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Fluff the rice a little with a fork and divide between plates. Arrange the chili alongside and top with cheese. Enjoy!",
+    "instruction_de": "Reis mit einer Gabel ein wenig auflockern und auf Teller verteilen. Chili dazu anrichten und mit Käse toppen. Guten Appetit!",
+    "image": "images/mildes_chili_con_carne_step6.jpg"
+  },
+  {
+    "id": 235,
+    "recipeId": 46,
+    "stepNumber": 1,
+    "title_en": "Bake the potatoes",
+    "title_de": "Kartoffeln backen",
+    "instruction_en": "Preheat the oven to 220°C top/bottom heat (200°C fan). Cut the potatoes into 1cm wedges. Spread on a baking-paper-lined tray, toss with 1 tbsp [1.5 tbsp | 2 tbsp] oil*, salt*, and pepper*, and roast for 25–30 min until golden brown.",
+    "instruction_de": "Heize den Backofen auf 220 °C Ober-/Unterhitze (200 °C Umluft) vor. Kartoffeln in 1 cm Spalten schneiden. Kartoffeln auf einem mit Backpapier belegten Backblech verteilen, mit 1 EL [1,5 EL | 2 EL] Öl*, Salz* und Pfeffer* vermengen und im Ofen 25–30 Min. goldbraun garen.",
+    "image": "images/miso_beef_burger_step1.jpg"
+  },
+  {
+    "id": 236,
+    "recipeId": 46,
+    "stepNumber": 2,
+    "title_en": "For the cucumber salad",
+    "title_de": "Für den Gurkensalat",
+    "instruction_en": "Finely chop the garlic. Halve the chili lengthwise (careful: spicy!), deseed, and finely chop. Thinly slice or shave the cucumber. Whisk together half of the sesame oil, 1 tsp [1.5 tsp | 2 tsp] vinegar*, 0.5 tsp [0.75 tsp | 1 tsp] sugar*, salt*, and pepper* into a dressing. Add the cucumber, a quarter of the garlic, and chili to taste, and let marinate.",
+    "instruction_de": "Knoblauch fein hacken. Chili (Achtung: scharf!) längs halbieren, entkernen und fein hacken. Gurke in feine Scheiben hobeln oder schneiden. In einer großen Schüssel die Hälfte des Sesamöls, 1 TL [1,5 TL | 2 TL] Essig*, 0,5 TL [0,75 TL | 1 TL] Zucker*, Salz* und Pfeffer* zu einem Dressing verrühren. Gurke, ein Viertel des Knoblauchs und Chili nach Belieben hinzugeben und marinieren lassen.",
+    "image": "images/miso_beef_burger_step2.jpg"
+  },
+  {
+    "id": 237,
+    "recipeId": 46,
+    "stepNumber": 3,
+    "title_en": "For the sesame mayonnaise",
+    "title_de": "Für die Sesam-Mayonnaise",
+    "instruction_en": "In a small bowl, mix the mayonnaise, remaining sesame oil, chili to taste, salt*, and pepper*.",
+    "instruction_de": "In einer kleinen Schüssel Mayonnaise, restliches Sesamöl, Chili nach Belieben, Salz* und Pfeffer* verrühren.",
+    "image": "images/miso_beef_burger_step3.jpg"
+  },
+  {
+    "id": 238,
+    "recipeId": 46,
+    "stepNumber": 4,
+    "title_en": "Form the patties",
+    "title_de": "Patties formen",
+    "instruction_en": "In a large bowl, combine the mince, remaining garlic, miso paste, and pepper*. Shape into 2 [3 | 4] flat, equal-sized patties, about 1cm thick.",
+    "instruction_de": "In einer großen Schüssel Hackfleisch, restlichen Knoblauch, Misopaste und Pfeffer* vermengen. Aus der Masse 2 [3 | 4] ca. 1 cm flache, gleich große Patties formen.",
+    "image": "images/miso_beef_burger_step4.jpg"
+  },
+  {
+    "id": 239,
+    "recipeId": 46,
+    "stepNumber": 5,
+    "title_en": "For the burgers",
+    "title_de": "Für die Burger",
+    "instruction_en": "Halve the brioche buns horizontally. Heat 1 tbsp [1.5 tbsp | 2 tbsp] butter* in a large pan. Toast the cut side of the buns for 1–2 min until golden. Remove and wipe the pan clean. Heat 1 tbsp [1.5 tbsp | 2 tbsp] oil* in the pan. Fry the patties for 3–4 min per side, pressing down slightly.",
+    "instruction_de": "Brioche Buns waagerecht aufschneiden. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Butter* erhitzen. Brioche Buns auf der Schnittseite 1–2 Min. goldbraun toasten. Herausnehmen und Pfanne auswischen. In der Pfanne 1 EL [1,5 EL | 2 EL] Öl* erhitzen. Patties darin je Seite 3–4 Min. anbraten, dabei etwas flach drücken.",
+    "image": "images/miso_beef_burger_step5.jpg"
+  },
+  {
+    "id": 240,
+    "recipeId": 46,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Spread a little mayo on both bun halves. Arrange the patties on top and finish with the cucumber salad. Place the bun tops on. Arrange the potato wedges alongside and serve with the remaining dip. Enjoy!",
+    "instruction_de": "Beide Brötchenseiten mit etwas Mayo bestreichen. Patties darauf anrichten und mit Gurkensalat toppen. Brötchenoberseite aufsetzen. Kartoffelspalten daneben anrichten und mit restlichem Dip servieren. Guten Appetit!",
+    "image": "images/miso_beef_burger_step6.jpg"
+  },
+  {
+    "id": 241,
+    "recipeId": 47,
+    "stepNumber": 1,
+    "title_en": "Quick prep",
+    "title_de": "Kleine Vorbereitung",
+    "instruction_en": "Boil 325ml [500ml | 650ml] water in the kettle. Cut the lemon into 6 wedges. Quarter the fennel, remove the core, and cut into very thin strips. Roughly dice the onion. Finely chop the garlic.",
+    "instruction_de": "Erhitze 325 ml [500 ml | 650 ml] Wasser im Wasserkocher. Zitrone in 6 Spalten schneiden. Fenchel vierteln, Strunk entfernen und Fenchel in sehr feine Streifen schneiden. Zwiebel grob würfeln. Knoblauch fein hacken.",
+    "image": "images/provenzalischer_fisch_step1.jpg"
+  },
+  {
+    "id": 242,
+    "recipeId": 47,
+    "stepNumber": 2,
+    "title_en": "Fry the fennel",
+    "title_de": "Fenchel anbraten",
+    "instruction_en": "Heat 1 tbsp [1.5 tbsp | 2 tbsp] olive oil* in a large pot with a lid. Fry the fennel, half of the \"Hello Provence\" spice mix, garlic, and half of the onion for 4–5 min.",
+    "instruction_de": "In einem großen Topf mit Deckel 1 EL [1,5 EL | 2 EL] Olivenöl* erhitzen. Fenchel, Hälfte „Hello Provence“, Knoblauch und Hälfte Zwiebel darin 4–5 Min. anbraten.",
+    "image": "images/provenzalischer_fisch_step2.jpg"
+  },
+  {
+    "id": 243,
+    "recipeId": 47,
+    "stepNumber": 3,
+    "title_en": "Simmer the sauce",
+    "title_de": "Soße köcheln",
+    "instruction_en": "Deglaze with the chopped tomatoes, 75ml [125ml | 150ml] water*, sugar*, salt*, and pepper*. Add the olives and simmer covered over low heat until the end of the recipe.",
+    "instruction_de": "Topfinhalt mit stückigen Tomaten, 75 ml [125 ml | 150 ml] Wasser*, Zucker*, Salz* und Pfeffer* ablöschen. Oliven hinzugeben und Soße bei niedriger Hitze bis zum Ende des Rezepts abgedeckt köcheln lassen.",
+    "image": "images/provenzalischer_fisch_step3.jpg"
+  },
+  {
+    "id": 244,
+    "recipeId": 47,
+    "stepNumber": 4,
+    "title_en": "Prepare the couscous",
+    "title_de": "Couscous zubereiten",
+    "instruction_en": "Heat a little olive oil* in a small pot with a lid. Sauté the remaining onion with a big pinch of salt* for 2 min. Deglaze with 250ml [375ml | 500ml] hot water* and bring to a boil. Stir in the couscous and stock powder, remove from the heat, and let swell covered for 5–8 min.",
+    "instruction_de": "In einem kleinen Topf mit Deckel etwas Olivenöl* erhitzen. Restliche Zwiebel mit einer großen Prise Salz* 2 Min. anschwitzen. Mit 250 ml [375 ml | 500 ml] heißem Wasser* ablöschen und aufkochen lassen. Couscous und Brühepulver hineinrühren, Topf vom Herd nehmen und 5–8 Min. abgedeckt quellen lassen.",
+    "image": "images/provenzalischer_fisch_step4.jpg"
+  },
+  {
+    "id": 245,
+    "recipeId": 47,
+    "stepNumber": 5,
+    "title_en": "For the fish",
+    "title_de": "Für den Fisch",
+    "instruction_en": "Season the fish fillets with the remaining \"Hello Provence\" and a little salt* and pepper*. Heat 1 tbsp [1.5 tbsp | 2 tbsp] olive oil* in a large pan. Fry for 1–2 min per side, until no longer translucent inside. Deglaze with the juice of 1 [2 | 2] lemon wedges.",
+    "instruction_de": "Fischfilets mit restlichem „Hello Provence“ und etwas Salz* und Pfeffer* würzen. In einer großen Pfanne 1 EL [1,5 EL | 2 EL] Olivenöl* erhitzen. Fisch 1–2 Min. je Seite braten, bis er innen nicht mehr glasig ist. Mit Saft von 1 [2 | 2] Zitronenspalte ablöschen.",
+    "image": "images/provenzalischer_fisch_step5.jpg"
+  },
+  {
+    "id": 246,
+    "recipeId": 47,
+    "stepNumber": 6,
+    "title_en": "Plate up",
+    "title_de": "Anrichten",
+    "instruction_en": "Season the sauce with sugar*, salt*, and pepper*. Divide the Provençal tomato sauce and couscous between deep plates. Arrange the fish fillets on top. Enjoy with a lemon wedge. Enjoy!",
+    "instruction_de": "Soße mit Zucker*, Salz* und Pfeffer* abschmecken. Provenzalische Tomatensoße und Couscous auf tiefe Teller verteilen. Fischfilets darauf anrichten. Mit einer Zitronenspalte genießen. Guten Appetit!",
+    "image": "images/provenzalischer_fisch_step6.jpg"
   }
 ]
