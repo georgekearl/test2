@@ -111,6 +111,35 @@
 
   .loading { color:var(--muted); text-align:center; padding:60px 0; }
   .hint { color:rgb(120,125,145); font-size:11px; text-align:center; max-width:480px; margin:14px auto 0; }
+
+  /* Live search boxes (All Recipes, Fridge add-ingredient) */
+  .search-box { display:flex; align-items:center; gap:8px; background:var(--tile-hi); border:1px solid var(--border); border-radius:8px; padding:9px 12px; margin-bottom:14px; }
+  .search-box input { flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:14px; min-width:0; }
+  .search-box input::placeholder { color:var(--muted); }
+  .search-box .clear { color:var(--muted); cursor:pointer; font-size:13px; flex:0 0 auto; }
+  .search-icon { color:var(--muted); flex:0 0 auto; }
+
+  /* Favorite star toggle, used on the Home Screen suggestion list and All Recipes cards */
+  .sugg-line .sugg-text { flex:1; min-width:0; }
+  .star { flex:0 0 auto; font-size:16px; line-height:1; cursor:pointer; color:var(--muted); padding:2px; }
+  .star.active { color:var(--amber); }
+  .star:hover { color:var(--amber); }
+
+  /* Bullet markers for the "Ausgewählte Rezepte" list */
+  .bullet-line { display:flex; align-items:baseline; gap:8px; padding:4px 0; }
+  .bullet-line .bullet-mark { color:var(--accent); font-size:15px; line-height:1; flex:0 0 auto; }
+  .bullet-line .bullet-name { font-size:13.5px; color:var(--text); }
+
+  /* Graceful fallback for a missing/broken recipe photo, instead of a broken-image icon */
+  .img-fallback { display:flex; align-items:center; justify-content:center; background:var(--tile-hi); color:var(--muted); font-size:28px; font-weight:700; }
+
+  /* Live-search combobox for adding a fridge ingredient */
+  .combobox-wrap { position:relative; flex:2; min-width:140px; }
+  .combobox-wrap input { width:100%; background:var(--tile-hi); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:9px 10px; font-size:13.5px; }
+  .combobox-list { position:absolute; top:calc(100% + 4px); left:0; right:0; max-height:230px; overflow-y:auto; background:var(--tile-hi); border:1px solid var(--border); border-radius:8px; z-index:10; box-shadow:0 8px 24px rgba(0,0,0,0.4); }
+  .combobox-item { padding:9px 12px; font-size:13.5px; color:var(--text); cursor:pointer; }
+  .combobox-item:hover { background:var(--tile); }
+  .combobox-empty { padding:9px 12px; font-size:13px; color:var(--muted); font-style:italic; }
 </style>
 </head>
 <body>
@@ -144,7 +173,12 @@ const STRINGS = {
     toBuy: "Einzukaufen",
     readyToCook: "Kochbereit",
     whatCanICook: "Was kann ich kochen?",
-    whatCanICookHint: "Zeile antippen zum Öffnen, Häkchen für die Einkaufsliste",
+    whatCanICookHint: "Zeile antippen zum Öffnen, ★ für Favoriten, Häkchen für die Einkaufsliste",
+    searchRecipes: "Rezept suchen…",
+    noSearchResults: "Keine Rezepte gefunden.",
+    favoriteTitle: "Als Favorit markieren",
+    searchIngredient: "Zutat suchen…",
+    noIngredientMatch: "Keine passende Zutat gefunden.",
     missingLabel: "fehlt",
     shoppingListOpen: "Einkaufsliste — offen",
     shoppingListEmpty: "Rezepte auswählen, um die Einkaufsliste zu füllen.",
@@ -183,7 +217,12 @@ const STRINGS = {
     toBuy: "To Buy",
     readyToCook: "Ready to Cook",
     whatCanICook: "What can I cook?",
-    whatCanICookHint: "Tap a row to open, checkmark for the shopping list",
+    whatCanICookHint: "Tap a row to open, ★ to favorite, checkmark for the shopping list",
+    searchRecipes: "Search recipes…",
+    noSearchResults: "No recipes found.",
+    favoriteTitle: "Mark as favorite",
+    searchIngredient: "Search ingredient…",
+    noIngredientMatch: "No matching ingredient found.",
     missingLabel: "missing",
     shoppingListOpen: "Shopping List — Open",
     shoppingListEmpty: "Select recipes to fill the shopping list.",
@@ -310,6 +349,31 @@ function useSharedSelected() {
   return [selected, setSelected];
 }
 
+// Favorited/starred recipes - shared across devices the same way the
+// selection is, since "which recipes do we like" is a household-level
+// preference, not a per-device one.
+function useSharedFavorites() {
+  const [favorites, setFavoritesLocal] = React.useState(null); // null = still loading
+
+  React.useEffect(() => {
+    const ref = db.ref("mealPlanner/favorites");
+    const handler = snap => setFavoritesLocal(new Set(snap.val() || []));
+    ref.on("value", handler);
+    return () => ref.off("value", handler);
+  }, []);
+
+  const setFavorites = (updaterOrValue) => {
+    setFavoritesLocal(prevLocal => {
+      const base = prevLocal || new Set();
+      const next = typeof updaterOrValue === "function" ? updaterOrValue(base) : updaterOrValue;
+      db.ref("mealPlanner/favorites").set(Array.from(next));
+      return next;
+    });
+  };
+
+  return [favorites, setFavorites];
+}
+
 // "Ticked off in the basket" state while physically shopping - keyed by
 // ingredient ID, synced live so it works if more than one phone is doing
 // the shopping together.
@@ -374,6 +438,38 @@ function computeStatus(recipe, recipeIngredients, ingredientsById, fridge) {
   return { level, missing, items };
 }
 
+// Traffic-light order (green, then amber, then red); favorited recipes
+// are pulled to the front of that ordering first, since starring a
+// recipe is a deliberate "keep this near the top" signal.
+const STATUS_RANK = { green: 0, amber: 1, red: 2 };
+function sortRecipes(list, statuses, favorites, lang) {
+  return [...list].sort((a, b) => {
+    const favA = favorites.has(a.id) ? 0 : 1;
+    const favB = favorites.has(b.id) ? 0 : 1;
+    if (favA !== favB) return favA - favB;
+    const rankA = STATUS_RANK[statuses[a.id].level];
+    const rankB = STATUS_RANK[statuses[b.id].level];
+    if (rankA !== rankB) return rankA - rankB;
+    return localName(a, lang).localeCompare(localName(b, lang));
+  });
+}
+
+// Recipe photos live in a large, hand-maintained images/ folder - a
+// filename mismatch or a photo that never made it into the repo
+// shouldn't leave a broken-image icon on screen. Falls back to a
+// plain tile with the recipe's first letter instead.
+function ImgWithFallback({ src, alt, className, style }) {
+  const [broken, setBroken] = React.useState(false);
+  if (!src || broken) {
+    return (
+      <div className={(className || "") + " img-fallback"} style={style}>
+        {alt ? alt.trim().charAt(0).toUpperCase() : "🍽"}
+      </div>
+    );
+  }
+  return <img className={className} style={style} src={src} alt={alt} onError={() => setBroken(true)} />;
+}
+
 function useData() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -404,6 +500,7 @@ function App() {
   const [selected, setSelected] = useSharedSelected();
   const [fridge, setFridge] = useSharedFridge();
   const [checked, setChecked] = useSharedChecked();
+  const [favorites, setFavorites] = useSharedFavorites();
   const [lang, setLangState] = useState(loadLang);
   const [recipesFilter, setRecipesFilter] = useState("all"); // all | ready
 
@@ -424,7 +521,7 @@ function App() {
     );
   }
 
-  if (!data || fridge === null || selected === null || checked === null) {
+  if (!data || fridge === null || selected === null || checked === null || favorites === null) {
     return <div className="screen"><div className="loading">{t(lang, "loading")}</div></div>;
   }
 
@@ -482,6 +579,8 @@ function App() {
         fridge={fridge}
         selected={selected}
         setSelected={setSelected}
+        favorites={favorites}
+        setFavorites={setFavorites}
         onOpenRecipe={openRecipe}
         onBack={goHome}
         onGoHome={goHome}
@@ -515,6 +614,9 @@ function App() {
       fridge={fridge}
       selected={selected}
       setSelected={setSelected}
+      favorites={favorites}
+      setFavorites={setFavorites}
+      checked={checked}
       onOpenRecipe={openRecipe}
       onOpenFridge={() => setView("fridge")}
       onOpenRecipesList={() => { setRecipesFilter("all"); setView("recipes"); }}
@@ -526,7 +628,9 @@ function App() {
   );
 }
 
-function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFridge, onOpenRecipesList, onOpenReadyToCook, onOpenShoppingList, lang, setLang }) {
+const DASHBOARD_RECIPE_LIMIT = 10;
+
+function Dashboard({ data, fridge, selected, setSelected, favorites, setFavorites, checked, onOpenRecipe, onOpenFridge, onOpenRecipesList, onOpenReadyToCook, onOpenShoppingList, lang, setLang }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
 
   const statuses = useMemo(() => {
@@ -551,8 +655,28 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
     return Object.values(totals);
   }, [selected, statuses, recipes]);
 
+  // "Einzukaufen" reflects what's still actually left to buy - it counts
+  // down live as items get ticked off in the Einkaufsliste, rather than
+  // just showing the flat total every time.
+  const remainingToBuy = shoppingList.filter(item => !checked[item.ing.id]).length;
+
+  // Home Screen suggestion list: favorites first, then green -> amber ->
+  // red, capped to a short, glanceable top 10.
+  const topSuggestions = useMemo(
+    () => sortRecipes(recipes, statuses, favorites, lang).slice(0, DASHBOARD_RECIPE_LIMIT),
+    [recipes, statuses, favorites, lang]
+  );
+
   const toggleRecipe = (id) => {
     setSelected(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
+
+  const toggleFavorite = (id) => {
+    setFavorites(prev => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
@@ -575,21 +699,22 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
       <div className="kpi-row">
         <Kpi label={t(lang, "recipes")} value={recipes.length} onClick={onOpenRecipesList} />
         <Kpi label={t(lang, "inFridge")} value={nFridgeItems} onClick={onOpenFridge} />
-        <Kpi label={t(lang, "toBuy")} value={shoppingList.length} tone={shoppingList.length > 0 ? "warn" : "good"} onClick={onOpenShoppingList} />
+        <Kpi label={t(lang, "toBuy")} value={remainingToBuy} tone={remainingToBuy > 0 ? "warn" : "good"} onClick={onOpenShoppingList} />
         <Kpi label={t(lang, "readyToCook")} value={nCook} tone={nCook > 0 ? "good" : "warn"} onClick={onOpenReadyToCook} />
       </div>
 
       <div className="main-row">
         <div className="tile">
           <div className="tile-hdr">{t(lang, "whatCanICook")} — {t(lang, "whatCanICookHint")}</div>
-          {recipes.map(r => {
+          {topSuggestions.map(r => {
             const s = statuses[r.id];
             const isSel = selected.has(r.id);
+            const isFav = favorites.has(r.id);
             return (
               <div key={r.id} className={"sugg-line" + (isSel ? " selected" : "")} onClick={() => onOpenRecipe(r.id)}>
                 <span className="check" onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}>✓</span>
                 <span className={"dot " + s.level}></span>
-                <span>
+                <span className="sugg-text">
                   <span className="recipe-title">{localName(r, lang)}</span>
                   {s.missing.length > 0 && (
                     <span className="sugg-missing">
@@ -598,6 +723,11 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
                     </span>
                   )}
                 </span>
+                <span
+                  className={"star" + (isFav ? " active" : "")}
+                  onClick={(e) => { e.stopPropagation(); toggleFavorite(r.id); }}
+                  title={t(lang, "favoriteTitle")}
+                >{isFav ? "★" : "☆"}</span>
               </div>
             );
           })}
@@ -623,7 +753,10 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
               <div className="empty-msg">{t(lang, "noSelectionYet")}</div>
             ) : (
               recipes.filter(r => selected.has(r.id)).map(r => (
-                <div key={r.id} style={{ fontSize: 13.5, color: "var(--text)", padding: "4px 0" }}>{localName(r, lang)}</div>
+                <div key={r.id} className="bullet-line">
+                  <span className="bullet-mark">•</span>
+                  <span className="bullet-name">{localName(r, lang)}</span>
+                </div>
               ))
             )}
           </div>
@@ -642,8 +775,9 @@ function Dashboard({ data, fridge, selected, setSelected, onOpenRecipe, onOpenFr
 // Dedicated full-page recipe browser — every recipe in the database,
 // with photo, status, and the same add-to-shopping-list checkbox as
 // the Home Screen tile, just roomier and easier to scroll through.
-function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack, onGoHome, lang, setLang, filter, setFilter }) {
+function RecipesPage({ data, fridge, selected, setSelected, favorites, setFavorites, onOpenRecipe, onBack, onGoHome, lang, setLang, filter, setFilter }) {
   const { recipes, recipeIngredients, ingredientsById } = data;
+  const [query, setQuery] = useState("");
 
   const statuses = useMemo(() => {
     const map = {};
@@ -651,10 +785,21 @@ function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack
     return map;
   }, [recipes, recipeIngredients, ingredientsById, fridge]);
 
-  const visibleRecipes = filter === "ready" ? recipes.filter(r => statuses[r.id].level === "green") : recipes;
+  const baseFiltered = filter === "ready" ? recipes.filter(r => statuses[r.id].level === "green") : recipes;
+  const q = query.trim().toLowerCase();
+  const searched = q === "" ? baseFiltered : baseFiltered.filter(r => localName(r, lang).toLowerCase().includes(q));
+  const visibleRecipes = sortRecipes(searched, statuses, favorites, lang);
 
   const toggleRecipe = (id) => {
     setSelected(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
+
+  const toggleFavorite = (id) => {
+    setFavorites(prev => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
@@ -680,19 +825,36 @@ function RecipesPage({ data, fridge, selected, setSelected, onOpenRecipe, onBack
         </span>
       </div>
 
+      <div className="search-box">
+        <span className="search-icon">⌕</span>
+        <input
+          type="text"
+          placeholder={t(lang, "searchRecipes")}
+          value={query}
+          onChange={ev => setQuery(ev.target.value)}
+        />
+        {query && <span className="clear" onClick={() => setQuery("")}>✕</span>}
+      </div>
+
       {visibleRecipes.length === 0 && (
-        <div className="empty-msg">{t(lang, "noReadyRecipes")}</div>
+        <div className="empty-msg">{q !== "" ? t(lang, "noSearchResults") : t(lang, "noReadyRecipes")}</div>
       )}
 
       {visibleRecipes.map(r => {
         const s = statuses[r.id];
         const isSel = selected.has(r.id);
+        const isFav = favorites.has(r.id);
         return (
           <div key={r.id} className="recipe-card" onClick={() => onOpenRecipe(r.id)}>
-            {r.heroImage && <img className="recipe-card-img" src={r.heroImage} alt={localName(r, lang)} />}
+            <ImgWithFallback className="recipe-card-img" src={r.heroImage} alt={localName(r, lang)} />
             <div className="recipe-card-body">
               <div className="recipe-card-top">
-                <span className="recipe-card-title">{localName(r, lang)}</span>
+                <span className="recipe-card-title" style={{ flex: 1, minWidth: 0 }}>{localName(r, lang)}</span>
+                <span
+                  className={"star" + (isFav ? " active" : "")}
+                  onClick={(e) => { e.stopPropagation(); toggleFavorite(r.id); }}
+                  title={t(lang, "favoriteTitle")}
+                >{isFav ? "★" : "☆"}</span>
                 <span
                   className={"check" + (isSel ? " checked" : "")}
                   onClick={(e) => { e.stopPropagation(); toggleRecipe(r.id); }}
@@ -813,6 +975,8 @@ function ShoppingListPage({ data, fridge, selected, checked, setChecked, onBack,
 function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang }) {
   const [addId, setAddId] = useState("");
   const [addQty, setAddQty] = useState("1");
+  const [addQuery, setAddQuery] = useState("");
+  const [showAddList, setShowAddList] = useState(false);
 
   const entries = Object.entries(fridge)
     .map(([id, qty]) => ({ id, qty, ing: data.ingredientsById[id] }))
@@ -835,12 +999,24 @@ function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang
     .filter(ing => !(String(ing.id) in fridge))
     .sort((a, b) => localName(a, lang).localeCompare(localName(b, lang)));
 
+  const addQueryLower = addQuery.trim().toLowerCase();
+  const filteredToAdd = addQueryLower === ""
+    ? availableToAdd
+    : availableToAdd.filter(ing => localName(ing, lang).toLowerCase().includes(addQueryLower));
+
+  const chooseToAdd = (ing) => {
+    setAddId(String(ing.id));
+    setAddQuery(localName(ing, lang));
+    setShowAddList(false);
+  };
+
   const handleAdd = () => {
     if (!addId) return;
     const qty = parseFloat(addQty);
     setFridge(prev => ({ ...prev, [addId]: isNaN(qty) ? 0 : qty }));
     setAddId("");
     setAddQty("1");
+    setAddQuery("");
   };
 
   return (
@@ -872,12 +1048,29 @@ function FridgeScreen({ data, fridge, setFridge, onBack, onGoHome, lang, setLang
       )}
 
       <div className="add-row">
-        <select value={addId} onChange={ev => setAddId(ev.target.value)}>
-          <option value="">{t(lang, "chooseIngredient")}</option>
-          {availableToAdd.map(ing => (
-            <option key={ing.id} value={ing.id}>{localName(ing, lang)}</option>
-          ))}
-        </select>
+        <div className="combobox-wrap">
+          <input
+            type="text"
+            placeholder={t(lang, "searchIngredient")}
+            value={addQuery}
+            onChange={ev => { setAddQuery(ev.target.value); setAddId(""); setShowAddList(true); }}
+            onFocus={() => setShowAddList(true)}
+            onBlur={() => setTimeout(() => setShowAddList(false), 150)}
+          />
+          {showAddList && (
+            <div className="combobox-list">
+              {filteredToAdd.length === 0 ? (
+                <div className="combobox-empty">{t(lang, "noIngredientMatch")}</div>
+              ) : (
+                filteredToAdd.slice(0, 30).map(ing => (
+                  <div key={ing.id} className="combobox-item" onClick={() => chooseToAdd(ing)}>
+                    {localName(ing, lang)}
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+        </div>
         <input type="number" min="0" step="any" value={addQty} onChange={ev => setAddQty(ev.target.value)} />
         <button className="btn primary" onClick={handleAdd} disabled={!addId}>{t(lang, "add")}</button>
       </div>
@@ -903,7 +1096,7 @@ function RecipeDetail({ data, recipeId, onBack, onCook, onGoHome, lang, setLang 
         </div>
       </div>
 
-      {recipe.heroImage && <img className="hero-img" src={recipe.heroImage} alt={localName(recipe, lang)} />}
+      <ImgWithFallback className="hero-img" src={recipe.heroImage} alt={localName(recipe, lang)} />
 
       <h2 style={{ color: "var(--text)", marginTop: 0 }}>{localName(recipe, lang)}</h2>
       <div className="recipe-meta">
@@ -956,7 +1149,7 @@ function CookMode({ data, recipeId, step, setStep, onExit, onGoHome, lang, setLa
 
       <div className="cook-progress">{t(lang, "stepOf", step + 1, steps.length)}</div>
 
-      {current.image && <img className="cook-step-img" src={current.image} alt={localField(current, "title", lang)} />}
+      <ImgWithFallback className="cook-step-img" src={current.image} alt={localField(current, "title", lang)} />
 
       <div className="cook-title">{localField(current, "title", lang)}</div>
       <div className="cook-instruction">{localField(current, "instruction", lang)}</div>

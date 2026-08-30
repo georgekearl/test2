@@ -1,33 +1,5 @@
 [
   {
-    "id": 1,
-    "name_en": "Tomato Pasta",
-    "name_de": "Tomatennudeln",
-    "servings": 2,
-    "heroImage": null
-  },
-  {
-    "id": 2,
-    "name_en": "Scrambled Eggs",
-    "name_de": "Rührei",
-    "servings": 1,
-    "heroImage": null
-  },
-  {
-    "id": 3,
-    "name_en": "Fruit Bowl",
-    "name_de": "Obstschale",
-    "servings": 1,
-    "heroImage": null
-  },
-  {
-    "id": 4,
-    "name_en": "Fish",
-    "name_de": "Fisch",
-    "servings": 2,
-    "heroImage": null
-  },
-  {
     "id": 5,
     "name_en": "Breaded Feta on Tomato Bean Ragout with Greek Lemon Potatoes",
     "name_de": "Panierter Hirtenkäse auf tomatigem Bohnenragout mit griechischen Zitronenkartoffeln",
